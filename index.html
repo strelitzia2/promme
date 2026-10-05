@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>promme</title>
+  <meta name="description" content="AI 최상의 결과물을 위한 프롬프트 모음, promme">
+  <meta name="theme-color" content="#F9EED1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="top-left">
+    <!-- mac 신호등 점 (장식용) -->
+    <div class="mac-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <!-- 뒤로 · 앞으로 -->
+    <div class="nav-arrows pill" role="group" aria-label="이동">
+      <button id="backBtn" aria-label="뒤로 가기" disabled>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5-7 7 7 7"/></svg>
+      </button>
+      <button id="fwdBtn" aria-label="앞으로 가기" disabled>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- 보기 방식 -->
+    <div class="seg pill" role="group" aria-label="보기 방식">
+      <button id="viewGrid" aria-pressed="true" aria-label="격자 보기"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></button>
+      <button id="viewList" aria-pressed="false" aria-label="목록 보기"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg></button>
+    </div>
+  </div>
+
+  <div class="top-right">
+    <label class="mini-search pill" id="miniSearch">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="miniInput" type="search" placeholder="원하는 프롬프트를 검색하세요" aria-label="프롬프트 검색">
+    </label>
+    <button class="login pill" id="loginBtn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5a6.5 6.5 0 0 1 11 0"/></svg>로그인
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- 홈 -->
+  <section class="page" id="page-home" data-tab="home">
+    <div class="hero">
+      <h1 class="logo">promme</h1>
+      <p>원하는 프롬프트를 검색하세요</p>
+      <label class="bigsearch pill" id="bigSearch">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="searchInput" type="search" placeholder="무엇을 찾고 계신가요?" aria-label="프롬프트 검색">
+      </label>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- MY 아카이브 -->
+  <section class="page" id="page-archive" data-tab="archive" hidden>
+    <h2>MY 아카이브</h2>
+    <p class="lede">카드의 북마크 버튼을 누르면 여기에 모여요.</p>
+    <div class="grid" id="archiveGrid"></div>
+  </section>
+
+  <!-- AI 최신 NEWS -->
+  <section class="page" id="page-news" data-tab="news" hidden>
+    <h2>AI 최신 NEWS <span class="tag">예시 화면</span></h2>
+    <p class="lede">실제 서비스에서는 RSS나 뉴스 API를 연결해 자동으로 채워요.</p>
+    <div class="stack">
+      <article class="row"><h3>이번 주 가장 많이 저장된 이미지 생성 프롬프트</h3><p>셀카를 피규어·애니 캐릭터로 바꾸는 스타일 전환 프롬프트가 저장 수 상위를 차지했어요.</p><div class="src">promme 트렌드 · 예시</div></article>
+      <article class="row"><h3>새 AI 모델이 나오면 여기에 요약이 올라와요</h3><p>모델 이름, 출시일, 무료로 쓸 수 있는 범위, 한 줄 평을 카드 하나로 정리하는 형식이에요.</p><div class="src">뉴스 카드 형식 · 예시</div></article>
+      <article class="row"><h3>프롬프트 작성 팁: 역할 · 맥락 · 출력 형식</h3><p>“너는 ~야” 역할 지정, 내 상황 설명, 원하는 결과 형식을 순서대로 쓰면 결과가 안정돼요.</p><div class="src">가이드 · 예시</div></article>
+    </div>
+  </section>
+
+  <!-- AI 성능 위키백과 -->
+  <section class="page" id="page-wiki" data-tab="wiki" hidden>
+    <h2>AI 성능 위키백과 <span class="tag">예시 화면</span></h2>
+    <p class="lede">요금과 무료 혜택은 자주 바뀌니, 실제 서비스에서는 공식 요금 페이지 기준으로 날짜와 함께 갱신하세요.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>서비스</th><th>무료 플랜</th><th>잘하는 일</th><th>추천 카테고리</th></tr></thead>
+        <tbody>
+          <tr><td><b>ChatGPT</b></td><td>있음</td><td>대화형 작성, 이미지 생성</td><td>SNS · 이미지 생성</td></tr>
+          <tr><td><b>Claude</b></td><td>있음</td><td>긴 문서 정리, 글쓰기, 코딩</td><td>학습 · 코딩</td></tr>
+          <tr><td><b>Gemini</b></td><td>있음</td><td>구글 서비스 연동, 검색 결합</td><td>시장조사 · 학습</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 오늘의 운세 -->
+  <section class="page" id="page-fortune" data-tab="fortune" hidden>
+    <h2>오늘의 운세</h2>
+    <p class="lede">매일 바뀌는 한 줄 운세와 오늘 써볼 프롬프트.</p>
+    <div class="row fortune">
+      <div class="orb">🔮</div>
+      <div class="date" id="fDate"></div>
+      <div class="msg" id="fMsg"></div>
+      <div class="lucky" id="fLucky"></div>
+      <div style="margin-top:22px"><button class="btn" id="fPrompt">오늘의 프롬프트 보기</button></div>
+    </div>
+  </section>
+</main>
+
+<!-- 하단 리퀴드 글래스 탭바 -->
+<nav class="tabbar-wrap" aria-label="주요 메뉴">
+  <div class="tabbar" id="tabbar" role="tablist">
+    <div class="indicator" id="indicator"></div>
+    <button class="tab" role="tab" data-tab="archive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>MY 아카이브</span></button>
+    <button class="tab" role="tab" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"/></svg><span>홈</span></button>
+    <button class="tab" role="tab" data-tab="news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span>AI 최신 NEWS</span></button>
+    <button class="tab" role="tab" data-tab="wiki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>AI 성능 위키백과</span></button>
+    <button class="tab" role="tab" data-tab="fortune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="10" r="6"/><path d="M8 20h8M9.5 16l-1 4M14.5 16l1 4"/></svg><span>오늘의 운세</span></button>
+  </div>
+</nav>
+
+<!-- 프롬프트 상세 시트 -->
+<div class="scrim" id="scrim" hidden>
+  <div class="sheet glass" role="dialog" aria-modal="true" aria-labelledby="sTitle">
+    <h3 id="sTitle"></h3>
+    <p class="sub" id="sSub"></p>
+    <pre id="sPrompt"></pre>
+    <div class="actions">
+      <button class="btn" id="sCopy">프롬프트 복사</button>
+      <button class="btn ghost" id="sClose">닫기</button>
+    </div>
+  </div>
+</div>
+<div class="toast glass" id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
