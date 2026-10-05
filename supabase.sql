@@ -24,6 +24,10 @@ create table if not exists public.saves (
 create index if not exists folders_user_idx on public.folders (user_id);
 create index if not exists saves_folder_idx on public.saves (folder_id);
 
+-- Data API 접근 권한 ("Automatically expose new tables"를 꺼둔 경우 필요)
+grant select, insert, update, delete on public.folders to authenticated;
+grant select, insert, update, delete on public.saves   to authenticated;
+
 -- 행 단위 보안: 로그인한 본인 데이터만 읽고 쓸 수 있음
 alter table public.folders enable row level security;
 alter table public.saves   enable row level security;

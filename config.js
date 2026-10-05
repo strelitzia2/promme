@@ -9,7 +9,7 @@
    - google          : Supabase에서 Google 로그인을 켰다면 true
    ========================================================= */
 window.PROMME_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: "",
+  supabaseUrl: "https://cnttunmezdhsmqpmuqap.supabase.co",
+  supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNudHR1bm1lemRoc21xcG11cWFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTExNzUwMzIsImV4cCI6MjEwNjc1MTAzMn0.0sEVsHcmLXiMg37HQetK0uCfJxN_tMtNKgtxpMg79ZY",
   google: false,
 };
