@@ -26,7 +26,7 @@ const PROMPTS = [
     prompt: "너는 20대 감성의 인스타그램 카피라이터야.\n내 정보: [전공/취미/요즘 빠진 것]\n이 정보로 프로필 소개글 5개를 만들어줘. 각 30자 이내, 이모지 1~2개, 말투는 담백하게." },
   { id: 3, title: "캐릭캐릭 체인지", cat: "image", tool: "ChatGPT", saves: "2.4k", art: "🌸", img: "", bg: "linear-gradient(135deg,#9be7c4,#ffc0d9)",
     prompt: "첨부한 사진을 2000년대 일본 애니메이션 스타일 캐릭터로 바꿔줘.\n- 큰 눈, 선명한 셀 채색\n- 배경은 학교 운동장과 하늘\n- 원래 옷 색과 헤어스타일은 유지" },
-  { id: 4, title: "요즘 유행 웹툰 한 컷", cat: "sns", tool: "ChatGPT", saves: "1.7k", art: "💭", img: "", bg: "linear-gradient(135deg,#ffe2a1,#f6a77a)",
+  { id: 4, title: "요즘 유행 웹툰 한 컷", cat: "sns", tool: "ChatGPT", saves: "1.7k", art: "💭", img: "images/4.webp", bg: "linear-gradient(135deg,#ffe2a1,#f6a77a)",
     prompt: "아래 상황을 한국 웹툰 한 컷으로 그려줘.\n상황: [내가 겪은 웃긴 일]\n- 말풍선 하나, 한국어 대사\n- 과장된 표정, 깔끔한 선화" },
   { id: 5, title: "주 3회 운동 루틴", cat: "life", tool: "Claude", saves: "640", art: "🏃", img: "", bg: "linear-gradient(135deg,#bfe8ff,#d8f5c0)",
     prompt: "너는 퍼스널 트레이너야.\n내 정보: 운동 경험 [없음/초급], 목표 [체력/근력], 가능한 시간 [하루 40분]\n주 3회, 4주짜리 루틴을 표로 만들어줘. 각 운동에 세트·횟수·쉬는 시간 포함." },
@@ -44,6 +44,8 @@ const FOLDER_EMOJIS = ["📁", "✨", "🔖", "💡", "🎨", "📸", "📚", "�
 const $ = (s) => document.querySelector(s);
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const ORDER = ["archive", "home", "news", "wiki", "fortune"];
+const EASE = "cubic-bezier(.32,.72,0,1)";        // 부드럽게 감속 (iOS 시트 느낌)
+const EASE_BOUNCE = "cubic-bezier(.34,1.25,.5,1)"; // 살짝 튕기며 멈춤
 const byId = (id) => PROMPTS.find((p) => p.id === id);
 const catName = (id) => CATS.find((c) => c.id === id).name;
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -202,9 +204,33 @@ function setCat(cat) {
 $("#chips").addEventListener("click", (e) => {
   const b = e.target.closest(".chip");
   if (!b || b.dataset.cat === state.cat) return;
-  setCat(b.dataset.cat);
+  flip($("#grid"), () => setCat(b.dataset.cat));
   recordNav();
 });
+
+/* 카드 재배치 애니메이션 (FLIP)
+   바뀌기 전 위치를 기억했다가, 바뀐 뒤 그 자리에서 새 자리로 미끄러지게 함.
+   새로 나타나는 카드는 아래에서 살짝 떠오름. */
+function flip(container, mutate) {
+  if (reduce || !container || !container.animate) { mutate(); return; }
+  const before = new Map([...container.querySelectorAll(".card[data-id]")].map((el) => [el.dataset.id, el.getBoundingClientRect()]));
+  mutate();
+  let fresh = 0;
+  container.querySelectorAll(".card[data-id]").forEach((el) => {
+    const b = before.get(el.dataset.id), a = el.getBoundingClientRect();
+    if (b) {
+      const dx = b.left - a.left, dy = b.top - a.top, sx = b.width / a.width, sy = b.height / a.height;
+      if (Math.abs(dx) < 1 && Math.abs(dy) < 1 && Math.abs(sx - 1) < 0.01 && Math.abs(sy - 1) < 0.01) return;
+      el.animate(
+        [{ transformOrigin: "top left", transform: `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})` },
+         { transformOrigin: "top left", transform: "none" }],
+        { duration: 620, easing: EASE });
+    } else {
+      el.animate([{ opacity: 0, transform: "translateY(18px) scale(.96)" }, { opacity: 1, transform: "none" }],
+        { duration: 520, delay: Math.min(fresh++, 8) * 35, easing: EASE, fill: "backwards" });
+    }
+  });
+}
 
 /* 검색 */
 function syncSearch(v) { state.q = v; $("#searchInput").value = v; $("#miniInput").value = v; renderHome(); }
@@ -216,7 +242,9 @@ $("#miniInput").addEventListener("input", (e) => { syncSearch(e.target.value); i
   state.view = sel === "#viewList" ? "list" : "grid";
   $("#viewGrid").setAttribute("aria-pressed", state.view === "grid");
   $("#viewList").setAttribute("aria-pressed", state.view === "list");
-  renderHome(); renderArchive();
+  moveSlideInd($(".seg"));
+  const box = current === "archive" ? $("#archiveRoot") : $("#grid");
+  flip(box, () => { renderHome(); renderArchive(); });
 }));
 
 /* 카드 클릭 → 상세 / 북마크 → 폴더 고르기 */
@@ -307,10 +335,31 @@ $("#archiveRoot").addEventListener("click", (e) => {
 });
 function openFolder(fid) {
   if (archiveView === fid) return;
+  const deeper = fid !== null;          // 폴더 안으로 들어가면 오른쪽에서, 나오면 왼쪽에서
   archiveView = fid;
-  renderArchive();
-  scrollTo(0, 0);
+  slideIn($("#archiveRoot"), deeper ? 1 : -1, renderArchive);
+  scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
   recordNav();
+}
+/* 내용을 바꾼 뒤 옆에서 부드럽게 밀려 들어오게 */
+function slideIn(el, dir, mutate) {
+  mutate();
+  if (reduce || !el.animate) return;
+  el.animate([{ opacity: 0, transform: `translateX(${dir * 36}px)` }, { opacity: 1, transform: "none" }],
+    { duration: 560, easing: EASE });
+}
+
+/* 선택 표시 알약을 해당 버튼 아래로 미끄러뜨림 (보기 방식, 로그인/회원가입) */
+function moveSlideInd(group, instant) {
+  if (!group) return;
+  let ind = group.querySelector(".slide-ind");
+  if (!ind) { ind = document.createElement("span"); ind.className = "slide-ind"; group.prepend(ind); instant = true; }
+  const on = group.querySelector('[aria-pressed="true"]');
+  if (!on || !on.offsetWidth) return;
+  if (instant) ind.style.transition = "none";
+  ind.style.width = on.offsetWidth + "px";
+  ind.style.transform = `translateX(${on.offsetLeft}px)`;
+  if (instant) { ind.offsetWidth; ind.style.transition = ""; }
 }
 
 function renderBadge(pop) {
@@ -329,15 +378,47 @@ function renderAll() {
 
 /* ================= 5) 시트 공통 ================= */
 function openModal(id) {
-  const s = $(id);
+  const s = $(id), sheet = s.querySelector(".sheet");
+  sheet.style.transform = "";
   s.hidden = false;
-  requestAnimationFrame(() => s.classList.add("open"));
+  requestAnimationFrame(() => requestAnimationFrame(() => s.classList.add("open")));   // 두 프레임 뒤: 시작 위치가 그려진 다음 올라오게
 }
 function closeModal(id) {
   const s = $(id);
   s.classList.remove("open");
-  setTimeout(() => { if (!s.classList.contains("open")) s.hidden = true; }, reduce ? 0 : 300);
+  s.querySelector(".sheet").style.transform = "";
+  setTimeout(() => { if (!s.classList.contains("open")) s.hidden = true; }, reduce ? 0 : 460);
 }
+
+/* 시트 손잡이: 아래로 끌면 따라 내려오고, 충분히 내리거나 빠르게 튕기면 닫힘 */
+document.querySelectorAll(".scrim .sheet").forEach((sheet) => {
+  const grab = document.createElement("button");
+  grab.type = "button"; grab.className = "sheet-grab"; grab.setAttribute("aria-label", "아래로 끌어서 닫기");
+  sheet.prepend(grab);
+  let start = null;
+  grab.addEventListener("pointerdown", (e) => {
+    start = { y: e.clientY, t: performance.now(), dy: 0 };
+    grab.setPointerCapture(e.pointerId);
+    sheet.classList.add("dragging");
+  });
+  grab.addEventListener("pointermove", (e) => {
+    if (!start) return;
+    const dy = e.clientY - start.y;
+    start.dy = dy > 0 ? dy : dy / 6;               // 위로는 고무줄처럼 조금만
+    sheet.style.transform = `translateY(${start.dy}px)`;
+  });
+  const end = () => {
+    if (!start) return;
+    const v = start.dy / Math.max(1, performance.now() - start.t);   // px/ms
+    sheet.classList.remove("dragging");
+    const scrimId = "#" + sheet.closest(".scrim").id;
+    if (start.dy > 110 || (v > 0.6 && start.dy > 20)) closeModal(scrimId);
+    else sheet.style.transform = "";             // 제자리로 부드럽게 복귀
+    start = null;
+  };
+  grab.addEventListener("pointerup", end);
+  grab.addEventListener("pointercancel", end);
+});
 document.addEventListener("click", (e) => {
   const c = e.target.closest("[data-close]");
   if (c) { closeModal("#" + c.closest(".scrim").id); return; }
@@ -540,6 +621,7 @@ function setAuthMode(m) {
   $("#authSubmit").textContent = m === "login" ? "로그인" : "회원가입";
   $("#authPw").autocomplete = m === "login" ? "current-password" : "new-password";
   setAuthMsg("");
+  moveSlideInd($(".mode-tabs"));
 }
 function setAuthMsg(t, ok) { const m = $("#authMsg"); m.textContent = t; m.classList.toggle("ok", !!ok); }
 function openAuth() {
@@ -548,7 +630,8 @@ function openAuth() {
   [...$("#authForm").elements].forEach((el) => (el.disabled = !sb));
   $("#oauthBox").hidden = !(sb && CFG.google);
   openModal("#authScrim");
-  if (sb) setTimeout(() => $("#authEmail").focus(), 50);
+  requestAnimationFrame(() => moveSlideInd($(".mode-tabs"), true));
+  if (sb) setTimeout(() => $("#authEmail").focus({ preventScroll: true }), 120);
 }
 document.querySelectorAll(".mode-tabs [data-mode]").forEach((b) => b.addEventListener("click", () => setAuthMode(b.dataset.mode)));
 
@@ -670,8 +753,8 @@ const bar = $("#tabbar"), ind = $("#indicator"), tabs = [...bar.querySelectorAll
 
 /* 스프링 물리: 알약 위치(x)가 목표(target)로 탄성 있게 이동 */
 const sp = { x: 0, v: 0, target: 0, scale: 1, scaleT: 1, raf: 0 };
-const K = 420;   // 강성 — 클수록 빠르게 따라감
-const D = 30;    // 감쇠 — 작을수록 더 출렁임
+const K = 300;   // 강성 — 클수록 빠르게 따라감
+const D = 26;    // 감쇠 — 작을수록 더 출렁임
 const tabRect = (i) => ({ x: tabs[i].offsetLeft, w: tabs[i].offsetWidth });
 
 function setTransform(x, sx, sy) { ind.style.transform = `translateX(${x}px) scale(${sx},${sy})`; }
@@ -715,25 +798,39 @@ function selectTab(name, opts = {}) {
   if (record) recordNav();
 
   if (reduce || opts.instant || !to.animate) {
-    document.querySelectorAll(".page").forEach((p) => (p.hidden = p.dataset.tab !== current));
+    document.querySelectorAll(".page").forEach((p) => {
+      p.getAnimations().forEach((a) => a.cancel());
+      p.classList.remove("leaving"); p.style.top = "";
+      p.hidden = p.dataset.tab !== current;
+    });
     scrollTo(0, 0);
     return;
   }
-  from.animate(
-    [{ transform: "translateX(0)", opacity: 1, filter: "blur(0)" },
-     { transform: `translateX(${-dir * 18}%)`, opacity: 0, filter: "blur(6px)" }],
-    { duration: 240, easing: "ease-in" }
-  ).onfinish = () => {
-    if (current !== name) return;
-    document.querySelectorAll(".page").forEach((p) => (p.hidden = p.dataset.tab !== current));
-    scrollTo(0, 0);
-    updateMiniSearch();
-    to.animate(
-      [{ transform: `translateX(${dir * 22}%)`, opacity: 0, filter: "blur(6px)" },
-       { transform: "translateX(0)", opacity: 1, filter: "blur(0)" }],
-      { duration: 520, easing: "cubic-bezier(.22,1,.36,1)" }
-    );
+
+  /* 나가는 페이지와 들어오는 페이지를 동시에 움직여 한 장의 화면이 밀려나듯 전환.
+     나가는 페이지는 스크롤 위치 그대로 겹쳐 둔 채 옆으로 빠져나감 */
+  const y = scrollY;
+  [from, to].forEach((p) => p.getAnimations().forEach((a) => a.cancel()));
+  to.classList.remove("leaving"); to.style.top = "";
+  from.classList.add("leaving");
+  from.style.top = `${-y}px`;
+  to.hidden = false;
+  scrollTo(0, 0);
+  updateMiniSearch();
+
+  const out = from.animate(
+    [{ transform: "translateX(0) scale(1)", opacity: 1 },
+     { transform: `translateX(${-dir * 18}%) scale(.98)`, opacity: 0, offset: 0.5 },
+     { transform: `translateX(${-dir * 32}%) scale(.97)`, opacity: 0 }],
+    { duration: 620, easing: EASE });
+  out.onfinish = out.oncancel = () => {
+    from.classList.remove("leaving"); from.style.top = "";
+    from.hidden = from.dataset.tab !== current;
   };
+  to.animate(
+    [{ transform: `translateX(${dir * 38}%)`, opacity: 0 },
+     { transform: "translateX(0)", opacity: 1 }],
+    { duration: 680, easing: EASE });
 }
 
 /* 탭바: 클릭하면 바로 이동, 끌면 알약이 따라오다 가까운 메뉴에 붙음 */
@@ -793,7 +890,7 @@ $("#main").addEventListener("touchend", (e) => {
   }
 }, { passive: true });
 
-addEventListener("resize", () => placeIndicator(ORDER.indexOf(current), true));
+addEventListener("resize", () => { placeIndicator(ORDER.indexOf(current), true); moveSlideInd($(".seg"), true); });
 
 /* ================= 10) 뒤로 · 앞으로 =================
    탭 이동, 카테고리, 아카이브 폴더 이동을 기록 */
@@ -821,7 +918,12 @@ function recordNav() {
 function applyNav(s) {
   if (s.cat !== state.cat) setCat(s.cat);
   const folder = s.folder === undefined ? null : s.folder;
-  if (folder !== archiveView) { archiveView = folder; renderArchive(); }
+  if (folder !== archiveView) {
+    const dir = folder === null ? -1 : 1;
+    archiveView = folder;
+    if (current === "archive" && s.tab === "archive") slideIn($("#archiveRoot"), dir, renderArchive);
+    else renderArchive();
+  }
   selectTab(s.tab, { record: false });
 }
 function moveTo(pos) {
@@ -877,5 +979,6 @@ renderAll();
   selectTab(current, { instant: true, record: false });
   saveNav(); updateArrows();
 
-  if (document.fonts) document.fonts.ready.then(() => placeIndicator(ORDER.indexOf(current), true));
+  moveSlideInd($(".seg"), true);
+  if (document.fonts) document.fonts.ready.then(() => { placeIndicator(ORDER.indexOf(current), true); moveSlideInd($(".seg"), true); });
 })();

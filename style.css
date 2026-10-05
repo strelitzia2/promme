@@ -37,6 +37,8 @@
   --r-pill: 999px;
   --r-card: 26px;
   --spring: cubic-bezier(.22, 1.2, .36, 1);
+  --ease-soft: cubic-bezier(.32, .72, 0, 1);      /* iOS 시트처럼 부드럽게 감속 */
+  --ease-bounce: cubic-bezier(.34, 1.25, .5, 1);  /* 살짝 튕기며 멈춤 */
   color-scheme: light;
 }
 
@@ -98,8 +100,23 @@ button{ font: inherit; color: inherit }
 .nav-arrows button:disabled{ opacity: .32; cursor: default }
 
 /* 보기 방식 */
-.seg{ display: flex; gap: 2px; padding: 4px }
-.seg button[aria-pressed="true"]{ background: var(--seg-on); color: var(--ink); box-shadow: 0 2px 8px -3px var(--glass-shadow) }
+.seg{ display: flex; gap: 2px; padding: 4px; position: relative }
+.seg button{ position: relative; z-index: 1 }
+.seg button[aria-pressed="true"]{ color: var(--ink) }
+
+/* 선택 표시가 버튼 사이를 미끄러지듯 이동 (보기 방식 · 로그인/회원가입) */
+.slide-ind{
+  position: absolute; top: 4px; bottom: 4px; left: 0; border-radius: var(--r-pill); z-index: 0;
+  background: var(--seg-on); box-shadow: 0 2px 8px -3px var(--glass-shadow);
+  transition: transform .55s var(--ease-bounce), width .55s var(--ease-bounce);
+  pointer-events: none;
+}
+
+/* 버튼을 누를 때 살짝 눌리는 느낌 */
+.login, .btn, .back-chip, .frow, .emoji-pick button, .mode-tabs button, .seg button, .nav-arrows button{
+  transition: transform .45s var(--ease-bounce), background .3s, color .3s, opacity .3s;
+}
+.login:active, .back-chip:active{ transform: scale(.95) }
 
 .top-right{ display: flex; align-items: center; gap: 10px; min-width: 0 }
 .mini-search{
@@ -116,7 +133,9 @@ button{ font: inherit; color: inherit }
 }
 
 /* ---------- 페이지 ---------- */
-main{ max-width: 1080px; margin: 0 auto; padding-inline: 20px; padding-block: 0 150px; position: relative }
+main{ --gutter: 20px; max-width: 1080px; margin: 0 auto; padding-inline: var(--gutter); padding-block: 0 150px; position: relative }
+/* 페이지 전환 중 빠져나가는 페이지: 제자리에 겹쳐 둔 채로 미끄러져 나감 */
+.page.leaving{ position: absolute; left: var(--gutter); right: var(--gutter); pointer-events: none }
 .page{ will-change: transform, opacity }
 .page h2{ font-size: 26px; font-weight: 700; margin: 28px 0 6px; text-wrap: balance }
 .page .lede{ color: var(--ink-soft); margin: 0 0 22px; font-size: 15px }
@@ -253,14 +272,27 @@ tr:last-child td{ border-bottom: 0 }
 .tab.active svg{ transform: translateY(-1px) scale(1.06) }
 
 /* ---------- 프롬프트 시트 · 토스트 ---------- */
-.scrim{ position: fixed; inset: 0; z-index: 40; background: rgba(40,28,10,.28); display: grid; place-items: end center; padding: 16px; opacity: 0; transition: opacity .3s }
-.scrim.open{ opacity: 1 }
+/* 시트: 아래에서 천천히 밀려 올라오고, 손잡이를 끌어내리면 닫힘 */
+.scrim{
+  position: fixed; inset: 0; z-index: 40; display: grid; place-items: end center; padding: 16px;
+  background: rgba(40,28,10,.26); opacity: 0;
+  -webkit-backdrop-filter: blur(0px); backdrop-filter: blur(0px);
+  transition: opacity .5s var(--ease-soft), backdrop-filter .5s var(--ease-soft), -webkit-backdrop-filter .5s var(--ease-soft);
+}
+.scrim.open{ opacity: 1; -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px) }
 .sheet{
-  width: min(560px, 100%); border-radius: 30px; padding: 22px;
-  transform: translateY(40px) scale(.97); transition: transform .5s var(--spring);
-  max-height: 80vh; overflow: auto; background: rgba(255, 252, 232, .82);
+  position: relative; width: min(560px, 100%); border-radius: 30px; padding: 26px 22px 22px;
+  transform: translateY(calc(100% + 40px)); transition: transform .62s var(--ease-soft);
+  max-height: 80vh; overflow: auto; background: rgba(255, 252, 232, .86); touch-action: pan-y;
 }
 .scrim.open .sheet{ transform: none }
+.scrim:not(.open) .sheet{ transition-duration: .42s; transition-timing-function: cubic-bezier(.4, 0, .9, .6) }
+.sheet.dragging{ transition: none }
+.sheet-grab{
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 96px; height: 24px;
+  display: grid; place-items: center; cursor: grab; touch-action: none; border: 0; background: none; padding: 0;
+}
+.sheet-grab::before{ content: ""; width: 40px; height: 5px; border-radius: 3px; background: rgba(90, 70, 40, .25) }
 .sheet h3{ margin: 4px 0; font-size: 21px }
 .sheet .sub{ color: var(--ink-soft); font-size: 13px; margin: 0 0 14px }
 .sheet pre{ white-space: pre-wrap; word-break: keep-all; font-family: var(--f-body); font-size: 14.5px; line-height: 1.7; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 16px; margin: 0 0 16px }
@@ -370,9 +402,9 @@ tr:last-child td{ border-bottom: 0 }
 .avatar.big{ width: 48px; height: 48px; font-size: 20px; background: var(--accent); color: #fff; font-weight: 700 }
 .auth{ text-align: left }
 .auth-logo{ font-family: var(--f-logo); font-weight: 800; font-size: 34px; letter-spacing: -.03em; text-align: center; margin: 4px 0 14px }
-.mode-tabs{ display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: var(--r-pill); background: var(--surface-2); margin-bottom: 14px }
-.mode-tabs button{ height: 38px; border: 0; border-radius: var(--r-pill); background: transparent; cursor: pointer; font-weight: 600; color: var(--ink-soft) }
-.mode-tabs button[aria-pressed="true"]{ background: var(--seg-on); color: var(--ink); box-shadow: 0 2px 8px -3px var(--glass-shadow) }
+.mode-tabs{ position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: var(--r-pill); background: var(--surface-2); margin-bottom: 14px }
+.mode-tabs button{ position: relative; z-index: 1; height: 38px; border: 0; border-radius: var(--r-pill); background: transparent; cursor: pointer; font-weight: 600; color: var(--ink-soft) }
+.mode-tabs button[aria-pressed="true"]{ color: var(--ink) }
 .auth-form{ display: grid; gap: 6px }
 .auth-form label{ font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-top: 6px }
 .auth-form .btn{ margin-top: 8px }
@@ -407,7 +439,7 @@ tr:last-child td{ border-bottom: 0 }
 @media (max-width: 420px){
   .tab span{ font-size: 9.5px }
   .topbar{ padding: 12px 16px }
-  main{ padding-inline: 16px }
+  main{ --gutter: 16px }
   .top-left{ gap: 10px }
   .nav-arrows button{ width: 36px }
   .login{ padding: 0 14px }
