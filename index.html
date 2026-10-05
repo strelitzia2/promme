@@ -41,7 +41,8 @@
       <input id="miniInput" type="search" placeholder="원하는 프롬프트를 검색하세요" aria-label="프롬프트 검색">
     </label>
     <button class="login pill" id="loginBtn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5a6.5 6.5 0 0 1 11 0"/></svg>로그인
+      <span class="avatar" id="loginAvatar" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5a6.5 6.5 0 0 1 11 0"/></svg></span>
+      <span id="loginLabel">로그인</span>
     </button>
   </div>
 </header>
@@ -63,9 +64,7 @@
 
   <!-- MY 아카이브 -->
   <section class="page" id="page-archive" data-tab="archive" hidden>
-    <h2>MY 아카이브</h2>
-    <p class="lede">카드의 북마크 버튼을 누르면 여기에 모여요.</p>
-    <div class="grid" id="archiveGrid"></div>
+    <div id="archiveRoot"></div>
   </section>
 
   <!-- AI 최신 NEWS -->
@@ -113,7 +112,7 @@
 <nav class="tabbar-wrap" aria-label="주요 메뉴">
   <div class="tabbar" id="tabbar" role="tablist">
     <div class="indicator" id="indicator"></div>
-    <button class="tab" role="tab" data-tab="archive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>MY 아카이브</span></button>
+    <button class="tab" role="tab" data-tab="archive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>MY 아카이브</span><b class="badge" id="archiveBadge" hidden></b></button>
     <button class="tab" role="tab" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"/></svg><span>홈</span></button>
     <button class="tab" role="tab" data-tab="news"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span>AI 최신 NEWS</span></button>
     <button class="tab" role="tab" data-tab="wiki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg><span>AI 성능 위키백과</span></button>
@@ -122,19 +121,106 @@
 </nav>
 
 <!-- 프롬프트 상세 시트 -->
-<div class="scrim" id="scrim" hidden>
+<div class="scrim" id="promptScrim" hidden>
   <div class="sheet glass" role="dialog" aria-modal="true" aria-labelledby="sTitle">
     <h3 id="sTitle"></h3>
     <p class="sub" id="sSub"></p>
     <pre id="sPrompt"></pre>
     <div class="actions">
       <button class="btn" id="sCopy">프롬프트 복사</button>
-      <button class="btn ghost" id="sClose">닫기</button>
+      <button class="btn soft" id="sSave">폴더에 담기</button>
+      <button class="btn ghost" data-close>닫기</button>
     </div>
   </div>
 </div>
+
+<!-- 폴더 고르기 시트 -->
+<div class="scrim" id="pickerScrim" hidden>
+  <div class="sheet glass picker" role="dialog" aria-modal="true" aria-labelledby="pkTitle">
+    <div class="picker-head">
+      <div class="mini-thumb" id="pkThumb" aria-hidden="true"></div>
+      <div class="picker-text">
+        <h3 id="pkTitle">어느 폴더에 담을까요?</h3>
+        <p class="sub" id="pkSub"></p>
+      </div>
+    </div>
+    <div class="folder-list" id="pkList"></div>
+    <form class="new-folder" id="pkNew" autocomplete="off">
+      <p class="label">새 폴더 만들고 담기</p>
+      <div class="emoji-pick" id="pkEmoji" role="radiogroup" aria-label="폴더 아이콘"></div>
+      <div class="new-row">
+        <input id="pkName" type="text" maxlength="20" placeholder="새 폴더 이름" aria-label="새 폴더 이름">
+        <button class="btn" type="submit">만들고 담기</button>
+      </div>
+    </form>
+    <div class="actions">
+      <button class="btn danger-ghost" id="pkUnsave" hidden>저장 취소</button>
+      <button class="btn ghost" data-close>닫기</button>
+    </div>
+  </div>
+</div>
+
+<!-- 폴더 만들기 · 이름 바꾸기 시트 -->
+<div class="scrim" id="folderScrim" hidden>
+  <div class="sheet glass" role="dialog" aria-modal="true" aria-labelledby="ffTitle">
+    <h3 id="ffTitle">새 폴더</h3>
+    <form id="ffForm" class="ff-form" autocomplete="off">
+      <div class="emoji-pick" id="ffEmoji" role="radiogroup" aria-label="폴더 아이콘"></div>
+      <input id="ffName" type="text" maxlength="20" placeholder="폴더 이름" aria-label="폴더 이름" required>
+      <div class="actions">
+        <button class="btn" type="submit" id="ffSubmit">만들기</button>
+        <button class="btn ghost" type="button" data-close>닫기</button>
+        <button class="btn danger-ghost" type="button" id="ffDelete" hidden>폴더 삭제</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 로그인 · 회원가입 시트 -->
+<div class="scrim" id="authScrim" hidden>
+  <div class="sheet glass auth" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <h3 class="auth-logo" id="authTitle">promme</h3>
+    <div class="mode-tabs" role="group" aria-label="로그인 방식">
+      <button type="button" data-mode="login" aria-pressed="true">로그인</button>
+      <button type="button" data-mode="signup" aria-pressed="false">회원가입</button>
+    </div>
+    <p class="notice" id="authNotice" hidden>로그인 서버가 아직 연결되지 않았어요. 지금은 이 기기에만 저장돼요.</p>
+    <form id="authForm" class="auth-form">
+      <label for="authEmail">이메일</label>
+      <input id="authEmail" type="email" autocomplete="email" required placeholder="you@example.com">
+      <label for="authPw">비밀번호</label>
+      <input id="authPw" type="password" minlength="6" autocomplete="current-password" required placeholder="6자 이상">
+      <p class="form-msg" id="authMsg" role="alert"></p>
+      <button class="btn full" type="submit" id="authSubmit">로그인</button>
+    </form>
+    <div class="oauth" id="oauthBox" hidden>
+      <span class="or">또는</span>
+      <button class="btn ghost full" type="button" id="googleBtn">Google로 계속하기</button>
+    </div>
+    <p class="fine">로그인하면 MY 아카이브 폴더가 계정에 저장돼서 다른 기기에서도 그대로 보여요.</p>
+    <div class="actions"><button class="btn ghost" data-close>닫기</button></div>
+  </div>
+</div>
+
+<!-- 내 계정 시트 -->
+<div class="scrim" id="accountScrim" hidden>
+  <div class="sheet glass account" role="dialog" aria-modal="true" aria-labelledby="acEmail">
+    <div class="account-row">
+      <span class="avatar big" id="acAvatar"></span>
+      <div><h3 id="acEmail"></h3><p class="sub" id="acStats"></p></div>
+    </div>
+    <div class="actions">
+      <button class="btn" id="acArchive">MY 아카이브 보기</button>
+      <button class="btn ghost" id="acLogout">로그아웃</button>
+      <button class="btn ghost" data-close>닫기</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast glass" id="toast" role="status"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
