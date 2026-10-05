@@ -20,7 +20,7 @@ const CATS = [
 ];
 
 const PROMPTS = [
-  { id: 1, title: "셀카 + GPT로 피규어 만들기", cat: "image", tool: "ChatGPT", saves: "1.2k", art: "🧸", img: "", bg: "linear-gradient(135deg,#ffb7c5,#ffe1a8)",
+  { id: 1, title: "셀카 + GPT로 피규어 만들기", cat: "image", tool: "ChatGPT", saves: "1.2k", art: "🧸", img: "images/1.webp", bg: "linear-gradient(135deg,#ffb7c5,#ffe1a8)",
     prompt: "첨부한 사진 속 인물을 1/7 스케일의 수집용 피규어로 만들어줘.\n- 투명 아크릴 받침대 위에 서 있는 모습\n- 뒤쪽에 피규어 박스 패키지 디자인\n- 책상 위, 자연광, 실사 느낌" },
   { id: 2, title: "인스타 프로필 소개글", cat: "sns", tool: "Claude", saves: "860", art: "📸", img: "", bg: "linear-gradient(135deg,#ffd6e8,#c9b8ff)",
     prompt: "너는 20대 감성의 인스타그램 카피라이터야.\n내 정보: [전공/취미/요즘 빠진 것]\n이 정보로 프로필 소개글 5개를 만들어줘. 각 30자 이내, 이모지 1~2개, 말투는 담백하게." },
