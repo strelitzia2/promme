@@ -796,6 +796,7 @@ function selectTab(name, opts = {}) {
   current = name;
   updateMiniSearch();
   if (record) recordNav();
+  if (name === "wiki") requestAnimationFrame(() => syncWikiModes());
 
   if (reduce || opts.instant || !to.animate) {
     document.querySelectorAll(".page").forEach((p) => {
@@ -890,13 +891,444 @@ $("#main").addEventListener("touchend", (e) => {
   }
 }, { passive: true });
 
-addEventListener("resize", () => { placeIndicator(ORDER.indexOf(current), true); moveSlideInd($(".seg"), true); });
+const syncWikiModes = () => { const wm = $("#wikiRoot .wiki-modes"); if (wm) moveSlideInd(wm, true); };
+addEventListener("resize", () => { placeIndicator(ORDER.indexOf(current), true); moveSlideInd($(".seg"), true); syncWikiModes(); });
+
+/* ================= 9.5) AI 성능 위키백과 =================
+   데이터: wiki-data.js (ai_wiki_csv v2에서 생성)
+   화면: 앱으로 쓰기 / API로 쓰기 / 성능 비교 / 모델 상세 */
+const W = window.PROMME_WIKI || null;
+const wiki = { mode: "app", cat: "all", ent: null, freeOnly: false, unit: "token", saleOnly: false, freeApi: false, sort: "out" };
+const wikiKey = () => `${wiki.mode}|${wiki.cat}|${wiki.ent || ""}`;
+const WIKI_CHIPS = ["all", "writing", "coding", "image", "video", "research", "translation", "music", "tts", "agents"];
+const PROVIDER_TINT = { OpenAI: "rgb(210,236,222)", Anthropic: "rgb(250,218,196)", Google: "rgb(208,224,250)", GitHub: "rgb(226,222,240)", DeepL: "rgb(208,226,240)", Perplexity: "rgb(206,236,234)", Cursor: "rgb(232,232,226)", Midjourney: "rgb(240,222,236)" };
+const PROVIDER_DOT = { OpenAI: "rgb(15,100,90)", Anthropic: "rgb(196,98,28)", Google: "rgb(40,80,180)" };
+const UNIT_GROUPS = {
+  token: { label: "글 · 토큰", units: ["USD_per_1M_tokens"] },
+  image: { label: "이미지 · 장당", units: ["USD_per_image"] },
+  video: { label: "영상 · 초·클립당", units: ["USD_per_second", "USD_per_clip"] },
+  voice: { label: "음성 · 분·시간당", units: ["USD_per_minute", "USD_per_hour"] },
+};
+const UNIT_KO = { USD_per_image: "장당", USD_per_second: "초당", USD_per_clip: "클립당", USD_per_minute: "분당", USD_per_hour: "시간당", USD_per_song: "곡당" };
+
+const wEnt = (id) => (W && W.ents[id]) || null;
+const wCats = (id) => (W && W.ec[id]) || [];
+const wCatKo = (id) => (W ? (W.cats.find((c) => c[0] === id) || [id, id])[1] : id);
+const inCat = (id) => wiki.cat === "all" || wCats(id).includes(wiki.cat);
+const money = (n, cur = "USD") => {
+  const whole = Math.abs(n - Math.round(n)) < 1e-9;
+  const cents = Math.abs(n * 100 - Math.round(n * 100)) < 1e-9;
+  const s = whole ? String(Math.round(n)) : cents ? n.toFixed(2) : String(+n.toFixed(4));
+  return (cur === "EUR" ? "€" : "$") + s;
+};
+/* 날짜는 모두 UTC 기준 (CSV의 시각이 UTC) */
+const ymd = (iso) => { const d = new Date(iso); const y = d.getUTCFullYear() !== new Date().getUTCFullYear() ? `${d.getUTCFullYear()}. ` : ""; return `${y}${d.getUTCMonth() + 1}/${d.getUTCDate()}`; };
+const lastDay = (iso) => ymd(new Date(Date.parse(iso) - 1).toISOString());   // 배타적 상한의 전날
+const fullDate = (iso) => { const [y, m, d] = iso.slice(0, 10).split("-"); return `${y}. ${+m}. ${+d}`; };
+const MONO = { chatgpt: "G", claudeapp: "C", geminiapp: "G", ghcopilot: "GH", deepl: "D", perplexity: "P", cursor: "Cu", midjourney: "M", gemini4argon: "G4" };
+const monoOf = (name, id) => MONO[id] || name.replace(/[^A-Za-z0-9가-힣]/g, "").slice(0, 1).toUpperCase();
+const dots = (t) => String(t || "").replace(/;\s*/g, " · ");
+const planName = (n) => n.replace(/ (annual|monthly)$/i, "");
+const tintOf = (e) => PROVIDER_TINT[e.p] || "rgb(236,230,210)";
+const isSecondary = (ver) => ver === "secondary_source";
+const srcLabel = (u) => { try { const x = new URL(u); const seg = x.pathname.split("/").filter(Boolean).pop(); return seg ? seg.replace(/[-_]/g, " ").slice(0, 28) : x.hostname.replace(/^www\./, ""); } catch (e) { return ""; } };
+const isThird = (ver) => /third_party/.test(ver || "");
+
+/* 지금 시각에 유효한 가격인지 (valid_from 이상, valid_until 미만) */
+function activeAt(p, now = Date.now()) {
+  if (p.f && Date.parse(p.f) > now) return false;
+  if (p.to && Date.parse(p.to) <= now) return false;
+  return true;
+}
+const TYPE_RANK = { promotion: 0, scheduled: 1, standard: 2, list: 3 };
+/* 토큰 가격 한 줄: 입력·출력 대표값 + 다음 가격 + 참고 */
+function tokenSummary(eid) {
+  const rows = W.prices.filter((p) => p.e === eid && p.u === "USD_per_1M_tokens");
+  if (!rows.length) return null;
+  const now = Date.now();
+  const main = (p) => p.tier !== "long" && !/cache hit|audio|peak;|^peak/.test(p.cond || "") || /off_peak/.test(p.cond || "");
+  const pick = (comp, list) => list.filter((p) => p.c === comp && main(p))
+    .sort((a, b) => (TYPE_RANK[a.pt] ?? 9) - (TYPE_RANK[b.pt] ?? 9))[0];
+  const act = rows.filter((p) => activeAt(p, now));
+  const inp = pick("input", act), out = pick("output", act);
+  if (!inp || !out) return null;
+  const notes = [];
+  const fut = rows.filter((p) => p.f && Date.parse(p.f) > now && main(p));
+  const fi = pick("input", fut), fo = pick("output", fut);
+  let next = "";
+  if (fi && fo) next = `${ymd(fi.f)}부터 ${money(fi.a)} / ${money(fo.a)}`;
+  else if (out.pt === "promotion") {
+    const li = pick("input", act.filter((p) => p.pt === "list")), lo = pick("output", act.filter((p) => p.pt === "list"));
+    if (li && lo) next = `정가 ${money(li.a)} / ${money(lo.a)}` + (out.to ? "" : " · 종료일 미표기");
+  }
+  const longI = act.find((p) => p.c === "input" && p.tier === "long"), longO = act.find((p) => p.c === "output" && p.tier === "long");
+  if (longI && longO) notes.push(`긴 입력 ${money(longI.a)} / ${money(longO.a)}`);
+  const peakI = act.find((p) => p.c === "input" && /^peak|cache miss; peak/.test(p.cond || "")), peakO = act.find((p) => p.c === "output" && /^peak/.test(p.cond || ""));
+  if (peakI && peakO) notes.push(`피크 시간 ${money(peakI.a)} / ${money(peakO.a)}`);
+  const sale = out.pt === "promotion";
+  return { inp, out, sale, until: out.to, next, notes };
+}
+function freeOf(eid) { return W.free.filter((f) => f.e === eid); }
+function apiFreeLabel(eid) {
+  const f = freeOf(eid);
+  if (f.some((x) => x.t === "api_free_tier")) return "있음";
+  if (f.some((x) => x.t === "not_available")) return "없음";
+  const e = wEnt(eid);
+  if (e && e.p === "Z.AI") return "구형 모델만";
+  return "—";
+}
+const ctxKo = (n) => (n ? (n >= 10000 ? `${(n / 10000).toLocaleString("ko-KR")}만` : n) : "");
+/* 개인용 월 결제 플랜 (팀·좌석당 제외) */
+function personalPlans(eid) {
+  const ps = W.plans.filter((p) => p.e === eid && !/좌석당|사용자당/.test(p.cond || ""));
+  const monthly = ps.filter((p) => p.per === "monthly");
+  const list = (monthly.length ? monthly : ps).slice().sort((a, b) => a.m - b.m);
+  return list;
+}
+const badge = (txt, kind) => `<span class="wbadge ${kind || ""}">${esc(txt)}</span>`;
+const srcBadge = (ver) => isSecondary(ver) ? badge("2차 자료", "warn") : isThird(ver) ? badge("제3자 값 · 재확인 중", "warn") : badge("공식", "ok");
+
+/* ---------- 공통 머리 ---------- */
+function wikiHead() {
+  const modes = [["app", "앱으로 쓰기"], ["api", "API로 쓰기"], ["perf", "성능 비교"]];
+  return `<div class="wiki-hero">
+      <p class="eyebrow">AI 성능 위키백과</p>
+      <h2 class="wiki-title">${wiki.mode === "api" ? "API 가격표" : wiki.mode === "perf" ? "똑똑할수록 비쌀까?" : "무료로 어디까지, 돈 내면 얼마?"}</h2>
+      <p class="lede">${wiki.mode === "api" ? "직접 서비스를 만들 때 내는 사용량 요금이에요. 앱 구독료와는 따로 계산돼요."
+        : wiki.mode === "perf" ? "대표 언어모델을 제3자 평가 지수와 평가 1회 비용으로 놓았어요. 왼쪽 위로 갈수록 싸고 똑똑해요."
+        : "AI 서비스의 무료 혜택, 구독 가격, 성능을 한 곳에서 비교해요. 모든 값에 출처와 확인 날짜가 붙어 있어요."}</p>
+      <p class="wiki-asof">마지막 확인 ${fullDate(W.asOf)} · 공식 페이지 기준</p>
+    </div>
+    <div class="wiki-bar">
+      <div class="wiki-modes pill" role="group" aria-label="보는 방식">
+        ${modes.map(([m, t]) => `<button data-wmode="${m}" aria-pressed="${wiki.mode === m}">${t}</button>`).join("")}
+      </div>
+      ${wiki.mode === "app" ? `<label class="wcheck"><input type="checkbox" data-wtoggle="freeOnly" ${wiki.freeOnly ? "checked" : ""}>무료로 쓸 수 있는 것만</label>` : ""}
+    </div>
+    ${wiki.mode === "perf" ? "" : `<div class="wiki-chips" role="group" aria-label="분야">
+      ${WIKI_CHIPS.map((c) => `<button class="chip pill" data-wcat="${c}" aria-pressed="${wiki.cat === c}">${c === "all" ? "전체" : esc(wCatKo(c))}</button>`).join("")}
+    </div>`}`;
+}
+
+/* ---------- 앱으로 쓰기 ---------- */
+function wikiApp() {
+  const cards = W.free.filter((f) => (f.t === "app_free_plan" || f.t === "api_free_tier") && (!f.e || inCat(f.e)));
+  // API 무료 등급은 한 장으로 묶음
+  const apiFree = cards.filter((f) => f.t === "api_free_tier");
+  const appFree = cards.filter((f) => f.t === "app_free_plan");
+  const cardHTML = (f) => {
+    const e = wEnt(f.e) || { n: f.n, p: f.p };
+    const plans = personalPlans(f.e);
+    const paid = plans[0] ? `${planName(plans[0].n)} ${money(plans[0].m, plans[0].cur)}` : "—";
+    return `<button class="wcard free-card" data-went="${esc(f.e)}">
+      <span class="wc-top"><span class="mono" style="background:${tintOf(e)}">${esc(monoOf(e.n, f.e))}</span>${isSecondary(f.ver) ? badge("2차 자료", "warn") : badge("무료", "ok")}</span>
+      <span class="wc-name">${esc(f.e ? `${e.n.replace(/ \(.*\)$/, "").replace(/ (Translator|앱)$/, "")} 무료` : f.n)}</span>
+      <span class="wc-sub">${esc(dots(f.m))}</span>
+      <span class="wc-lim">${esc(dots(f.lim))}</span>
+      <span class="wc-foot"><span>유료는</span><b>${esc(paid)}</b></span>
+    </button>`;
+  };
+  let apiCard = "";
+  if (apiFree.length) {
+    const first = tokenSummary(apiFree[0].e);
+    apiCard = `<button class="wcard free-card" data-wmode-go="api">
+      <span class="wc-top"><span class="mono" style="background:${PROVIDER_TINT.Google}">Gm</span>${badge("개발자용", "dev")}</span>
+      <span class="wc-name">Gemini API 무료 등급</span>
+      <span class="wc-sub">${esc(apiFree.map((f) => wEnt(f.e).n.replace("Gemini ", "")).join(" · "))}</span>
+      <span class="wc-lim">${esc(apiFree[0].lim)}</span>
+      <span class="wc-foot"><span>유료는</span><b>${first ? money(first.inp.a) + " / 1M 토큰" : "—"}</b></span>
+    </button>`;
+  }
+  const appEnts = Object.keys(W.ents).filter((id) => W.ents[id].t === "application" && W.plans.some((p) => p.e === id) && inCat(id))
+    .filter((id) => !wiki.freeOnly || freeOf(id).some((f) => f.t === "app_free_plan"));
+  const FIRST = ["chatgpt", "claudeapp", "geminiapp", "perplexity", "midjourney", "cursor", "ghcopilot", "deepl"];
+  const rank = (id) => (FIRST.includes(id) ? FIRST.indexOf(id) : 99);
+  const rows = appEnts.filter((id) => personalPlans(id).length).sort((a, b) => rank(a) - rank(b)).map((id) => {
+    const e = wEnt(id), ps = personalPlans(id), fr = freeOf(id);
+    const freeTxt = fr.some((f) => f.t === "app_free_plan") ? "있음" : fr.some((f) => f.t === "not_listed") ? "언급 없음" : "—";
+    const ver = ps.some((p) => isSecondary(p.ver)) ? "secondary_source" : "official_documented";
+    return `<tr>
+      <td><button class="wlink" data-went="${esc(id)}">${esc(e.n)}</button></td>
+      <td>${freeTxt}</td>
+      <td class="plan-list">${ps.map((p) => `<span>${esc(planName(p.n))} <b>${money(p.m, p.cur)}${/시작 가격|From/.test(p.cond || "") ? "~" : ""}</b>${p.per === "annual" ? "<small>(연간 결제 월 환산)</small>" : ""}</span>`).join("")}</td>
+      <td>${srcBadge(ver)}</td>
+    </tr>`;
+  }).join("");
+  const nCards = appFree.length + (apiFree.length ? 1 : 0);
+  return `<section class="wsec">
+      <div class="wsec-head"><h3>무료로 시작하기</h3><span>무료 혜택 ${nCards}개 · 가장 싼 유료 플랜과 함께</span></div>
+      ${nCards ? `<div class="free-grid">${appFree.map(cardHTML).join("")}${apiCard}</div>` : `<div class="arc-empty">이 분야에는 아직 무료 혜택 정보가 없어요.</div>`}
+    </section>
+    <section class="wsec">
+      <div class="wsec-head"><h3>구독 가격 한눈에</h3><span>미국 달러 기준 · 세금 별도 · 개인 플랜</span></div>
+      ${rows ? `<div class="tablewrap wtable"><table>
+        <thead><tr><th>서비스</th><th>무료</th><th>개인 플랜 (월)</th><th>출처</th></tr></thead>
+        <tbody>${rows}</tbody></table></div>` : `<div class="arc-empty">조건에 맞는 서비스가 없어요.</div>`}
+      <p class="wnote">원화 가격은 앱스토어 결제 금액을 모아 추가할 예정이에요. ‘2차 자료’는 공식 페이지에 금액이 보이지 않아 기사 두 곳에서 확인한 값이에요.</p>
+    </section>
+    ${wikiNotice()}`;
+}
+function wikiNotice() {
+  return `<section class="wcard wnotice">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#aa5a19" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5h.01"/></svg>
+      <div><b>가격은 자주 바뀌어요</b><span>할인 중인 가격은 종료일을 함께 보여주고, 종료일이 지나면 자동으로 다음 가격으로 바뀌어요.</span></div>
+    </section>`;
+}
+
+/* ---------- API로 쓰기 ---------- */
+function wikiApi() {
+  const g = UNIT_GROUPS[wiki.unit];
+  const unitBar = `<div class="wiki-units" role="group" aria-label="단위">${Object.entries(UNIT_GROUPS).map(([k, v]) =>
+    `<button class="chip pill" data-wunit="${k}" aria-pressed="${wiki.unit === k}">${v.label}</button>`).join("")}</div>`;
+  let body = "";
+  if (wiki.unit === "token") {
+    let list = Object.keys(W.ents).filter((id) => inCat(id)).map((id) => ({ id, s: tokenSummary(id) })).filter((x) => x.s);
+    if (wiki.saleOnly) list = list.filter((x) => x.s.sale);
+    if (wiki.freeApi) list = list.filter((x) => apiFreeLabel(x.id) === "있음");
+    list.sort((a, b) => wiki.sort === "in" ? a.s.inp.a - b.s.inp.a : wiki.sort === "co" ? wEnt(a.id).p.localeCompare(wEnt(b.id).p) : a.s.out.a - b.s.out.a);
+    const rows = list.map(({ id, s }) => {
+      const e = wEnt(id);
+      const st = s.sale ? badge(s.until ? `할인 중 · ${lastDay(s.until)}까지` : "할인 중", "warn") : badge("정가", "");
+      const sub = [s.next, ...s.notes].filter(Boolean).join(" · ");
+      return `<tr>
+        <td><button class="wlink" data-went="${esc(id)}">${esc(e.n)}</button></td>
+        <td class="muted">${esc(e.p)}</td>
+        <td class="num">${money(s.inp.a)}</td>
+        <td class="num"><b>${money(s.out.a)}</b></td>
+        <td>${st}${sub ? `<small class="sub">${esc(sub)}</small>` : ""}</td>
+        <td>${apiFreeLabel(id)}</td>
+        <td class="nowrap">${e.ctx ? ctxKo(+e.ctx) : "확인 중"}</td>
+      </tr>`;
+    }).join("");
+    body = `<div class="wfilters">
+        <label class="wcheck"><input type="checkbox" data-wtoggle="saleOnly" ${wiki.saleOnly ? "checked" : ""}>할인 중만</label>
+        <label class="wcheck"><input type="checkbox" data-wtoggle="freeApi" ${wiki.freeApi ? "checked" : ""}>무료 등급 있음</label>
+        <label class="wsort">정렬 <select data-wsort>
+          <option value="out" ${wiki.sort === "out" ? "selected" : ""}>출력 가격 낮은 순</option>
+          <option value="in" ${wiki.sort === "in" ? "selected" : ""}>입력 가격 낮은 순</option>
+          <option value="co" ${wiki.sort === "co" ? "selected" : ""}>회사별</option></select></label>
+      </div>
+      ${rows ? `<div class="tablewrap wtable"><table>
+        <caption>USD, 100만 토큰당 · 오늘 기준 현재 가격</caption>
+        <thead><tr><th>모델</th><th>회사</th><th class="num">입력</th><th class="num">출력</th><th>지금 가격</th><th>무료 등급</th><th>문맥 길이</th></tr></thead>
+        <tbody>${rows}</tbody></table></div>` : `<div class="arc-empty">조건에 맞는 모델이 없어요.</div>`}
+      <div class="wtips">
+        <div class="wcard"><b>입력 · 출력이 뭐예요?</b><span>입력은 내가 보낸 글, 출력은 AI가 쓴 답의 양이에요. 보통 출력이 더 비싸요.</span></div>
+        <div class="wcard"><b>시간대에 따라 다른 가격</b><span>DeepSeek는 평일 피크 시간(한국 오전 10시~오후 1시, 오후 3~7시)에 두 배예요. 표는 비피크 가격이에요.</span></div>
+        <div class="wcard"><b>긴 글은 더 비쌀 수 있어요</b><span>일부 모델은 긴 입력에서 단가가 올라가요. 모델 이름을 누르면 구간별 가격이 보여요.</span></div>
+      </div>`;
+  } else {
+    const rows = W.prices.filter((p) => g.units.includes(p.u) && activeAt(p) && inCat(p.e)).map((p) => {
+      const e = wEnt(p.e);
+      return `<tr><td><button class="wlink" data-went="${esc(p.e)}">${esc(e.n)}</button></td><td class="muted">${esc(e.p)}</td>
+        <td class="num"><b>${money(p.a, p.cur)}</b> <small>${UNIT_KO[p.u] || ""}</small></td><td>${esc(p.cond || "")}</td></tr>`;
+    }).join("");
+    body = rows ? `<div class="tablewrap wtable"><table><caption>USD · 오늘 기준 현재 가격</caption>
+      <thead><tr><th>모델</th><th>회사</th><th class="num">가격</th><th>조건</th></tr></thead><tbody>${rows}</tbody></table></div>`
+      : `<div class="arc-empty">이 분야·단위에는 아직 가격 정보가 없어요.</div>`;
+  }
+  return `<section class="wsec">${unitBar}${body}</section>`;
+}
+
+/* ---------- 성능 비교 ---------- */
+function wikiPerf() {
+  const pts = W.perf.filter((p) => p.idx != null && p.cost != null);
+  const Wd = 720, H = 400, padL = 48, padB = 44, padT = 14, padR = 150;
+  const px = (c) => padL + (Math.log10(c) + 2) / 3 * Wd;
+  const py = (v) => padT + H - v / 60 * H;
+  const grid = [0, 20, 40, 60].map((v) => `<line x1="${padL}" x2="${padL + Wd}" y1="${py(v)}" y2="${py(v)}" class="gl"/><text x="${padL - 8}" y="${py(v) + 4}" text-anchor="end">${v}</text>`).join("")
+    + [0.01, 0.1, 1, 10].map((c) => `<line y1="${padT}" y2="${padT + H}" x1="${px(c)}" x2="${px(c)}" class="gl"/><text x="${px(c)}" y="${padT + H + 18}" text-anchor="middle">$${c}</text>`).join("");
+  // 이름표가 겹치지 않게 간단히 위아래로 비킴
+  const placed = [];
+  const dots = pts.slice().sort((a, b) => b.idx - a.idx).map((p) => {
+    const e = wEnt(p.e), x = px(p.cost), y = py(p.idx), col = PROVIDER_DOT[e.p] || "rgb(160,150,130)";
+    const left = x > padL + Wd - 120;
+    let ly = y + 4;
+    for (let k = 0; k < 6 && placed.some((q) => Math.abs(q.y - ly) < 13 && Math.abs(q.x - x) < 120); k++) ly += 13;
+    placed.push({ x, y: ly });
+    return `<g class="pt" data-went="${esc(p.e)}" tabindex="0" role="button" aria-label="${esc(e.n)}: 지수 ${p.idx}, 평가 1회 $${p.cost}">
+      <circle cx="${x}" cy="${y}" r="7" fill="${col}" stroke="#fffde6" stroke-width="2"/>
+      <text x="${left ? x - 11 : x + 11}" y="${ly}" text-anchor="${left ? "end" : "start"}">${esc(e.n)}</text></g>`;
+  }).join("");
+  const best = pts.reduce((a, b) => (b.idx > a.idx ? b : a));
+  const cheap50 = pts.filter((p) => p.idx >= 50).reduce((a, b) => (b.cost < a.cost ? b : a));
+  const cheapHalf = pts.filter((p) => p.cost < 0.5).reduce((a, b) => (b.idx > a.idx ? b : a));
+  const leg = [["OpenAI", PROVIDER_DOT.OpenAI], ["Anthropic", PROVIDER_DOT.Anthropic], ["Google", PROVIDER_DOT.Google], ["그 외", "rgb(160,150,130)"]];
+  const s = W.src.s63;
+  return `<div class="perf-wrap">
+    <figure class="wcard perf-fig">
+      <div class="perf-head"><figcaption>언어모델: AA 지능 지수 대비 평가 비용</figcaption>${badge("제3자 값 · 재확인 중", "warn")}</div>
+      <div class="perf-leg">${leg.map(([n, c]) => `<span><i style="background:${c}"></i>${n}</span>`).join("")}</div>
+      <div class="perf-scroll"><svg viewBox="0 0 ${padL + Wd + padR} ${padT + H + padB + 20}" role="img" aria-label="${pts.length}개 언어모델의 AA 지능 지수와 평가 1회 비용 산점도">
+        ${grid}
+        <text x="${padL + Wd / 2}" y="${padT + H + padB + 10}" text-anchor="middle" class="ax">평가 1회 비용 (USD, 로그 눈금) · 왼쪽일수록 쌈</text>
+        ${dots}
+      </svg></div>
+      <p class="wnote">점을 누르면 모델 상세로 가요. 세로축은 AA 지능 지수(위일수록 높음)예요.</p>
+    </figure>
+    <aside class="perf-side">
+      <div class="wcard"><b>이렇게 읽어요</b><span>위로 갈수록 여러 시험의 종합 점수가 높고, 왼쪽으로 갈수록 같은 시험을 치르는 데 돈이 덜 들어요. 가로축은 10배씩 커지는 눈금이에요.</span></div>
+      <div class="wcard"><b>눈에 띄는 점</b>
+        <span>가장 높은 점수: <b>${esc(wEnt(best.e).n)}</b> ${best.idx}</span>
+        <span>지수 50 이상 중 가장 쌈: <b>${esc(wEnt(cheap50.e).n)}</b> $${cheap50.cost}</span>
+        <span>0.5달러 미만 중 가장 높음: <b>${esc(wEnt(cheapHalf.e).n)}</b> ${cheapHalf.idx}</span></div>
+      <div class="wcard"><b>알아둘 점</b><span>${esc(s.p)}가 매긴 값이에요(${fullDate(s.d)} 확인). 모델마다 측정한 추론 강도(max·high 등)가 달라요. 평가 1회 비용은 실제 내 사용 요금과 달라요.</span>
+        <a href="${esc(s.u)}" target="_blank" rel="noopener">원본 리더보드 보기</a></div>
+    </aside>
+  </div>`;
+}
+
+/* ---------- 모델 상세 ---------- */
+function wikiDetail(id) {
+  const e = wEnt(id);
+  if (!e) return `<div class="arc-empty">정보를 찾을 수 없어요.</div>`;
+  const now = Date.now();
+  const typeKo = { model: "모델", model_family: "모델 계열", application: "앱·서비스", platform: "모델 제공 플랫폼" }[e.t] || e.t;
+  const s = tokenSummary(id);
+  const badges = [];
+  if (e.st === "preview") badges.push(badge("프리뷰", "dev"));
+  if (s && s.sale) badges.push(badge("할인 중", "warn"));
+  const fr = freeOf(id);
+  if (fr.some((f) => f.t === "app_free_plan" || f.t === "api_free_tier")) badges.push(badge("무료로 쓸 수 있음", "ok"));
+  if (fr.some((f) => f.t === "not_available")) badges.push(badge("무료 등급 없음", ""));
+  // 가격 블록
+  let priceBlock = "";
+  if (s) {
+    const fut = W.prices.filter((p) => p.e === id && p.u === "USD_per_1M_tokens" && p.f && Date.parse(p.f) > now);
+    const fi = fut.find((p) => p.c === "input"), fo = fut.find((p) => p.c === "output");
+    priceBlock = `<section class="wcard wsec-card"><div class="wsec-head"><h3>API 가격</h3><span>USD, 100만 토큰당</span></div>
+      <div class="price-steps">
+        <div class="pstep now"><span class="wbadge ${s.sale ? "warn strong" : ""}">${s.sale && s.until ? `지금 · ${lastDay(s.until)}까지` : "지금"}</span>
+          <div class="pnums"><div><small>입력</small><b>${money(s.inp.a)}</b></div><div><small>출력</small><b>${money(s.out.a)}</b></div></div></div>
+        ${fi && fo ? `<div class="pstep"><span class="wbadge">${ymd(fi.f)}부터</span>
+          <div class="pnums"><div><small>입력</small><b>${money(fi.a)}</b></div><div><small>출력</small><b>${money(fo.a)}</b></div></div></div>` : ""}
+      </div>
+      ${[s.next && !(fi && fo) ? s.next : "", ...s.notes].filter(Boolean).map((t) => `<p class="wnote">${esc(t)}</p>`).join("")}
+    </section>`;
+  }
+  const other = W.prices.filter((p) => p.e === id && p.u !== "USD_per_1M_tokens" && activeAt(p));
+  if (other.length) {
+    priceBlock += `<section class="wcard wsec-card"><div class="wsec-head"><h3>가격</h3><span>오늘 기준</span></div>
+      ${other.map((p) => `<div class="drow"><span>${esc(p.cond || p.c)}</span><b>${money(p.a, p.cur)}${p.u === "percent" ? "%" : ""} <small>${UNIT_KO[p.u] || esc(p.u.replace(/^USD_per_/, "/ "))}</small></b></div>`).join("")}
+    </section>`;
+  }
+  // 앱 플랜·무료
+  const plans = W.plans.filter((p) => p.e === id);
+  let appBlock = "";
+  if (plans.length || fr.length) {
+    appBlock = `<section class="wcard wsec-card"><div class="wsec-head"><h3>${e.t === "application" ? "무료 · 구독 플랜" : "무료 혜택"}</h3></div>
+      ${fr.map((f) => `<div class="drow col"><span class="dname">${esc(f.n)} ${f.t === "not_available" ? badge("없음", "") : f.t === "not_listed" ? badge("언급 없음", "") : badge("무료", "ok")}</span>
+        <small>${esc([f.m, f.lim, f.reset && `초기화: ${f.reset}`, f.r].filter(Boolean).map(dots).join(" · "))}</small></div>`).join("")}
+      ${plans.map((p) => `<div class="drow"><span>${esc(planName(p.n))}${p.per === "annual" ? " <small>(연간 결제)</small>" : ""}${p.use ? `<small class="block">${esc(p.use)}</small>` : ""}</span>
+        <b>${money(p.m, p.cur)}<small>/월</small></b></div>`).join("")}
+    </section>`;
+  }
+  // 앱으로 쓰려면 (다른 앱의 플랜 조건에 이 모델이 들어 있는 경우)
+  const via = e.t !== "application" ? W.plans.filter((p) => p.e !== id && (p.cond || "").includes(e.n)) : [];
+  if (via.length) {
+    const host = wEnt(via[0].e);
+    const hostFree = freeOf(via[0].e).find((f) => f.t === "app_free_plan");
+    appBlock += `<section class="wcard wsec-card"><div class="wsec-head"><h3>앱으로 쓰려면</h3><span>${esc(host.n)}</span></div>
+      ${hostFree ? `<div class="drow"><span class="dname">${esc(host.n.replace(/ \(.*\)$/, ""))} 무료 ${badge("미포함", "")}</span><small>${esc(dots(hostFree.m))}만</small></div>` : ""}
+      ${via.map((p) => `<div class="drow"><span class="dname">${esc(planName(p.n))} ${badge("포함", "ok")}</span><b>${money(p.m, p.cur)}<small>/월</small></b></div>`).join("")}
+    </section>`;
+  }
+  // 성능
+  const pf = W.perf.find((p) => p.e === id);
+  let perfBlock = "";
+  if (pf && pf.idx != null) {
+    const same = W.perf.filter((p) => p.e !== id && p.idx === pf.idx && p.cost != null);
+    perfBlock = `<section class="wcard wsec-card"><div class="wsec-head"><h3>성능</h3>${badge("제3자 값 · 재확인 중", "warn")}</div>
+      <div class="pnums big"><div><small>AA 지능 지수${pf.var ? ` (${esc(pf.var)})` : ""}</small><b>${pf.idx}</b></div>${pf.cost != null ? `<div><small>평가 1회 비용</small><b>$${pf.cost}</b></div>` : ""}</div>
+      ${same.length && pf.cost != null ? `<p class="wnote">같은 지수 ${pf.idx}인 ${same.map((p) => `<b>${esc(wEnt(p.e).n)}</b>($${p.cost})`).join(", ")}${same.every((p) => p.cost > pf.cost) ? "보다 평가 비용이 낮아요." : "와 비교해 보세요."}</p>` : ""}
+      <button class="wlink" data-wmode-go="perf">그래프에서 다른 모델과 비교하기</button>
+    </section>`;
+  }
+  // 사양 · 출처
+  const spec = [["종류", typeKo], ["문맥 길이", e.ctx ? `${ctxKo(+e.ctx)} 토큰` : "확인 중"],
+    e.tp ? ["파라미터", `${e.tp}B${e.ap ? ` (활성 ${e.ap}B)` : ""}`] : null, e.lic ? ["라이선스", e.lic] : null,
+    ["한국어 지원", e.ko || "확인 중"]].filter(Boolean);
+  const srcIds = new Set([e.src, ...(e.spec ? e.spec.split(";") : []), ...W.prices.filter((p) => p.e === id).map((p) => p.s),
+    ...plans.map((p) => p.s), ...fr.map((f) => f.s), ...(pf ? [pf.s] : [])].filter(Boolean));
+  const srcs = [...srcIds].map((k) => W.src[k]).filter(Boolean);
+  return `<div class="wdetail">
+    <button class="back-chip" data-wback><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5-7 7 7 7"/></svg>위키로</button>
+    <div class="d-head">
+      <span class="mono big" style="background:${tintOf(e)}">${esc(monoOf(e.n, id))}</span>
+      <div><p class="eyebrow">${esc(e.p)} · ${esc(typeKo)}</p><h2 class="wiki-title">${esc(e.n)}</h2><div class="d-badges">${badges.join("")}</div></div>
+    </div>
+    ${e.note ? `<p class="lede">${esc(dots(e.note))}</p>` : ""}
+    <div class="d-cols">
+      <div class="d-main">${priceBlock}${appBlock}${perfBlock}${!priceBlock && !appBlock && !perfBlock ? `<div class="wcard wsec-card"><p class="wnote">아직 가격·성능 정보를 모으는 중이에요.</p></div>` : ""}</div>
+      <aside class="d-side">
+        <section class="wcard wsec-card"><h3>사양</h3>${spec.map(([k, v]) => `<div class="kv"><small>${k}</small><b class="${/확인 중/.test(v) ? "pending" : ""}">${esc(v)}</b></div>`).join("")}
+          <div class="kv"><small>쓰기 좋은 분야</small><div class="d-badges">${wCats(id).map((c) => `<span class="wbadge cat">${esc(wCatKo(c))}</span>`).join("")}</div></div>
+        </section>
+        <section class="wcard wsec-card"><h3>출처</h3>${srcs.map((x) => `<div class="kv"><a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.p)} · ${esc(srcLabel(x.u))}</a><small>${x.t === "official" ? "공식" : x.t === "secondary" ? "2차 자료" : "제3자"} · ${fullDate(x.d)} 확인</small></div>`).join("")}</section>
+      </aside>
+    </div>
+  </div>`;
+}
+
+function renderWiki() {
+  const root = $("#wikiRoot");
+  if (!root) return;
+  if (!W) { root.innerHTML = `<div class="arc-empty">위키 데이터를 불러오지 못했어요.</div>`; return; }
+  root.innerHTML = wiki.ent ? wikiDetail(wiki.ent)
+    : wikiHead() + (wiki.mode === "api" ? wikiApi() : wiki.mode === "perf" ? wikiPerf() : wikiApp());
+  const modes = root.querySelector(".wiki-modes");
+  if (modes) moveSlideInd(modes, true);
+}
+function wikiGo(patch, dir) {
+  const before = wikiKey();
+  Object.assign(wiki, patch);
+  if (wikiKey() === before) { renderWiki(); return; }
+  if (dir !== undefined) {
+    slideIn($("#wikiRoot"), dir, renderWiki);
+    if (dir) scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+  } else renderWiki();
+  recordNav();
+}
+$("#wikiRoot").addEventListener("click", (e) => {
+  const t = e.target;
+  const ent = t.closest("[data-went]");
+  if (ent && ent.dataset.went) { wikiGo({ ent: ent.dataset.went }, 1); return; }
+  if (t.closest("[data-wback]")) { wikiGo({ ent: null }, -1); return; }
+  const go = t.closest("[data-wmode-go]");
+  if (go) { wikiGo({ mode: go.dataset.wmodeGo, ent: null, cat: go.dataset.wmodeGo === "perf" ? "all" : wiki.cat }, 1); return; }
+  const m = t.closest("[data-wmode]");
+  if (m && m.dataset.wmode !== wiki.mode) {
+    const order = ["app", "api", "perf"];
+    const modes = $("#wikiRoot .wiki-modes");
+    modes.querySelectorAll("[data-wmode]").forEach((b) => b.setAttribute("aria-pressed", b === m));
+    moveSlideInd(modes);
+    const dir = order.indexOf(m.dataset.wmode) > order.indexOf(wiki.mode) ? 1 : -1;
+    setTimeout(() => wikiGo({ mode: m.dataset.wmode }, dir), reduce ? 0 : 180);
+    return;
+  }
+  const c = t.closest("[data-wcat]");
+  if (c && c.dataset.wcat !== wiki.cat) { wikiGo({ cat: c.dataset.wcat }, 0); return; }
+  const u = t.closest("[data-wunit]");
+  if (u) { wiki.unit = u.dataset.wunit; renderWiki(); }
+});
+$("#wikiRoot").addEventListener("change", (e) => {
+  const tg = e.target.dataset.wtoggle;
+  if (tg) { wiki[tg] = e.target.checked; renderWiki(); return; }
+  if (e.target.matches("[data-wsort]")) { wiki.sort = e.target.value; renderWiki(); }
+});
+$("#wikiRoot").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && e.target.matches("g.pt")) wikiGo({ ent: e.target.dataset.went }, 1);
+});
 
 /* ================= 10) 뒤로 · 앞으로 =================
    탭 이동, 카테고리, 아카이브 폴더 이동을 기록 */
 const nav = { stack: [], pos: -1, browser: true, waiting: null };
-const snapshot = () => ({ tab: current, cat: state.cat, folder: archiveView });
-const same = (a, b) => a && b && a.tab === b.tab && a.cat === b.cat && a.folder === b.folder;
+const snapshot = () => ({ tab: current, cat: state.cat, folder: archiveView, wiki: wikiKey() });
+const same = (a, b) => a && b && a.tab === b.tab && a.cat === b.cat && a.folder === b.folder && (a.wiki || "app|all|") === (b.wiki || "app|all|");
+function setWikiKey(k) {
+  const [mode, cat, ent] = (k || "app|all|").split("|");
+  wiki.mode = mode || "app"; wiki.cat = cat || "all"; wiki.ent = ent || null;
+}
 
 function saveNav() { try { sessionStorage.setItem("promme-nav", JSON.stringify({ stack: nav.stack, pos: nav.pos })); } catch (e) {} }
 function updateArrows() {
@@ -923,6 +1355,14 @@ function applyNav(s) {
     archiveView = folder;
     if (current === "archive" && s.tab === "archive") slideIn($("#archiveRoot"), dir, renderArchive);
     else renderArchive();
+  }
+  const wk = s.wiki || "app|all|";
+  if (wk !== wikiKey()) {
+    const hadEnt = !!wiki.ent;
+    setWikiKey(wk);
+    const dir = wiki.ent ? 1 : hadEnt ? -1 : 0;
+    if (current === "wiki" && s.tab === "wiki") slideIn($("#wikiRoot"), dir, renderWiki);
+    else renderWiki();
   }
   selectTab(s.tab, { record: false });
 }
@@ -964,7 +1404,7 @@ renderAll();
   if (restored && hs && hs.promme && restored.stack[hs.pos]) {
     nav.stack = restored.stack; nav.pos = hs.pos;
   } else {
-    nav.stack = [{ tab: hashTab, cat: "all", folder: null }]; nav.pos = 0;
+    nav.stack = [{ tab: hashTab, cat: "all", folder: null, wiki: "app|all|" }]; nav.pos = 0;
     try { history.replaceState({ promme: true, pos: 0 }, "", "#" + hashTab); } catch (e) { nav.browser = false; }
   }
 
@@ -972,6 +1412,8 @@ renderAll();
   if (s.cat !== "all") setCat(s.cat);
   archiveView = s.folder === undefined ? null : s.folder;
   renderArchive();
+  setWikiKey(s.wiki);
+  renderWiki();
   if (s.tab !== "home") {
     document.querySelectorAll(".page").forEach((p) => (p.hidden = p.dataset.tab !== s.tab));
     current = s.tab;
@@ -980,5 +1422,5 @@ renderAll();
   saveNav(); updateArrows();
 
   moveSlideInd($(".seg"), true);
-  if (document.fonts) document.fonts.ready.then(() => { placeIndicator(ORDER.indexOf(current), true); moveSlideInd($(".seg"), true); });
+  if (document.fonts) document.fonts.ready.then(() => { placeIndicator(ORDER.indexOf(current), true); moveSlideInd($(".seg"), true); const wm = $("#wikiRoot .wiki-modes"); if (wm) moveSlideInd(wm, true); });
 })();

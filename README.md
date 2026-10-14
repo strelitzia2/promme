@@ -49,3 +49,10 @@ python3 -m http.server 8000
 - **카테고리**: `app.js` → `CATS` 배열
 - **폴더 아이콘 후보**: `app.js` → `FOLDER_EMOJIS`
 - **탭바 알약의 출렁임**: `app.js` → `K`(강성), `D`(감쇠)
+
+## AI 성능 위키백과 데이터
+
+- 위키 화면은 `wiki-data.js`(window.PROMME_WIKI)를 읽어서 그립니다.
+- `wiki-data.js`는 `ai_wiki_csv` v2(조사 기준일 2026-10-14)에서 자동 생성한 파일입니다. 값을 고칠 때는 CSV를 고친 뒤 다시 생성하세요.
+- 가격은 오늘 날짜 기준으로 `valid_from ≤ 지금 < valid_until`인 행만 "현재 가격"으로 보여 주고, 할인 종료 후 가격은 "다음 가격"으로 함께 표시합니다.
+- 출처가 `secondary_source`(2차 자료)이거나 제3자 값이면 화면에 배지로 표시합니다.

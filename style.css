@@ -447,3 +447,137 @@ tr:last-child td{ border-bottom: 0 }
 @media (prefers-reduced-motion: reduce){
   *{ transition-duration: .01ms !important; animation-duration: .01ms !important }
 }
+
+/* ---------- AI 성능 위키백과 ---------- */
+#wikiRoot{ display: flex; flex-direction: column; gap: 26px; padding-top: 18px }
+.wiki-hero{ display: flex; flex-direction: column; gap: 8px }
+.eyebrow{ margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .06em; color: #aa5a19 }
+.wiki-title{ margin: 0; font-family: var(--f-logo); font-size: clamp(30px, 5vw, 44px); font-weight: 800; letter-spacing: -.02em; line-height: 1.15; text-wrap: balance }
+.wiki-hero .lede{ margin: 0; max-width: 660px; line-height: 1.6 }
+.wiki-asof{ margin: 0; font-size: 13px; color: var(--ink-soft) }
+.wiki-bar{ display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap }
+.wiki-modes{ position: relative; display: flex; gap: 4px; padding: 4px }
+.wiki-modes button{ position: relative; z-index: 1; height: 44px; padding: 0 20px; border: 0; border-radius: var(--r-pill); background: transparent; cursor: pointer; font-size: 15px; font-weight: 600; color: var(--ink-soft); transition: color .3s }
+.wiki-modes button[aria-pressed="true"]{ color: var(--ink) }
+.wcheck{ display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; font-weight: 500; cursor: pointer }
+.wcheck input{ width: 20px; height: 20px; accent-color: #c4621c }
+.wiki-chips, .wiki-units{ display: flex; flex-wrap: wrap; gap: 10px }
+.wiki-chips .chip, .wiki-units .chip{ height: 44px; padding: 0 18px; font-size: 15px }
+.wiki-units{ margin-bottom: 16px }
+.wsec{ display: flex; flex-direction: column; gap: 14px }
+.wsec-head{ display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap }
+.wsec-head h3{ margin: 0; font-size: 21px }
+.wsec-head span{ font-size: 13px; color: var(--ink-soft) }
+.wcard{ background: linear-gradient(180deg, var(--surface), var(--surface-2)); border: 1px solid var(--glass-edge); border-radius: 22px; box-shadow: inset 0 1px 0 var(--glass-edge), 0 14px 28px -20px var(--glass-shadow) }
+.wbadge{ display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: var(--r-pill); font-size: 12px; font-weight: 600; white-space: nowrap; background: rgb(236,230,210); color: rgb(80,66,40) }
+.wbadge.ok{ background: rgb(214,240,220); color: rgb(30,95,50) }
+.wbadge.warn{ background: rgb(255,224,189); color: rgb(130,62,10) }
+.wbadge.warn.strong{ background: #ef8a3a; color: rgb(40,20,5) }
+.wbadge.dev{ background: rgb(226,222,240); color: rgb(70,55,120) }
+.wbadge.cat{ background: var(--chip-on); color: var(--ink) }
+.free-grid{ display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px }
+.free-card{ display: flex; flex-direction: column; gap: 9px; padding: 18px; text-align: left; cursor: pointer; font: inherit; color: var(--ink); min-height: 200px; transition: transform .45s var(--spring) }
+.free-card:hover{ transform: translateY(-3px) }
+.free-card:active{ transform: scale(.98) }
+.wc-top{ display: flex; align-items: center; justify-content: space-between; gap: 8px }
+.mono{ display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; font-family: var(--f-logo); font-weight: 800; font-size: 16px; flex: none; color: var(--ink) }
+.mono.big{ width: 72px; height: 72px; border-radius: 22px; font-size: 28px }
+.wc-name{ font-size: 17px; font-weight: 700 }
+.wc-sub{ font-size: 13px; color: var(--ink-soft); line-height: 1.5 }
+.wc-lim{ font-size: 13px; line-height: 1.55; flex: 1 }
+.wc-foot{ display: flex; justify-content: space-between; align-items: center; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; font-size: 13px; color: var(--ink-soft) }
+.wc-foot b{ color: var(--ink); font-variant-numeric: tabular-nums }
+.wtable{ background: linear-gradient(180deg, var(--surface), var(--surface-2)) }
+.wtable table{ min-width: 720px }
+.wtable caption{ text-align: left; padding: 14px 16px 2px; font-size: 13px; color: var(--ink-soft) }
+.wtable td{ vertical-align: middle }
+.wtable .num{ text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap }
+.wtable .muted{ color: var(--ink-soft) }
+.wtable .nowrap{ white-space: nowrap }
+.wtable small.sub{ display: block; margin-top: 4px; font-size: 12px; color: var(--ink-soft) }
+.plan-list{ display: flex; flex-wrap: wrap; gap: 6px 14px }
+.plan-list span{ white-space: nowrap; font-size: 14px }
+.plan-list small{ margin-left: 4px; font-size: 11px; color: var(--ink-soft) }
+.wlink{ border: 0; background: none; padding: 0; font: inherit; font-weight: 700; color: var(--ink); cursor: pointer; text-align: left; min-height: 32px; text-decoration: underline; text-decoration-color: rgba(120,90,40,.3); text-underline-offset: 3px }
+.wlink:hover{ text-decoration-color: currentColor }
+.wnote{ margin: 0; font-size: 13px; color: var(--ink-soft); line-height: 1.6 }
+.wnotice{ display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px }
+.wnotice div{ display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.6 }
+.wnotice span{ color: var(--ink-soft) }
+.wfilters{ display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 14px }
+.wsort{ display: flex; align-items: center; gap: 8px; margin-left: auto; font-size: 14px; font-weight: 500 }
+.wsort select{ height: 44px; border-radius: var(--r-pill); border: 1px solid var(--line); background: var(--surface); padding: 0 14px; font: inherit; font-size: 14px; color: var(--ink) }
+.wtips{ display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 18px }
+.wtips .wcard, .perf-side .wcard{ padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.6 }
+.wtips span, .perf-side span{ color: var(--ink-soft) }
+.perf-side span b{ color: var(--ink) }
+.perf-side a{ font-weight: 600; min-height: 44px; display: flex; align-items: center; color: #965014 }
+.perf-wrap{ display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start }
+.perf-fig{ flex: 999 1 600px; min-width: 0; margin: 0; padding: 22px; display: flex; flex-direction: column; gap: 14px }
+.perf-side{ flex: 1 1 260px; display: flex; flex-direction: column; gap: 14px }
+.perf-head{ display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap }
+.perf-head figcaption{ font-size: 17px; font-weight: 700 }
+.perf-leg{ display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; font-weight: 600 }
+.perf-leg span{ display: flex; align-items: center; gap: 6px }
+.perf-leg i{ width: 12px; height: 12px; border-radius: 50% }
+.perf-scroll{ overflow-x: auto }
+.perf-scroll svg{ display: block; width: 100%; min-width: 640px; height: auto; font-family: var(--f-body) }
+.perf-scroll .gl{ stroke: rgba(120,90,40,.18); stroke-dasharray: 4 4 }
+.perf-scroll text{ font-size: 12px; fill: var(--ink-soft) }
+.perf-scroll text.ax{ font-size: 13px; font-weight: 600 }
+.perf-scroll .pt{ cursor: pointer; outline: none }
+.perf-scroll .pt text{ fill: var(--ink); font-weight: 600 }
+.perf-scroll .pt circle{ transition: r .3s var(--spring) }
+.perf-scroll .pt:hover circle, .perf-scroll .pt:focus circle{ r: 10 }
+.wdetail{ display: flex; flex-direction: column; gap: 20px }
+.wdetail .back-chip{ align-self: flex-start }
+.d-head{ display: flex; gap: 18px; align-items: center; flex-wrap: wrap }
+.d-head > div{ display: flex; flex-direction: column; gap: 8px; min-width: 0 }
+.d-badges{ display: flex; flex-wrap: wrap; gap: 6px }
+.wdetail > .lede{ margin: 0 }
+.d-cols{ display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start }
+.d-main{ flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px }
+.d-side{ flex: 1 1 280px; display: flex; flex-direction: column; gap: 18px }
+.wsec-card{ padding: 22px; display: flex; flex-direction: column; gap: 14px }
+.wsec-card h3{ margin: 0; font-size: 19px }
+.price-steps{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px }
+.pstep{ border-radius: 18px; padding: 16px; background: rgba(255,253,230,.9); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px }
+.pstep.now{ background: rgb(255,236,214); border: 2px solid #ef8a3a }
+.pstep .wbadge{ align-self: flex-start }
+.pnums{ display: flex; gap: 26px; flex-wrap: wrap }
+.pnums small{ display: block; font-size: 13px; color: var(--ink-soft) }
+.pnums b{ font-size: 28px; font-variant-numeric: tabular-nums }
+.pnums.big b{ font-size: 32px }
+.drow{ display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px }
+.drow:last-child{ border-bottom: 0 }
+.drow.col{ flex-direction: column; align-items: flex-start; gap: 4px }
+.drow small{ font-size: 12px; color: var(--ink-soft); line-height: 1.5 }
+.drow small.block{ display: block }
+.drow b{ font-variant-numeric: tabular-nums; white-space: nowrap }
+.drow b small{ margin-left: 2px }
+.dname{ display: flex; align-items: center; gap: 8px; font-weight: 600 }
+.kv{ display: flex; flex-direction: column; gap: 3px }
+.kv small{ font-size: 13px; color: var(--ink-soft) }
+.kv b{ font-size: 15px }
+.kv b.pending{ color: rgb(130,62,10) }
+.kv a{ font-size: 14px; font-weight: 600; color: #965014 }
+@media (max-width: 700px){
+  .wiki-modes{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100% }
+  .wiki-modes button{ padding: 0 8px; font-size: 14px }
+  .wiki-chips, .wiki-units{ flex-wrap: nowrap; overflow-x: auto; margin-inline: calc(-1 * var(--gutter)); padding: 2px var(--gutter) 6px; scrollbar-width: none }
+  .wiki-chips .chip, .wiki-units .chip{ flex: none; height: 44px; font-size: 14px }
+  .free-grid{ grid-template-columns: 1fr }
+  .free-card{ min-height: 0 }
+  .wsort{ margin-left: 0 }
+}
+@media (max-width: 700px){
+  .free-card{ display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; grid-template-areas: "mono name badge" "mono lim price"; column-gap: 12px; row-gap: 4px; align-items: center; padding: 14px; min-height: 0 }
+  .free-card .wc-top, .free-card .wc-foot{ display: contents }
+  .free-card .mono{ grid-area: mono; width: 44px; height: 44px; border-radius: 14px }
+  .free-card .wc-top .wbadge{ grid-area: badge; justify-self: end }
+  .free-card .wc-name{ grid-area: name; font-size: 15px }
+  .free-card .wc-sub, .free-card .wc-foot span{ display: none }
+  .free-card .wc-lim{ grid-area: lim; font-size: 12px; color: var(--ink-soft); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+  .free-card .wc-foot b{ grid-area: price; justify-self: end; font-size: 12px; white-space: nowrap }
+  .free-grid{ gap: 10px }
+}

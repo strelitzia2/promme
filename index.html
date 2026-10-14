@@ -80,18 +80,7 @@
 
   <!-- AI 성능 위키백과 -->
   <section class="page" id="page-wiki" data-tab="wiki" hidden>
-    <h2>AI 성능 위키백과 <span class="tag">예시 화면</span></h2>
-    <p class="lede">요금과 무료 혜택은 자주 바뀌니, 실제 서비스에서는 공식 요금 페이지 기준으로 날짜와 함께 갱신하세요.</p>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>서비스</th><th>무료 플랜</th><th>잘하는 일</th><th>추천 카테고리</th></tr></thead>
-        <tbody>
-          <tr><td><b>ChatGPT</b></td><td>있음</td><td>대화형 작성, 이미지 생성</td><td>SNS · 이미지 생성</td></tr>
-          <tr><td><b>Claude</b></td><td>있음</td><td>긴 문서 정리, 글쓰기, 코딩</td><td>학습 · 코딩</td></tr>
-          <tr><td><b>Gemini</b></td><td>있음</td><td>구글 서비스 연동, 검색 결합</td><td>시장조사 · 학습</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div id="wikiRoot"></div>
   </section>
 
   <!-- 오늘의 운세 -->
@@ -221,6 +210,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
 <script src="config.js"></script>
+<script src="wiki-data.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
