@@ -756,7 +756,7 @@ function toast(m) {
    - 누가 관리자인지, 무엇을 바꿀 수 있는지는 Supabase(RLS)가 서버에서 판단함.
      화면의 관리자 메뉴는 보여주기만 할 뿐, 일반 사용자가 억지로 열어도 저장되지 않음
    - 사용자가 쓴 글자는 모두 esc() 또는 textContent로만 화면에 넣음 */
-const me = { nick: null, admin: false };
+const me = { nick: null, admin: false, owner: false };
 const NICK_RE = /^[0-9A-Za-z가-힣_]{2,16}$/;
 const STATUS = { pending: "검토 중", approved: "공개", rejected: "반려", hidden: "숨김" };
 const STATUS_HINT = { pending: "관리자가 확인하고 있어요", approved: "홈에 공개됐어요", rejected: "공개되지 않았어요", hidden: "관리자가 잠시 숨겼어요" };
@@ -766,6 +766,10 @@ const mine = () => (user ? PROMPTS.filter((p) => p.authorId === user.id) : []);
 
 function dbErrorText(err) {
   const m = (err && err.message) || "";
+  if (/not_owner/.test(m)) return "최고 관리자만 할 수 있어요.";
+  if (/user_not_found/.test(m)) return "그 이메일로 가입한 계정이 없어요. 먼저 promme에 회원가입해 달라고 해 주세요.";
+  if (/already_admin/.test(m)) return "이미 관리자예요.";
+  if (/cannot_revoke_owner/.test(m)) return "최고 관리자 권한은 Supabase SQL에서만 바꿀 수 있어요.";
   if (/too_many_pending/.test(m)) return "검토를 기다리는 글이 이미 5개예요. 승인된 뒤에 더 올려 주세요.";
   if (err && err.code === "23505") return "이미 누가 쓰고 있는 닉네임이에요.";
   if (err && err.code === "23514") return "입력한 내용을 다시 확인해 주세요.";
@@ -799,14 +803,15 @@ async function loadPrompts() {
   if (admOpen()) renderAdmin();
 }
 async function loadMe() {
-  me.nick = null; me.admin = false;
+  me.nick = null; me.admin = false; me.owner = false;
   if (!user || !sb) return;
   const [p, a] = await Promise.all([
     sb.from("profiles").select("nickname").eq("id", user.id).maybeSingle(),
-    sb.rpc("is_admin"),
+    sb.from("admins").select("role").eq("user_id", user.id).maybeSingle(),   // 내 행만 읽을 수 있음(RLS)
   ]);
   if (p.data) me.nick = p.data.nickname;
-  me.admin = a.data === true;
+  if (a.error) { const r = await sb.rpc("is_admin"); me.admin = r.data === true; }   // 역할 칸이 없는 옛 버전 DB
+  else { me.admin = !!a.data; me.owner = !!a.data && a.data.role === "owner"; }
 }
 async function saveNick(nick) {
   if (!NICK_RE.test(nick)) return "닉네임은 한글·영문·숫자·_ 2~16자로 정해 주세요.";
@@ -839,6 +844,7 @@ function renderAccount() {
     </div>`).join("")
     : `<p class="ac-empty">아직 올린 프롬프트가 없어요. 나만 알던 프롬프트를 공유해 보세요.</p>`;
   $("#acAdmin").hidden = !me.admin;
+  $("#acAdminSub").textContent = me.owner ? "최고 관리자 · 승인 대기 · 프롬프트 · 뉴스 · 관리자 관리" : "승인 대기 · 프롬프트 · 뉴스 관리";
   const n = pendingCount();
   $("#acAdminCount").hidden = !(me.admin && n);
   $("#acAdminCount").textContent = n;
@@ -982,13 +988,18 @@ $("#shareBtn").addEventListener("click", () => openSubmit());
 $("#sEdit").addEventListener("click", () => { closeModal("#promptScrim"); openSubmit(sheetP); });
 
 /* --- 관리자 시트 --- */
-const ATABS = ["queue", "prompts", "news"];
-const adm = { tab: "queue", q: "", nq: "", rejecting: null, confirmDel: null, editNews: null, limit: 40 };
+const ATABS = ["queue", "prompts", "news", "admins"];
+const adm = { tab: "queue", q: "", nq: "", rejecting: null, confirmDel: null, editNews: null, limit: 40, team: null, teamErr: "", confirmRevoke: null };
 const admOpen = () => !$("#adminScrim").hidden;
 function openAdmin(tab) {
   if (!me.admin) return;
   if (tab) adm.tab = tab;
-  adm.rejecting = adm.confirmDel = adm.editNews = null;
+  if (adm.tab === "admins" && !me.owner) adm.tab = "queue";
+  adm.rejecting = adm.confirmDel = adm.editNews = adm.confirmRevoke = null;
+  adm.team = null;   // 열 때마다 관리자 명단을 새로 받음
+  $("#adTabs [data-atab=admins]").hidden = !me.owner;   // 관리자 관리 탭은 최고 관리자에게만
+  $("#adTabs").classList.toggle("four", me.owner);
+  $("#adTabs").classList.toggle("three", !me.owner);
   openModal("#adminScrim");
   setAdminTab(adm.tab, true);
   requestAnimationFrame(() => moveSlideInd($("#adTabs"), true));
@@ -1008,6 +1019,7 @@ function renderAdmin() {
   const body = $("#adminBody");
   if (adm.tab === "queue") body.innerHTML = adminQueueHTML();
   else if (adm.tab === "prompts") body.innerHTML = adminSearchHTML(adm.q, "제목 · 내용 · 닉네임 검색") + `<div id="adList">${adminPromptListHTML()}</div>`;
+  else if (adm.tab === "admins") { body.innerHTML = adminTeamHTML(); if (!adm.team) loadTeam(); }
   else body.innerHTML = `<p class="ad-note">뉴스는 3시간마다 새로 모이지만, 여기서 고친 제목·분류와 숨김은 계속 유지돼요.</p>`
     + adminSearchHTML(adm.nq, "기사 제목 · 출처 검색") + `<div id="adList">${adminNewsListHTML()}</div>`;
 }
@@ -1088,6 +1100,37 @@ function adminNewsListHTML() {
   }).join("") + (all.length > shown.length ? `<button class="btn ghost full" type="button" data-a="news-more">더 보기 · ${all.length - shown.length}개 남음</button>` : "");
 }
 
+/* 관리자 관리 (최고 관리자 전용 · 서버 함수 admin_list / admin_grant / admin_revoke가 다시 확인함) */
+let teamReq = 0;
+async function loadTeam() {
+  const req = ++teamReq;
+  const { data, error } = await sb.rpc("admin_list");
+  if (req !== teamReq) return;
+  adm.team = error ? [] : data || [];
+  adm.teamErr = error ? dbErrorText(error) : "";
+  if (admOpen() && adm.tab === "admins") renderAdmin();
+}
+function adminTeamHTML() {
+  const form = `<form class="ad-grant" id="adGrant" autocomplete="off" novalidate>
+      <input type="email" name="email" maxlength="120" placeholder="추가할 사람의 가입 이메일" aria-label="관리자로 추가할 이메일">
+      <button class="btn" type="submit">추가</button>
+    </form>
+    <p class="ad-note">promme에 회원가입한 사람만 추가할 수 있어요. 관리자는 승인·수정·삭제·뉴스 관리를 할 수 있고, 관리자를 늘리거나 빼는 건 최고 관리자만 할 수 있어요.</p>`;
+  if (!adm.team) return form + `<div class="arc-empty">명단을 불러오는 중…</div>`;
+  if (adm.teamErr) return form + `<div class="arc-empty">${esc(adm.teamErr)}</div>`;
+  return form + adm.team.map((m) => {
+    const owner = m.role === "owner", self = user && m.user_id === user.id, conf = adm.confirmRevoke === m.user_id;
+    const name = m.nickname ? "@" + m.nickname : m.email || "알 수 없음";
+    return `<div class="ad-row" data-uid="${esc(m.user_id)}">
+      <span class="mine-thumb team-ava" aria-hidden="true">${esc(name.replace("@", "").charAt(0).toUpperCase())}</span>
+      <span class="mine-text"><b>${esc(name)}${self ? " · 나" : ""}</b><small>${m.nickname ? esc(m.email || "") + " · " : ""}${relTime(m.created_at)} 지정</small></span>
+      <span class="st ${owner ? "st-owner" : "st-admin"}">${owner ? "최고 관리자" : "관리자"}</span>
+      <span class="ad-row-actions">${owner ? `<small class="ad-lock">SQL에서만 변경</small>`
+        : `<button class="link-btn danger${conf ? " confirm" : ""}" type="button" data-a="revoke">${conf ? "정말 해제?" : "권한 해제"}</button>`}</span>
+    </div>`;
+  }).join("");
+}
+
 async function setStatus(pid, status, okMsg, extra) {
   const { data, error } = await sb.from("prompts").update({ status, ...(extra || {}) }).eq("id", pid).select("id");
   if (error || !data || !data.length) { toast(error ? dbErrorText(error) : "권한이 없어요"); return; }
@@ -1108,7 +1151,7 @@ async function saveNewsOv(id, patch, okMsg) {
 $("#adTabs").addEventListener("click", (e) => {
   const b = e.target.closest("[data-atab]");
   if (!b || b.dataset.atab === adm.tab) return;
-  adm.rejecting = adm.confirmDel = adm.editNews = null;
+  adm.rejecting = adm.confirmDel = adm.editNews = adm.confirmRevoke = null;
   setAdminTab(b.dataset.atab);
 });
 $("#adminBody").addEventListener("input", (e) => {
@@ -1124,6 +1167,7 @@ $("#adminBody").addEventListener("click", async (e) => {
   const pid = pEl ? +pEl.dataset.pid : null, nid = nEl ? nEl.dataset.nid : null;
   const busy = () => { b.disabled = true; };
   if (a !== "delete") adm.confirmDel = null;
+  if (a !== "revoke") adm.confirmRevoke = null;
 
   if (a === "approve") { busy(); await setStatus(pid, "approved", "승인했어요. 홈에 바로 올라갔어요"); }
   else if (a === "reject") { adm.rejecting = pid; renderAdmin(); const f = $(`[data-reject="${pid}"] input`); if (f) f.focus(); }
@@ -1145,11 +1189,32 @@ $("#adminBody").addEventListener("click", async (e) => {
   else if (a === "news-reset") { busy(); if (await saveNewsOv(nid, { title: null, tag: null }, "원래 제목·분류로 되돌렸어요")) adm.editNews = null; applyNews(); }
   else if (a === "news-hide") { busy(); await saveNewsOv(nid, { hidden: true }, "기사를 숨겼어요"); }
   else if (a === "news-show") { busy(); await saveNewsOv(nid, { hidden: false }, "기사를 다시 보이게 했어요"); }
+  else if (a === "revoke") {
+    const uid = b.closest("[data-uid]").dataset.uid;
+    if (adm.confirmRevoke !== uid) { adm.confirmRevoke = uid; renderAdmin(); return; }
+    busy();
+    const { error } = await sb.rpc("admin_revoke", { target: uid });
+    adm.confirmRevoke = null;
+    if (error) { toast(dbErrorText(error)); renderAdmin(); return; }
+    toast("관리자 권한을 해제했어요");
+    await loadTeam();
+  }
   else if (a === "news-more") { adm.limit += 40; $("#adList").innerHTML = adminNewsListHTML(); }
 });
 $("#adminBody").addEventListener("submit", async (e) => {
   e.preventDefault();
   const f = e.target, btn = f.querySelector('[type="submit"]');
+  if (f.id === "adGrant") {
+    const email = f.elements.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { toast("이메일을 정확히 적어 주세요"); f.elements.email.focus(); return; }
+    btn.disabled = true;
+    const { error } = await sb.rpc("admin_grant", { target_email: email });
+    btn.disabled = false;
+    if (error) { toast(dbErrorText(error)); return; }
+    toast("관리자로 추가했어요");
+    await loadTeam();
+    return;
+  }
   if (f.dataset.reject) {
     btn.disabled = true;
     const reason = f.elements.reason.value.trim().slice(0, 200);

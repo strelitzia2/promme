@@ -1,15 +1,32 @@
 -- =========================================================
--- promme — 2단계: 관리자 · 사용자 프롬프트 공유 · 뉴스 관리
+-- promme — 2단계: 최고 관리자 · 관리자 · 사용자 프롬프트 공유 · 뉴스 관리
 -- supabase.sql(1단계)을 실행한 뒤, SQL Editor에서 이 파일 전체를 한 번 실행하세요.
--- 맨 아래 "관리자 지정"의 이메일만 본인 것으로 바꿔서 실행합니다.
+-- 맨 아래 "최고 관리자 지정"의 이메일만 본인 것으로 바꿔서 실행합니다.
+-- 여러 번 실행해도 안전합니다(이미 만든 표·데이터는 그대로 두고 빠진 것만 채움).
+--
+-- 역할
+--   최고 관리자(owner): 관리자 권한을 주거나 뺏을 수 있음 + 관리자가 하는 모든 일
+--   관리자(admin)     : 투고 승인·반려, 프롬프트 수정·숨김·삭제, 뉴스 숨김·수정
+--   최고 관리자 지정·해제는 이 SQL Editor에서만 할 수 있습니다(화면에서는 불가).
 -- =========================================================
 
 -- ---------- 관리자 명단 ----------
--- 이 표에는 화면(앱)에서 추가할 수 없고, SQL Editor에서만 넣을 수 있습니다.
+-- 이 표는 화면(앱)에서 직접 고칠 수 없습니다.
+-- 관리자 추가·해제는 아래 admin_grant / admin_revoke 함수(최고 관리자만 실행 가능)로만 합니다.
 create table if not exists public.admins (
   user_id    uuid primary key references auth.users (id) on delete cascade,
+  role       text not null default 'admin' check (role in ('owner', 'admin')),
+  granted_by uuid references auth.users (id) on delete set null,
   created_at timestamptz not null default now()
 );
+-- 예전 버전(역할 칸 없음)을 이미 실행했다면 칸만 추가
+alter table public.admins add column if not exists role text not null default 'admin';
+alter table public.admins add column if not exists granted_by uuid references auth.users (id) on delete set null;
+do $$ begin
+  if not exists (select 1 from pg_constraint where conname = 'admins_role_check' and conrelid = 'public.admins'::regclass) then
+    alter table public.admins add constraint admins_role_check check (role in ('owner', 'admin'));
+  end if;
+end $$;
 alter table public.admins enable row level security;
 drop policy if exists "admins: read self" on public.admins;
 create policy "admins: read self" on public.admins
@@ -23,6 +40,71 @@ language sql stable security definer set search_path = '' as $$
 $$;
 revoke all on function public.is_admin() from public;
 grant execute on function public.is_admin() to anon, authenticated;
+
+-- 지금 로그인한 사람이 최고 관리자인지
+create or replace function public.is_owner() returns boolean
+language sql stable security definer set search_path = '' as $$
+  select exists (select 1 from public.admins where user_id = (select auth.uid()) and role = 'owner');
+$$;
+revoke all on function public.is_owner() from public;
+grant execute on function public.is_owner() to anon, authenticated;
+
+-- ---------- 관리자 관리 (최고 관리자 전용) ----------
+-- 관리자 명단: 이메일이 들어 있어서 최고 관리자만 볼 수 있음
+create or replace function public.admin_list()
+returns table (user_id uuid, email text, nickname text, role text, created_at timestamptz)
+language plpgsql stable security definer set search_path = '' as $$
+begin
+  if not public.is_owner() then
+    raise exception 'not_owner' using errcode = 'P0001';
+  end if;
+  return query
+    select a.user_id, u.email::text, p.nickname, a.role, a.created_at
+    from public.admins a
+    join auth.users u on u.id = a.user_id
+    left join public.profiles p on p.id = a.user_id
+    order by (a.role = 'owner') desc, a.created_at;
+end $$;
+
+-- 가입한 이메일로 관리자 추가 (항상 '관리자'로만 추가됨. 최고 관리자는 SQL에서만)
+create or replace function public.admin_grant(target_email text) returns uuid
+language plpgsql volatile security definer set search_path = '' as $$
+declare
+  target uuid;
+begin
+  if not public.is_owner() then
+    raise exception 'not_owner' using errcode = 'P0001';
+  end if;
+  select u.id into target from auth.users u where lower(u.email) = lower(trim(target_email)) limit 1;
+  if target is null then
+    raise exception 'user_not_found' using errcode = 'P0001';
+  end if;
+  if exists (select 1 from public.admins a where a.user_id = target) then
+    raise exception 'already_admin' using errcode = 'P0001';
+  end if;
+  insert into public.admins (user_id, role, granted_by) values (target, 'admin', (select auth.uid()));
+  return target;
+end $$;
+
+-- 관리자 권한 해제 (최고 관리자는 해제할 수 없음 → 본인이나 다른 최고 관리자를 실수로 빼는 일 방지)
+create or replace function public.admin_revoke(target uuid) returns void
+language plpgsql volatile security definer set search_path = '' as $$
+begin
+  if not public.is_owner() then
+    raise exception 'not_owner' using errcode = 'P0001';
+  end if;
+  if exists (select 1 from public.admins a where a.user_id = target and a.role = 'owner') then
+    raise exception 'cannot_revoke_owner' using errcode = 'P0001';
+  end if;
+  delete from public.admins a where a.user_id = target;
+end $$;
+
+revoke all on function public.admin_list() from public, anon;
+revoke all on function public.admin_grant(text) from public, anon;
+revoke all on function public.admin_revoke(uuid) from public, anon;
+grant execute on function public.admin_list() to authenticated;
+grant execute on function public.admin_grant(text) to authenticated;
+grant execute on function public.admin_revoke(uuid) to authenticated;
 
 -- ---------- 닉네임 ----------
 create table if not exists public.profiles (
@@ -154,8 +236,14 @@ create policy "news_overrides: admin write" on public.news_overrides for all to 
 grant select on public.news_overrides to anon, authenticated;
 grant insert, update, delete on public.news_overrides to authenticated;
 
--- ---------- 관리자 지정 ----------
--- promme 사이트에서 회원가입을 마친 이메일로 바꿔서 실행하세요. (여러 명이면 이 줄을 반복)
-insert into public.admins (user_id)
-select id from auth.users where email = 'ADMIN_EMAIL_HERE'
-on conflict do nothing;
+-- ---------- 최고 관리자 지정 ----------
+-- promme 사이트에서 회원가입을 마친 본인 이메일로 바꿔서 실행하세요.
+-- 일반 관리자는 사이트의 '관리자 페이지 → 관리자' 탭에서 추가·해제하면 됩니다.
+insert into public.admins (user_id, role)
+select id, 'owner' from auth.users where lower(email) = lower('ADMIN_EMAIL_HERE')
+on conflict (user_id) do update set role = 'owner';
+
+-- (참고) 최고 관리자를 일반 관리자로 내리기:
+--   update public.admins set role = 'admin' where user_id = (select id from auth.users where email = '이메일');
+-- (참고) 지금 명단 보기:
+--   select u.email, a.role, a.created_at from public.admins a join auth.users u on u.id = a.user_id;

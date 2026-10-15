@@ -720,6 +720,16 @@ tr:last-child td{ border-bottom: 0 }
 .ad-top{ display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px }
 .ad-top .btn{ height: 38px; padding: 0 16px }
 .mode-tabs.three{ grid-template-columns: repeat(3, 1fr) }
+.mode-tabs.four{ grid-template-columns: repeat(4, 1fr) }
+.mode-tabs button[hidden]{ display: none }
+.ad-grant{ display: flex; gap: 8px }
+.ad-grant input{ flex: 1; min-width: 0; height: 44px; padding: 0 16px; border-radius: var(--r-pill); border: 1px solid var(--line); background: var(--surface); font: inherit; font-size: 15px; color: var(--ink); outline: 0 }
+.ad-grant input:focus{ border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft) }
+.ad-grant .btn{ flex: none; height: 44px; padding: 0 20px }
+.team-ava{ background: var(--surface-2); font-size: 17px; font-weight: 700; color: var(--ink-soft) }
+.st-owner{ background: rgb(255, 222, 186); color: rgb(150, 70, 10) }
+.st-admin{ background: rgb(224, 231, 246); color: rgb(45, 70, 125) }
+.ad-lock{ font-size: 12px; color: var(--ink-soft); padding: 6px 4px; white-space: nowrap }
 #adminBody{ display: flex; flex-direction: column; gap: 10px }
 .ad-note{ margin: 0 0 2px; font-size: 13px; color: var(--ink-soft); line-height: 1.55 }
 .ad-tools{ padding: 2px 0 4px }
@@ -754,4 +764,5 @@ tr:last-child td{ border-bottom: 0 }
   .ad-row .ad-row-actions{ grid-area: ac; justify-content: flex-end; border-top: 1px dashed var(--line); padding-top: 4px }
   .ad-row:not(:has(.st)){ grid-template-areas: "th tx tx" "ac ac ac" }
   .mode-tabs.three button{ font-size: 13.5px }
+  .mode-tabs.four button{ font-size: 12.5px; letter-spacing: -.02em }
 }
