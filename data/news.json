@@ -1,7 +1,223 @@
 {
- "updated_at": "2026-10-15T10:11:26+00:00",
+ "updated_at": "2026-10-15T17:08:46+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "523eb646723a",
+   "title": "씨티그룹, 10년 만의 최고 매출 뒤 AI·사이버 보안 과제",
+   "url": "https://www.tokenpost.kr/news/market/423012",
+   "source": "tokenpost.kr",
+   "published": "2026-10-15T16:40:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "af1d0517a66d",
+   "title": "“빅테크, AI 투자금 반도 못 건져”… ‘투자 절벽’ 오면 반도체 치명...",
+   "url": "https://www.chosun.com/economy/stock-finance/2026/10/16/B4UTYD2BNRAPNFKY6TOQZB7AZM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+   "source": "chosun.com",
+   "published": "2026-10-15T15:43:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "5848e0b63b0f",
+   "title": "챗GPT vs 제미나이, 광고로 엿보는 사업 전략",
+   "url": "https://www.chosun.com/economy/tech_it/2026/10/16/5B7D6DZ5HFFRFDAZUMV6U4RWZU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+   "source": "chosun.com",
+   "published": "2026-10-15T15:35:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "2c9392a52f20",
+   "title": "AI agents are coming to Rivian’s cars",
+   "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+   "source": "TechCrunch",
+   "published": "2026-10-15T15:02:36+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "244831af6248",
+   "title": "Google’s Universal Cart shopping tool launches in the US",
+   "url": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
+   "source": "TechCrunch",
+   "published": "2026-10-15T14:29:33+00:00",
+   "tag": "출시",
+   "lang": "en"
+  },
+  {
+   "id": "3ef475cb849d",
+   "title": "요즘 Z세대들 '제미나이' 이렇게 사용한다... 구글 맞춤형 온오프라인 ...",
+   "url": "https://gamefocus.co.kr/detail.php?number=179819",
+   "source": "gamefocus.co.kr",
+   "published": "2026-10-15T14:18:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "75865dca44c9",
+   "title": "코히어, AI 보안 스타트업 AISLE 인수",
+   "url": "https://biz.chosun.com/it-science/ict/2026/10/15/PIF4ZYOKZZGGVA6Y2BPCHSUYJU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+   "source": "biz.chosun.com",
+   "published": "2026-10-15T14:15:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "e9b18357d342",
+   "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...TSMC 호실적도 못 막은 AI주 매도세",
+   "url": "https://www.newspim.com/news/view/20261015001327",
+   "source": "newspim.com",
+   "published": "2026-10-15T13:30:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "f6abe57baeaa",
+   "title": "앤트로픽, 싱가포르에 아태 5번째 거점 개설…정부와 AI 안전·평가 협력",
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42321",
+   "source": "aitimes.kr",
+   "published": "2026-10-15T13:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "fa14b8f7db46",
+   "title": "Teaching students to think and learn through questions",
+   "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+   "source": "OpenAI",
+   "published": "2026-10-15T13:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "05b723dbb8eb",
+   "title": "고객스뱅크, 오픈AI와 대출·예금·결제 AI 개발",
+   "url": "https://www.tokenpost.kr/news/ai/422923",
+   "source": "tokenpost.kr",
+   "published": "2026-10-15T12:58:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "bbb8b151d854",
+   "title": "시선AI 문서 AI, OCRBench v2 영어 과제 1위…구글·오픈AI 제쳐",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=06212326645613248&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "source": "edaily.co.kr",
+   "published": "2026-10-15T12:21:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "34225a382655",
+   "title": "美 FTC, 오픈AI·앤트로픽 보안 사고 조사 착수…경영진 소환 추진",
+   "url": "https://www.etoday.co.kr/news/view/2636418",
+   "source": "etoday.co.kr",
+   "published": "2026-10-15T12:14:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "cc07996f6bad",
+   "title": "Amazon’s Bee launches two new personal AI devices, starting at $75",
+   "url": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+   "source": "TechCrunch",
+   "published": "2026-10-15T12:00:00+00:00",
+   "tag": "출시",
+   "lang": "en"
+  },
+  {
+   "id": "999e9923be39",
+   "title": "Fake AI Attacks Spread Across US Companies: How MSSPs Can Stop Incidents Early",
+   "url": "https://thehackernews.com/2026/10/fake-ai-attacks-spread-across-us.html",
+   "source": "The Hacker News",
+   "published": "2026-10-15T11:46:59+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "19ba1fb25bc7",
+   "title": "美FTC '해킹 논란' 오픈AI·앤트로픽 조사…경영진 소환",
+   "url": "https://view.asiae.co.kr/article/2026101520451378690",
+   "source": "view.asiae.co.kr",
+   "published": "2026-10-15T11:45:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "fb1d2f528fa5",
+   "title": "[뉴스하이킥] 이해민 “금융권 AI 해킹 ‘상당 위험’ 수준…AI로의 공격...",
+   "url": "https://n.news.naver.com/mnews/article/214/0001529366?sid=100",
+   "source": "n.news.naver.com",
+   "published": "2026-10-15T11:44:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "1d69367a8099",
+   "title": "마인드로직, AI 플랫폼 베이즈 출시",
+   "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=873012",
+   "source": "hansbiz.co.kr",
+   "published": "2026-10-15T11:34:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "a84b37ec6c7d",
+   "title": "롯데·GS·LGD, '생성형 AI 검문소' 세운다",
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=63786",
+   "source": "thelec.kr",
+   "published": "2026-10-15T11:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "9bedf93cf19d",
+   "title": "Why AI Confidence Is Not Validation",
+   "url": "https://thehackernews.com/2026/10/why-ai-confidence-is-not-validation.html",
+   "source": "The Hacker News",
+   "published": "2026-10-15T11:04:35+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "985ab94c2ac2",
+   "title": "엑스보우, 오픈AI 모델 활용해 6일 만에 크롬 공격 체인 개발…25만 달러...",
+   "url": "https://www.dailysecu.com/news/articleView.html?idxno=208890",
+   "source": "dailysecu.com",
+   "published": "2026-10-15T11:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "bd6cfa429e8e",
+   "title": "유키 첸, Z.ai 합류…최고 보안 전문가와 프런티어 AI, \"무시무시\"",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=05776086645613248&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "source": "edaily.co.kr",
+   "published": "2026-10-15T10:38:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "a40f34f6ab76",
+   "title": "\"처벌보다 피해 확산 방지에 초점을\"... 금융권 AI 해킹 관련 긴급 좌담...",
+   "url": "https://www.boannews.com/news/articleView.html?idxno=146427",
+   "source": "boannews.com",
+   "published": "2026-10-15T10:22:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "d56611a0a9a9",
+   "title": "포항 세화고, 독자 개발 AI 플랫폼 ‘EoS’로 맞춤형 진학·보안 '두 토끼...",
+   "url": "https://www.ksmnews.co.kr/news/view.php?idx=625732",
+   "source": "ksmnews.co.kr",
+   "published": "2026-10-15T10:12:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
   {
    "id": "8da33e667d04",
    "title": "제논, AI 에이전트 통합 포털 '제나' 출시",
@@ -30,6 +246,15 @@
    "lang": "ko"
   },
   {
+   "id": "f75a52c43812",
+   "title": "“챗GPT 공짜로 쓸 수 있었는데”…서울 청년 50만명 무료 지원 무산",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=05510406645613248&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "source": "edaily.co.kr",
+   "published": "2026-10-15T09:39:00+00:00",
+   "tag": "할인",
+   "lang": "ko"
+  },
+  {
    "id": "1aaf245d3343",
    "title": "팀스파르타, 제미나이 행사 참가",
    "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=873029",
@@ -55,6 +280,15 @@
    "published": "2026-10-15T09:10:00+00:00",
    "tag": "소식",
    "lang": "ko"
+  },
+  {
+   "id": "e3c36d4422c6",
+   "title": "Apertus 1.5 Release Notes",
+   "url": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+   "source": "Hugging Face",
+   "published": "2026-10-15T09:08:45+00:00",
+   "tag": "출시",
+   "lang": "en"
   },
   {
    "id": "93eb58d3ed28",
@@ -117,6 +351,15 @@
    "source": "it.chosun.com",
    "published": "2026-10-15T08:48:00+00:00",
    "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "10a97078c110",
+   "title": "[단독] 앤트로픽, 한강 작가 책도 불법 다운받았다",
+   "url": "https://www.sedaily.com/article/20102152?ref=naver",
+   "source": "sedaily.com",
+   "published": "2026-10-15T08:46:00+00:00",
+   "tag": "소식",
    "lang": "ko"
   },
   {
@@ -741,6 +984,15 @@
    "lang": "ko"
   },
   {
+   "id": "3733c75a28bf",
+   "title": "Welcome FLUX.3 Image Klein in Diffusers",
+   "url": "https://huggingface.co/blog/flux-3",
+   "source": "Hugging Face",
+   "published": "2026-10-15T00:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
    "id": "e57e124fb49c",
    "title": "통신 3사 '구글 AI' 구독 경쟁…소비자 셈법은",
    "url": "https://www.sisaon.co.kr/news/articleView.html?idxno=205147",
@@ -1099,258 +1351,6 @@
    "published": "2026-10-13T20:02:00+00:00",
    "tag": "소식",
    "lang": "ko"
-  },
-  {
-   "id": "d3f06c5cb28b",
-   "title": "Flox Intelligence is building AI to keep wildlife away from trains, airports, and roads",
-   "url": "https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads/",
-   "source": "TechCrunch",
-   "published": "2026-10-13T18:30:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "d9ed76a64d3e",
-   "title": "Anthropic Warns Small AI Models Could Soon Form Self-Propagating IoT Botnets",
-   "url": "https://thehackernews.com/2026/10/anthropic-warns-small-ai-models-could.html",
-   "source": "The Hacker News",
-   "published": "2026-10-13T18:20:57+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "c06a934276cf",
-   "title": "Facebook is giving users more control over their algorithm",
-   "url": "https://techcrunch.com/2026/10/13/facebook-is-giving-users-more-control-over-their-algorithm/",
-   "source": "TechCrunch",
-   "published": "2026-10-13T18:05:24+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "fa1a37fdc416",
-   "title": "Laplace Intelligence red-teams robots and self-driving cars before they hit the real world",
-   "url": "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/",
-   "source": "TechCrunch",
-   "published": "2026-10-13T17:30:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "550c4c02e9ff",
-   "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
-   "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
-   "source": "Hugging Face",
-   "published": "2026-10-13T17:05:48+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "66cb1e68848f",
-   "title": "Gemini 4 Argon: Built to solve your hardest problems",
-   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-   "source": "Google",
-   "published": "2026-10-13T16:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "ffc748cb8d88",
-   "title": "Higgsfield takes AI video from 1 minute to over 10",
-   "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-   "source": "OpenAI",
-   "published": "2026-10-13T12:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "cd473945c5d8",
-   "title": "[Webinar] How to Stop AI-Driven Privilege Escalation With Runtime Identity Controls",
-   "url": "https://thehackernews.com/2026/10/webinar-how-to-stop-ai-driven-privilege.html",
-   "source": "The Hacker News",
-   "published": "2026-10-13T11:57:06+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "302530343dab",
-   "title": "Product Walkthrough: Bitdefender AI Visibility and Control",
-   "url": "https://thehackernews.com/2026/10/product-walkthrough-bitdefender-ai.html",
-   "source": "The Hacker News",
-   "published": "2026-10-13T10:30:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "6e33620606a0",
-   "title": "⚡ Weekly Recap: Helpdesk 0-Days, Rogue Certs, ShinyHunters Arrest, AI-Fooling Malware and More",
-   "url": "https://thehackernews.com/2026/10/weekly-recap-helpdesk-0-days-rogue.html",
-   "source": "The Hacker News",
-   "published": "2026-10-12T15:16:26+00:00",
-   "tag": "보안",
-   "lang": "en"
-  },
-  {
-   "id": "d261b6b9e669",
-   "title": "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records",
-   "url": "https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html",
-   "source": "The Hacker News",
-   "published": "2026-10-12T07:26:12+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "ab03395157ab",
-   "title": "[통신 View] AI 연합부터 문화·고객경험까지… 상생·체험 경영 본격화",
-   "url": "https://www.newscj.com/news/articleView.html?idxno=3439469",
-   "source": "newscj.com",
-   "published": "2026-10-12T00:46:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "4f95732c4969",
-   "title": "The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Agents You Didn't",
-   "url": "https://thehackernews.com/2026/10/the-third-party-agent-problem-why.html",
-   "source": "The Hacker News",
-   "published": "2026-10-10T11:00:00+00:00",
-   "tag": "보안",
-   "lang": "en"
-  },
-  {
-   "id": "ebcd6167a236",
-   "title": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection Flaws",
-   "url": "https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html",
-   "source": "The Hacker News",
-   "published": "2026-10-10T09:18:45+00:00",
-   "tag": "보안",
-   "lang": "en"
-  },
-  {
-   "id": "90995f7dbc9c",
-   "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-   "url": "https://openai.com/index/asana-browser-agent",
-   "source": "OpenAI",
-   "published": "2026-10-09T07:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "edd58468d564",
-   "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-   "url": "https://openai.com/index/sophos",
-   "source": "OpenAI",
-   "published": "2026-10-09T07:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "112b5f00879d",
-   "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
-   "url": "https://openai.com/index/oracle",
-   "source": "OpenAI",
-   "published": "2026-10-08T16:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "ca1ec6c6a1a1",
-   "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-   "url": "https://openai.com/index/pollo-ai",
-   "source": "OpenAI",
-   "published": "2026-10-08T12:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "f6d3626eb7c8",
-   "title": "LegalOn halves Codex costs while maintaining development speed",
-   "url": "https://openai.com/index/legalon-halves-codex-costs",
-   "source": "OpenAI",
-   "published": "2026-10-08T12:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "077dea1e8a7a",
-   "title": "Disrupting AI-enabled “false front” operations",
-   "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
-   "source": "OpenAI",
-   "published": "2026-10-08T00:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "0f05fd4155a4",
-   "title": "The model that didn't exist, so you made it yourself",
-   "url": "https://huggingface.co/blog/building-with-ml-intern",
-   "source": "Hugging Face",
-   "published": "2026-10-08T00:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "91ed3eb235f3",
-   "title": "Introducing Falcon ASR",
-   "url": "https://huggingface.co/blog/tiiuae/falcon-asr",
-   "source": "Hugging Face",
-   "published": "2026-10-07T13:21:03+00:00",
-   "tag": "출시",
-   "lang": "en"
-  },
-  {
-   "id": "5bdd694c6290",
-   "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
-   "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
-   "source": "Hugging Face",
-   "published": "2026-10-07T12:45:31+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "ad4e14640e35",
-   "title": "Helping teens learn, plan, and shape the future of AI",
-   "url": "https://openai.com/index/teens-learn-and-plan",
-   "source": "OpenAI",
-   "published": "2026-10-07T12:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "ea4f899dc8df",
-   "title": "Introducing Playground: Create and play custom games",
-   "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
-   "source": "Google",
-   "published": "2026-10-07T12:00:00+00:00",
-   "tag": "출시",
-   "lang": "en"
-  },
-  {
-   "id": "04e9dc3828b5",
-   "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
-   "url": "https://openai.com/index/radisson",
-   "source": "OpenAI",
-   "published": "2026-10-07T07:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "0ca1450969b5",
-   "title": "GPT-6 and Intelligent UI for everyone",
-   "url": "https://openai.com/index/gpt-6-for-everyone",
-   "source": "OpenAI",
-   "published": "2026-10-07T00:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "60ef2af305e7",
-   "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
-   "url": "https://openai.com/index/atlassian-partnership",
-   "source": "OpenAI",
-   "published": "2026-10-06T16:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
   }
  ]
 }
