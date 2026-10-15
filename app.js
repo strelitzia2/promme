@@ -1320,6 +1320,111 @@ $("#wikiRoot").addEventListener("keydown", (e) => {
   if (e.key === "Enter" && e.target.matches("g.pt")) wikiGo({ ent: e.target.dataset.went }, 1);
 });
 
+/* ================= 9.7) AI 최신 NEWS =================
+   GitHub Actions가 3시간마다 갱신하는 data/news.json을 읽어
+   홈 상단 제목 배너(티커)와 NEWS 탭 목록을 그림. 제목은 모두 textContent로만 넣음(외부 문자열) */
+const NEWS_TAGS = ["전체", "출시", "보안", "할인", "소식"];
+const news = { items: [], tag: "전체", updated: null, failed: false };
+
+function relTime(iso) {
+  const t = Date.parse(iso);
+  if (!t) return "";
+  const m = Math.max(0, Math.round((Date.now() - t) / 60000));
+  if (m < 60) return `${m || 1}분 전`;
+  if (m < 1440) return `${Math.round(m / 60)}시간 전`;
+  if (m < 10080) return `${Math.round(m / 1440)}일 전`;
+  const d = new Date(t);
+  return `${d.getMonth() + 1}/${d.getDate()}`;
+}
+function safeUrl(u) {
+  try { const x = new URL(u); return /^https?:$/.test(x.protocol) ? x.href : null; } catch (e) { return null; }
+}
+function el(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
+}
+function newsLink(it, cls, hidden) {
+  const a = el("a", cls);
+  a.href = it.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+  if (hidden) { a.tabIndex = -1; a.setAttribute("aria-hidden", "true"); }
+  a.append(el("span", `ntag t-${it.tag}`, it.tag), el("span", "ntitle", it.title));
+  const meta = el("span", "nmeta", `${it.source} · ${relTime(it.published)}`);
+  a.append(meta);
+  return a;
+}
+
+function renderNewsList() {
+  const list = $("#newsList");
+  list.replaceChildren();
+  if (news.failed) { list.append(el("div", "arc-empty", "소식을 불러오지 못했어요. 잠시 후 다시 확인해 주세요.")); return; }
+  const items = news.items.filter((it) => news.tag === "전체" || it.tag === news.tag);
+  if (!items.length) {
+    list.append(el("div", "arc-empty", news.items.length ? "이 분류의 소식이 아직 없어요." : "첫 소식을 모으는 중이에요. 곧 채워져요."));
+    return;
+  }
+  items.forEach((it) => {
+    const row = newsLink(it, "news-row wcard");
+    if (it.lang === "en") row.querySelector(".nmeta").append(el("span", "nlang", "EN"));
+    list.append(row);
+  });
+}
+function renderNewsChips() {
+  const box = $("#newsChips");
+  box.replaceChildren(...NEWS_TAGS.map((t) => {
+    const b = el("button", "chip pill", t === "전체" ? `전체 ${news.items.length}` : t);
+    b.dataset.ntag = t;
+    b.setAttribute("aria-pressed", news.tag === t);
+    return b;
+  }));
+}
+function renderNewsAsOf() {
+  const p = $("#newsAsOf");
+  if (!news.updated) { p.textContent = ""; return; }
+  const d = new Date(news.updated);
+  const hh = String(d.getHours()).padStart(2, "0"), mm = String(d.getMinutes()).padStart(2, "0");
+  p.textContent = `마지막 수집 ${d.getFullYear()}. ${d.getMonth() + 1}. ${d.getDate()} ${hh}:${mm} · ${news.items.length}건 · 3시간마다 자동 갱신`;
+}
+function renderTicker() {
+  const box = $("#newsTicker"), track = $("#ntTrack");
+  const top = news.items.slice(0, 12);
+  if (!top.length) { box.hidden = true; return; }
+  track.replaceChildren(
+    ...top.map((it) => newsLink(it, "nt-item")),
+    ...top.map((it) => newsLink(it, "nt-item", true)),   // 이어 붙여서 끊김 없이 흐르게
+  );
+  track.style.setProperty("--nt-dur", `${Math.max(30, top.length * 7)}s`);
+  box.hidden = false;
+}
+function renderNews() { renderNewsChips(); renderNewsAsOf(); renderNewsList(); renderTicker(); }
+
+async function loadNews() {
+  try {
+    const res = await fetch(`data/news.json?v=${Math.floor(Date.now() / 600000)}`, { cache: "no-cache" });
+    if (!res.ok) throw new Error(res.status);
+    const data = await res.json();
+    news.items = (data.items || []).map((it) => ({ ...it, url: safeUrl(it.url) }))
+      .filter((it) => it.url && it.title && NEWS_TAGS.includes(it.tag));
+    news.updated = data.updated_at;
+    news.failed = false;
+  } catch (e) {
+    console.warn("news.json", e);
+    news.failed = true;
+  }
+  renderNews();
+}
+$("#newsChips").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-ntag]");
+  if (!b || b.dataset.ntag === news.tag) return;
+  news.tag = b.dataset.ntag;
+  $("#newsChips").querySelectorAll("[data-ntag]").forEach((x) => x.setAttribute("aria-pressed", x === b));
+  slideIn($("#newsList"), 0, renderNewsList);
+});
+$("#ntLabel").addEventListener("click", () => selectTab("news"));
+loadNews();
+setInterval(() => { if (!document.hidden) loadNews(); }, 15 * 60 * 1000);   // 열어 둔 채로 있어도 15분마다 새로 읽음
+
 /* ================= 10) 뒤로 · 앞으로 =================
    탭 이동, 카테고리, 아카이브 폴더 이동을 기록 */
 const nav = { stack: [], pos: -1, browser: true, waiting: null };

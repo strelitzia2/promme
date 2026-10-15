@@ -581,3 +581,54 @@ tr:last-child td{ border-bottom: 0 }
   .free-card .wc-foot b{ grid-area: price; justify-self: end; font-size: 12px; white-space: nowrap }
   .free-grid{ gap: 10px }
 }
+
+/* ---------- AI 최신 NEWS: 홈 제목 배너 ---------- */
+.news-ticker{ display: flex; align-items: center; gap: 10px; max-width: 760px; margin: 14px auto 0; height: 46px; padding: 4px; border-radius: var(--r-pill);
+  background: var(--glass); -webkit-backdrop-filter: blur(16px) saturate(170%); backdrop-filter: blur(16px) saturate(170%);
+  border: 1px solid var(--glass-edge); box-shadow: inset 0 1px 0 var(--glass-edge), 0 8px 22px -14px var(--glass-shadow) }
+.nt-label{ flex: none; height: 38px; padding: 0 14px; border: 0; border-radius: var(--r-pill); background: var(--ink); color: var(--bg); font-size: 13px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px }
+.nt-label::before{ content: ""; width: 7px; height: 7px; border-radius: 50%; background: #ef8a3a; box-shadow: 0 0 0 3px rgba(239,138,58,.3); animation: nt-pulse 1.8s ease-in-out infinite }
+@keyframes nt-pulse{ 50%{ box-shadow: 0 0 0 6px rgba(239,138,58,0) } }
+.nt-viewport{ flex: 1; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 4%, #000 92%, transparent) }
+.nt-track{ display: flex; width: max-content; animation: nt-scroll var(--nt-dur, 60s) linear infinite }
+.news-ticker:hover .nt-track, .news-ticker:focus-within .nt-track{ animation-play-state: paused }
+@keyframes nt-scroll{ to{ transform: translateX(-50%) } }
+.nt-item{ display: inline-flex; align-items: center; gap: 8px; padding: 0 22px 0 4px; height: 38px; white-space: nowrap; color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500 }
+.nt-item:hover .ntitle{ text-decoration: underline; text-underline-offset: 3px }
+.nt-item .nmeta{ display: none }
+.nt-item + .nt-item{ border-left: 1px solid var(--line); padding-left: 22px }
+
+/* ---------- AI 최신 NEWS: 목록 ---------- */
+#page-news{ display: flex; flex-direction: column; gap: 20px; padding-top: 18px }
+#page-news[hidden]{ display: none }
+.news-head{ display: flex; flex-direction: column; gap: 8px }
+.news-head .lede{ margin: 0; max-width: 660px; line-height: 1.6 }
+.news-chips .chip{ height: 44px; padding: 0 18px; font-size: 15px }
+.news-list{ display: flex; flex-direction: column; gap: 10px }
+.news-row{ display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 16px 18px; color: var(--ink); text-decoration: none; transition: transform .4s var(--spring), box-shadow .3s }
+.news-row:hover{ transform: translateY(-2px); box-shadow: inset 0 1px 0 var(--glass-edge), 0 18px 30px -20px var(--glass-shadow) }
+.news-row:hover .ntitle{ text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(58,47,28,.35) }
+.news-row .ntitle{ font-size: 16px; font-weight: 600; line-height: 1.45 }
+.news-row .nmeta{ font-size: 12.5px; color: var(--ink-soft); white-space: nowrap; display: flex; align-items: center; gap: 6px }
+.nlang{ font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 6px; background: rgba(120,90,40,.12) }
+.ntag{ display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 24px; padding: 0 9px; border-radius: var(--r-pill); font-size: 12px; font-weight: 700; flex: none }
+.t-출시{ background: rgb(214,240,220); color: rgb(30,95,50) }
+.t-보안{ background: rgb(120,30,20); color: #fff }
+.t-할인{ background: rgb(255,224,189); color: rgb(130,62,10) }
+.t-소식{ background: rgb(226,222,240); color: rgb(70,55,120) }
+@media (max-width: 700px){
+  .news-ticker{ margin-top: 6px; height: 42px }
+  .nt-label{ height: 34px; padding: 0 12px; font-size: 12px }
+  .nt-item{ height: 34px; font-size: 13px }
+  .news-chips{ flex-wrap: nowrap; overflow-x: auto; margin-inline: calc(-1 * var(--gutter)); padding: 2px var(--gutter) 6px; scrollbar-width: none }
+  .news-chips .chip{ flex: none; font-size: 14px }
+  .news-row{ grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "tag meta" "title title"; row-gap: 8px; padding: 14px 16px }
+  .news-row .ntag{ grid-area: tag; justify-self: start }
+  .news-row .nmeta{ grid-area: meta; justify-self: end }
+  .news-row .ntitle{ grid-area: title; font-size: 15px }
+}
+@media (prefers-reduced-motion: reduce){
+  .nt-track{ animation: none }
+  .nt-viewport{ overflow-x: auto }
+  .nt-label::before{ animation: none }
+}

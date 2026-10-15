@@ -50,6 +50,10 @@
 <main id="main">
   <!-- 홈 -->
   <section class="page" id="page-home" data-tab="home">
+    <div class="news-ticker" id="newsTicker" hidden>
+      <button class="nt-label" id="ntLabel" type="button">AI 소식</button>
+      <div class="nt-viewport"><div class="nt-track" id="ntTrack"></div></div>
+    </div>
     <div class="hero">
       <h1 class="logo">promme</h1>
       <p>원하는 프롬프트를 검색하세요</p>
@@ -69,13 +73,14 @@
 
   <!-- AI 최신 NEWS -->
   <section class="page" id="page-news" data-tab="news" hidden>
-    <h2>AI 최신 NEWS <span class="tag">예시 화면</span></h2>
-    <p class="lede">실제 서비스에서는 RSS나 뉴스 API를 연결해 자동으로 채워요.</p>
-    <div class="stack">
-      <article class="row"><h3>이번 주 가장 많이 저장된 이미지 생성 프롬프트</h3><p>셀카를 피규어·애니 캐릭터로 바꾸는 스타일 전환 프롬프트가 저장 수 상위를 차지했어요.</p><div class="src">promme 트렌드 · 예시</div></article>
-      <article class="row"><h3>새 AI 모델이 나오면 여기에 요약이 올라와요</h3><p>모델 이름, 출시일, 무료로 쓸 수 있는 범위, 한 줄 평을 카드 하나로 정리하는 형식이에요.</p><div class="src">뉴스 카드 형식 · 예시</div></article>
-      <article class="row"><h3>프롬프트 작성 팁: 역할 · 맥락 · 출력 형식</h3><p>“너는 ~야” 역할 지정, 내 상황 설명, 원하는 결과 형식을 순서대로 쓰면 결과가 안정돼요.</p><div class="src">가이드 · 예시</div></article>
+    <div class="news-head">
+      <p class="eyebrow">AI 최신 NEWS</p>
+      <h2 class="wiki-title">오늘의 AI 소식</h2>
+      <p class="lede">신모델 출시, 보안 이슈, 요금·할인 소식을 3시간마다 모아 중복 없이 보여드려요. 제목을 누르면 원문 기사로 이동해요.</p>
+      <p class="wiki-asof" id="newsAsOf"></p>
     </div>
+    <div class="wiki-chips news-chips" id="newsChips" role="group" aria-label="소식 분류"></div>
+    <div class="news-list" id="newsList"></div>
   </section>
 
   <!-- AI 성능 위키백과 -->

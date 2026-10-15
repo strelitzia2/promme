@@ -1,0 +1,59 @@
+# AI 최신 뉴스 자동 수집
+# 3시간마다 RSS·NAVER API HUB에서 AI 관련 기사 제목과 링크를 모아 data/news.json을 갱신합니다.
+# Actions 탭 → "AI 뉴스 수집" → Run workflow 로 바로 실행할 수도 있어요.
+name: AI 뉴스 수집
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # UTC 기준 3시간마다(매시 17분 — 정각 혼잡 회피)
+  workflow_dispatch:
+
+permissions:
+  contents: write   # news.json 커밋
+  pages: write      # 커밋 후 GitHub Pages 재배포 요청
+
+concurrency:
+  group: news
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 라이브러리 설치
+        run: pip install requests
+
+      - name: 뉴스 수집
+        run: python scripts/fetch_news.py
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+
+      - name: 바뀐 경우만 커밋
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/news.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "새 기사가 없어 커밋하지 않습니다."
+          else
+            git commit -m "AI 뉴스 갱신"
+            git pull --rebase --autostash
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: GitHub Pages 재배포 요청
+        if: steps.commit.outputs.changed == 'true'
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds" || echo "재배포 요청 실패(다음 푸시 때 반영됨)"
+        env:
+          GH_TOKEN: ${{ github.token }}
