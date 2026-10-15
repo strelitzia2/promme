@@ -43,6 +43,7 @@
     <button class="login pill" id="loginBtn">
       <span class="avatar" id="loginAvatar" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18.5a6.5 6.5 0 0 1 11 0"/></svg></span>
       <span id="loginLabel">로그인</span>
+      <b class="badge ad-badge" id="adminBadge" hidden></b>
     </button>
   </div>
 </header>
@@ -62,6 +63,7 @@
         <input id="searchInput" type="search" placeholder="무엇을 찾고 계신가요?" aria-label="프롬프트 검색">
       </label>
       <div class="chips" id="chips"></div>
+      <div class="share-row" id="shareRow" hidden><button class="share-btn pill" id="shareBtn" type="button"><span aria-hidden="true">＋</span>내 프롬프트 공유하기</button></div>
     </div>
     <div class="grid" id="grid"></div>
   </section>
@@ -123,6 +125,7 @@
     <div class="actions">
       <button class="btn" id="sCopy">프롬프트 복사</button>
       <button class="btn soft" id="sSave">폴더에 담기</button>
+      <button class="btn ghost" id="sEdit" hidden>관리자 수정</button>
       <button class="btn ghost" data-close>닫기</button>
     </div>
   </div>
@@ -203,11 +206,108 @@
       <span class="avatar big" id="acAvatar"></span>
       <div><h3 id="acEmail"></h3><p class="sub" id="acStats"></p></div>
     </div>
+    <div class="ac-block">
+      <div class="ac-nick" id="acNickRow">
+        <span class="flabel">닉네임</span>
+        <b id="acNick"></b>
+        <button class="link-btn" type="button" id="acNickEdit">바꾸기</button>
+      </div>
+      <form class="new-row" id="nickForm" autocomplete="off" hidden>
+        <input id="nickInput" type="text" maxlength="16" placeholder="한글·영문·숫자 2~16자" aria-label="닉네임">
+        <button class="btn" type="submit">저장</button>
+      </form>
+      <p class="form-msg" id="nickMsg" role="alert"></p>
+    </div>
+    <div class="ac-block">
+      <div class="ac-mine-head"><span class="flabel">내가 올린 프롬프트</span><button class="link-btn" type="button" id="acShare">＋ 새로 올리기</button></div>
+      <div class="ac-mine" id="acMine"></div>
+    </div>
+    <button class="admin-entry" type="button" id="acAdmin" hidden>
+      <span class="ae-ico" aria-hidden="true">🛠️</span>
+      <span class="ae-text"><b>관리자 페이지</b><small id="acAdminSub">승인 대기 · 프롬프트 · 뉴스 관리</small></span>
+      <span class="ae-count" id="acAdminCount" hidden></span>
+    </button>
     <div class="actions">
       <button class="btn" id="acArchive">MY 아카이브 보기</button>
       <button class="btn ghost" id="acLogout">로그아웃</button>
       <button class="btn ghost" data-close>닫기</button>
     </div>
+  </div>
+</div>
+
+<!-- 프롬프트 올리기 · (관리자) 수정 시트 -->
+<div class="scrim" id="submitScrim" hidden>
+  <div class="sheet glass submit" role="dialog" aria-modal="true" aria-labelledby="subHead">
+    <h3 id="subHead">내 프롬프트 공유하기</h3>
+    <p class="sub" id="subLede">관리자가 확인한 뒤 홈에 공개돼요. 사진 첨부는 곧 열릴 예정이에요.</p>
+    <form id="subForm" class="sub-form" autocomplete="off" novalidate>
+      <div class="sub-prev-row">
+        <div class="sub-prev" id="subPrev" aria-hidden="true"><span id="subPrevArt">✨</span><b id="subPrevTitle">제목을 적어 주세요</b></div>
+        <div class="sub-picks">
+          <span class="flabel">아이콘</span>
+          <div class="emoji-pick" id="subArt" role="radiogroup" aria-label="카드 아이콘"></div>
+          <span class="flabel">카드 색</span>
+          <div class="theme-pick" id="subTheme" role="radiogroup" aria-label="카드 색"></div>
+        </div>
+      </div>
+      <div class="field" id="subNickWrap">
+        <label for="subNick">닉네임 <small>카드에 @닉네임으로 보여요 · 처음 한 번만</small></label>
+        <input id="subNick" type="text" maxlength="16" placeholder="한글·영문·숫자 2~16자">
+      </div>
+      <div class="field">
+        <label for="subTitle">제목 <small id="subTitleCount">0 / 40</small></label>
+        <input id="subTitle" type="text" maxlength="40" placeholder="예) 셀카로 90년대 필름 사진 만들기">
+      </div>
+      <div class="field two">
+        <div>
+          <label for="subCat">분류</label>
+          <select id="subCat"></select>
+        </div>
+        <div>
+          <label for="subTool">추천 AI</label>
+          <select id="subTool"></select>
+        </div>
+      </div>
+      <div class="field" id="subToolOtherWrap" hidden>
+        <label for="subToolOther">AI 이름</label>
+        <input id="subToolOther" type="text" maxlength="20" placeholder="예) Grok">
+      </div>
+      <div class="field">
+        <label for="subBody">프롬프트 <small id="subCount">0 / 2000</small></label>
+        <textarea id="subBody" maxlength="2000" rows="7" placeholder="AI 채팅창에 그대로 붙여넣을 내용을 적어 주세요.&#10;바꿔 쓸 부분은 [대괄호]로 표시하면 좋아요."></textarea>
+      </div>
+      <div class="field" id="subStatusWrap" hidden>
+        <label for="subStatus">공개 상태</label>
+        <select id="subStatus">
+          <option value="approved">공개</option>
+          <option value="pending">승인 대기</option>
+          <option value="hidden">숨김</option>
+          <option value="rejected">반려</option>
+        </select>
+      </div>
+      <p class="form-msg" id="subMsg" role="alert"></p>
+      <div class="actions">
+        <button class="btn" type="submit" id="subSubmit">검토 요청 보내기</button>
+        <button class="btn ghost" type="button" data-close>닫기</button>
+        <button class="btn danger-ghost" type="button" id="subDelete" hidden>삭제</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 관리자 시트 -->
+<div class="scrim" id="adminScrim" hidden>
+  <div class="sheet glass admin" role="dialog" aria-modal="true" aria-labelledby="adHead">
+    <div class="ad-top">
+      <h3 id="adHead">관리자 페이지</h3>
+      <button class="btn ghost" type="button" data-close>닫기</button>
+    </div>
+    <div class="mode-tabs three" id="adTabs" role="group" aria-label="관리 메뉴">
+      <button type="button" data-atab="queue" aria-pressed="true">승인 대기</button>
+      <button type="button" data-atab="prompts" aria-pressed="false">프롬프트</button>
+      <button type="button" data-atab="news" aria-pressed="false">뉴스</button>
+    </div>
+    <div id="adminBody"></div>
   </div>
 </div>
 

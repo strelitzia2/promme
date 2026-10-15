@@ -632,3 +632,126 @@ tr:last-child td{ border-bottom: 0 }
   .nt-viewport{ overflow-x: auto }
   .nt-label::before{ animation: none }
 }
+
+/* ---------- 프롬프트 공유 ---------- */
+.chips{ margin-bottom: 18px }
+.share-row[hidden]{ display: none }
+.chips:has(+ .share-row[hidden]){ margin-bottom: 34px }
+.share-row{ display: flex; justify-content: center; margin: 0 0 30px }
+.share-btn{ display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 20px; cursor: pointer; font: inherit; font-size: 15px; font-weight: 600; color: var(--ink);
+  border-style: dashed; border-color: rgba(170, 90, 25, .45); transition: transform .45s var(--spring), box-shadow .3s }
+.share-btn span{ font-size: 18px; line-height: 1; color: #aa5a19 }
+.share-btn:hover{ transform: translateY(-2px); box-shadow: inset 0 1px 0 var(--glass-edge), 0 14px 26px -14px var(--glass-shadow) }
+.share-btn:active{ transform: scale(.96) }
+.meta .by{ color: #aa5a19; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 50% }
+
+.login{ position: relative }
+.ad-badge{ position: absolute; top: -4px; right: -4px; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 10px;
+  background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; line-height: 20px; text-align: center; box-shadow: 0 0 0 2px var(--bg) }
+
+.flabel{ display: block; font-size: 13px; font-weight: 600; color: var(--ink-soft) }
+.link-btn{ border: 0; background: none; padding: 6px 4px; font: inherit; font-size: 13px; font-weight: 600; color: #aa5a19; cursor: pointer; text-decoration: none; white-space: nowrap; border-radius: 8px }
+.link-btn:hover{ text-decoration: underline; text-underline-offset: 3px }
+.link-btn.danger{ color: #b4432a }
+.link-btn.danger.confirm{ background: #b4432a; color: #fff; padding: 6px 10px; text-decoration: none }
+.link-btn:disabled{ opacity: .5 }
+
+/* 내 계정 시트 */
+.ac-block{ padding: 14px 0; border-top: 1px solid var(--line) }
+.ac-nick{ display: flex; align-items: center; gap: 10px }
+.ac-nick b{ font-size: 15px; color: var(--ink) }
+.ac-nick .link-btn{ margin-left: auto }
+.ac-block .new-row{ margin-top: 10px }
+.ac-block .form-msg:empty{ display: none }
+.admin-entry{ margin-top: 2px }
+.ac-mine-head{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px }
+.ac-mine{ display: flex; flex-direction: column; gap: 8px; max-height: 260px; overflow: auto }
+.ac-empty{ margin: 4px 0 0; font-size: 14px; color: var(--ink-soft); line-height: 1.6 }
+.mine-row, .ad-row{ display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 10px; padding: 8px 10px 8px 8px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line) }
+.mine-thumb{ width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; font-size: 20px; flex: none }
+.mine-text{ display: flex; flex-direction: column; gap: 2px; min-width: 0 }
+.mine-text b{ font-size: 14.5px; font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.mine-text small{ font-size: 12px; color: var(--ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.st{ display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: var(--r-pill); font-size: 12px; font-weight: 700; white-space: nowrap }
+.st-pending{ background: rgb(255, 236, 190); color: rgb(130, 80, 10) }
+.st-approved{ background: rgb(214, 240, 220); color: rgb(30, 95, 50) }
+.st-rejected{ background: rgb(250, 218, 210); color: rgb(150, 50, 30) }
+.st-hidden{ background: rgb(228, 224, 214); color: rgb(90, 80, 64) }
+.admin-entry{ display: flex; align-items: center; gap: 12px; width: 100%; margin: 0 0 16px; padding: 12px 14px; border-radius: 20px; border: 1px solid rgba(170, 90, 25, .3);
+  background: linear-gradient(90deg, rgb(255, 236, 205), rgb(255, 246, 214)); cursor: pointer; font: inherit; color: var(--ink); text-align: left; transition: transform .45s var(--spring) }
+.admin-entry:active{ transform: scale(.98) }
+.ae-ico{ font-size: 22px }
+.ae-text{ display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0 }
+.ae-text b{ font-size: 15px }
+.ae-text small{ font-size: 12px; color: var(--ink-soft) }
+.ae-count{ min-width: 26px; height: 26px; padding: 0 8px; border-radius: 13px; background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; line-height: 26px; text-align: center }
+
+/* 올리기 · 수정 시트 */
+.sheet.submit{ max-height: 88vh }
+.sub-form{ display: grid; gap: 14px; margin-top: 4px }
+.sub-prev-row{ display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 16px; align-items: start }
+.sub-prev{ position: relative; aspect-ratio: 1 / 1.08; border-radius: 22px; display: grid; place-items: center; overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 14px 26px -16px var(--glass-shadow); transition: background .4s }
+.sub-prev span{ font-size: 46px; transform: translateY(-10px) }
+.sub-prev b{ position: absolute; left: 7px; right: 7px; bottom: 7px; padding: 6px 10px; border-radius: 14px; background: rgba(255, 252, 235, .82); font-size: 12px; font-weight: 600; line-height: 1.35;
+  overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical }
+.sub-picks{ display: grid; gap: 6px; min-width: 0 }
+.sub-picks .emoji-pick{ margin-bottom: 4px }
+.sub-picks .emoji-pick button{ width: 34px; height: 34px; font-size: 17px; border-radius: 11px }
+.theme-pick{ display: flex; flex-wrap: wrap; gap: 8px }
+.theme-pick button{ width: 30px; height: 30px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .9); cursor: pointer; box-shadow: 0 2px 6px -2px var(--glass-shadow); transition: transform .3s var(--spring), box-shadow .2s }
+.theme-pick button[aria-checked="true"]{ transform: scale(1.12); box-shadow: 0 0 0 2px var(--accent) }
+.field{ display: grid; gap: 6px; min-width: 0 }
+.field[hidden]{ display: none }
+.field label{ display: flex; align-items: baseline; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 600; color: var(--ink-soft) }
+.field label small{ font-weight: 500; font-size: 12px; opacity: .85; font-variant-numeric: tabular-nums }
+.field.two{ grid-template-columns: 1fr 1fr; gap: 12px }
+.field.two > div{ display: grid; gap: 6px; min-width: 0 }
+.sub-form input, .sub-form select, .sub-form textarea, .ad-tools input, .ad-reject input, .ad-news-edit input, .ad-news-edit select{
+  width: 100%; min-width: 0; height: 44px; padding: 0 16px; border-radius: var(--r-pill); border: 1px solid var(--line); background: var(--surface);
+  font: inherit; font-size: 15px; color: var(--ink); outline: 0 }
+.sub-form select, .ad-news-edit select{ padding-right: 10px; cursor: pointer }
+.sub-form textarea{ height: auto; min-height: 150px; padding: 14px 16px; border-radius: 18px; line-height: 1.65; resize: vertical }
+.sub-form :is(input, select, textarea):focus, .ad-tools input:focus, .ad-reject input:focus, .ad-news-edit :is(input, select):focus{ border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft) }
+.sub-form .form-msg{ margin: 0 }
+
+/* 관리자 시트 */
+.sheet.admin{ width: min(780px, 100%); max-height: 88vh }
+.ad-top{ display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px }
+.ad-top .btn{ height: 38px; padding: 0 16px }
+.mode-tabs.three{ grid-template-columns: repeat(3, 1fr) }
+#adminBody{ display: flex; flex-direction: column; gap: 10px }
+.ad-note{ margin: 0 0 2px; font-size: 13px; color: var(--ink-soft); line-height: 1.55 }
+.ad-tools{ padding: 2px 0 4px }
+.ad-card{ display: grid; gap: 10px; padding: 14px; border-radius: 22px; background: var(--surface); border: 1px solid var(--line) }
+.ad-card-head{ display: flex; align-items: center; gap: 10px; min-width: 0 }
+.ad-body{ margin: 0 !important; max-height: 180px; overflow: auto; font-size: 14px !important }
+.ad-actions{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+.ad-actions .btn{ height: 40px; padding: 0 16px }
+.ad-actions select{ width: auto; flex: none }
+.ad-reject{ display: grid; gap: 8px }
+.ad-row{ grid-template-columns: auto minmax(0, 1fr) auto auto }
+.ad-row .ntag{ align-self: center }
+.ad-row-actions{ display: flex; gap: 2px; align-items: center }
+.ad-row.is-hidden{ opacity: .55 }
+.ad-row.is-hidden .mine-text b{ text-decoration: line-through; text-decoration-color: rgba(58, 47, 28, .4) }
+.ad-news-edit{ display: grid; gap: 8px; padding: 12px; border-radius: 18px; background: var(--surface); border: 1px solid var(--accent); box-shadow: 0 0 0 3px var(--accent-soft) }
+.ad-orig{ font-size: 12px; color: var(--ink-soft); line-height: 1.5 }
+#adminBody > .btn.full{ margin-top: 4px }
+
+@media (max-width: 700px){
+  .share-row{ margin-bottom: 22px }
+  .sub-prev-row{ grid-template-columns: 96px minmax(0, 1fr); gap: 12px }
+  .sub-picks .emoji-pick, .theme-pick{ flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 4px 2px; margin-right: -22px; padding-right: 22px }
+  .sub-picks .emoji-pick button, .theme-pick button{ flex: none }
+  .sub-prev span{ font-size: 34px }
+  .sub-prev b{ font-size: 11px; padding: 4px 8px }
+  .field.two{ grid-template-columns: 1fr }
+  .mine-row{ grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "th tx st" "th tx del" }
+  .mine-row .mine-thumb{ grid-area: th } .mine-row .mine-text{ grid-area: tx } .mine-row .st{ grid-area: st; justify-self: end } .mine-row .link-btn{ grid-area: del; justify-self: end; padding: 2px 4px }
+  .ad-row{ grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "th tx st" "ac ac ac"; row-gap: 4px }
+  .ad-row > :first-child{ grid-area: th } .ad-row .mine-text{ grid-area: tx } .ad-row .st{ grid-area: st }
+  .ad-row .ad-row-actions{ grid-area: ac; justify-content: flex-end; border-top: 1px dashed var(--line); padding-top: 4px }
+  .ad-row:not(:has(.st)){ grid-template-areas: "th tx tx" "ac ac ac" }
+  .mode-tabs.three button{ font-size: 13.5px }
+}

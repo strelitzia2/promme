@@ -3,7 +3,7 @@
    1) 데이터            2) 아카이브 저장소 (이 기기 / Supabase)
    3) 홈 카드            4) MY 아카이브 화면
    5) 시트 공통 · 프롬프트 · 폴더 고르기 · 폴더 편집
-   6) 날아가는 모션      7) 로그인 (Supabase)
+   6) 날아가는 모션      7) 로그인 (Supabase)  7.5) 프롬프트 공유 · 관리자
    8) 오늘의 운세        9) 탭바 · 페이지 전환
    10) 뒤로 · 앞으로     11) 시작
    ========================================================= */
@@ -38,6 +38,13 @@ const PROMPTS = [
     prompt: "주제: [발표 주제], 발표 시간: 10분, 청중: 같은 과 학생\n슬라이드 8장 구성으로 각 장의 제목, 핵심 문장 1개, 넣을 시각 자료를 제안해줘." },
 ];
 
+PROMPTS.forEach((p, i) => { p.theme = i; p.status = "approved"; p.author = null; p.authorId = null; });
+
+/* 카드 배경: 사용자가 올린 글은 색을 직접 쓰지 않고 이 8가지 중 번호로만 고름 */
+const THEMES = PROMPTS.map((p) => p.bg);
+/* 사용자 글에 쓸 수 있는 아이콘 (DB에서도 같은 목록만 허용) */
+const PROMPT_EMOJIS = ["✨", "🧸", "📸", "🌸", "💭", "🏃", "🍱", "📚", "🎤", "🎨", "💡", "🎬", "🎧", "💼", "🗺️", "🧪"];
+const TOOLS = ["ChatGPT", "Claude", "Gemini", "Perplexity", "Midjourney", "Copilot"];
 const FOLDER_EMOJIS = ["📁", "✨", "🔖", "💡", "🎨", "📸", "📚", "🍱", "💪", "💼", "🌙", "🎧"];
 
 /* ================= 공통 ================= */
@@ -47,7 +54,8 @@ const ORDER = ["archive", "home", "news", "wiki", "fortune"];
 const EASE = "cubic-bezier(.32,.72,0,1)";        // 부드럽게 감속 (iOS 시트 느낌)
 const EASE_BOUNCE = "cubic-bezier(.34,1.25,.5,1)"; // 살짝 튕기며 멈춤
 const byId = (id) => PROMPTS.find((p) => p.id === id);
-const catName = (id) => CATS.find((c) => c.id === id).name;
+const catName = (id) => (CATS.find((c) => c.id === id) || { name: "기타" }).name;
+const bgOf = (p) => THEMES[p.theme] || THEMES[0];
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const newId = () => (crypto.randomUUID ? crypto.randomUUID()
   : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => { const r = (Math.random() * 16) | 0; return (c === "x" ? r : (r & 3) | 8).toString(16); }));
@@ -166,27 +174,27 @@ const bookmarkSvg = '<svg width="15" height="15" viewBox="0 0 24 24" fill="curre
 
 /* 썸네일 안쪽: 이모지 + (있으면) 실제 이미지. 이미지가 뜨면 이모지는 숨김 */
 function artInner(p) {
-  return `<div class="art" aria-hidden="true">${p.art}</div>` +
+  return `<div class="art" aria-hidden="true">${esc(p.art)}</div>` +
     (p.img ? `<img class="shot" src="${esc(p.img)}" alt="" loading="lazy" decoding="async" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">` : "");
 }
 
 function cardHTML(p) {
   const s = saveOf(p.id), f = s && folderOf(s.folder_id);
   return `<article class="card" tabindex="0" data-id="${p.id}">
-    <div class="thumb" style="background:${p.bg}">
+    <div class="thumb" style="background:${bgOf(p)}">
       ${artInner(p)}
       <div class="cap"><span>${esc(p.title)}</span>
         <button class="save" data-save="${p.id}" aria-pressed="${!!s}" aria-label="${s ? `‘${esc(f ? f.name : "")}’ 폴더에 담김` : "폴더에 담기"}">${bookmarkSvg}</button></div>
     </div>
-    <div class="meta"><span class="list-title">${esc(p.title)}</span><span>${p.tool} · ${catName(p.cat)}</span><span>저장 ${p.saves}</span></div>
+    <div class="meta"><span class="list-title">${esc(p.title)}</span><span>${esc(p.tool)} · ${catName(p.cat)}</span>${p.author ? `<span class="by">@${esc(p.author)}</span>` : p.saves ? `<span>저장 ${esc(p.saves)}</span>` : "<span></span>"}</div>
   </article>`;
 }
 
 function renderHome() {
   const q = state.q.trim().toLowerCase();
-  const list = PROMPTS.filter((p) =>
+  const list = PROMPTS.filter((p) => p.status === "approved" &&
     (state.cat === "all" || p.cat === state.cat) &&
-    (!q || (p.title + p.prompt + p.tool).toLowerCase().includes(q)));
+    (!q || (p.title + p.prompt + p.tool + (p.author || "")).toLowerCase().includes(q)));
   $("#grid").innerHTML = list.length
     ? list.map(cardHTML).join("")
     : `<div class="empty">“${esc(state.q)}”에 맞는 프롬프트가 아직 없어요.</div>`;
@@ -265,7 +273,7 @@ function onCardClick(e) {
 
 /* ================= 4) MY 아카이브 화면 ================= */
 function tileHTML(p) {
-  return `<div class="tile" style="background:${p.bg}">${p.art}${p.img ? `<img src="${esc(p.img)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</div>`;
+  return `<div class="tile" style="background:${bgOf(p)}">${esc(p.art)}${p.img ? `<img src="${esc(p.img)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</div>`;
 }
 function collageHTML(fid, emoji) {
   const items = savesIn(fid).slice(0, 4).map((s) => byId(s.prompt_id)).filter(Boolean);
@@ -435,7 +443,8 @@ let sheetP = null;
 function openPrompt(p) {
   sheetP = p;
   $("#sTitle").textContent = p.title;
-  $("#sSub").textContent = `${p.tool} · ${catName(p.cat)} · 저장 ${p.saves}`;
+  $("#sSub").textContent = [p.tool, catName(p.cat), p.author ? `@${p.author}` : p.saves ? `저장 ${p.saves}` : ""].filter(Boolean).join(" · ");
+  $("#sEdit").hidden = !me.admin;
   $("#sPrompt").textContent = p.prompt;
   const s = saveOf(p.id), f = s && folderOf(s.folder_id);
   $("#sSave").textContent = f ? `${f.emoji} ${f.name}에 담김` : "폴더에 담기";
@@ -472,8 +481,8 @@ function bindEmojiPick(el, onPick) {
 function openPicker(pid, originEl) {
   const p = byId(pid), s = saveOf(pid);
   picker.pid = pid; picker.origin = originEl; picker.emoji = "📁";
-  $("#pkThumb").style.background = p.bg;
-  $("#pkThumb").innerHTML = p.art + (p.img ? `<img src="${esc(p.img)}" alt="" onerror="this.remove()">` : "");
+  $("#pkThumb").style.background = bgOf(p);
+  $("#pkThumb").innerHTML = esc(p.art) + (p.img ? `<img src="${esc(p.img)}" alt="" onerror="this.remove()">` : "");
   $("#pkTitle").textContent = s ? "다른 폴더로 옮길까요?" : "어느 폴더에 담을까요?";
   $("#pkSub").textContent = p.title;
   $("#pkList").innerHTML = store.folders.length
@@ -583,8 +592,8 @@ function flyToArchive(rect, p, done) {
 
   const el = document.createElement("div");
   el.className = "flyer";
-  el.style.cssText = `left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;background:${p.bg}`;
-  el.innerHTML = `<div class="art">${p.art}</div>` + (p.img ? `<img src="${esc(p.img)}" alt="" onerror="this.remove()">` : "");
+  el.style.cssText = `left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;background:${bgOf(p)}`;
+  el.innerHTML = `<div class="art">${esc(p.art)}</div>` + (p.img ? `<img src="${esc(p.img)}" alt="" onerror="this.remove()">` : "");
   document.body.appendChild(el);
 
   const x0 = rect.left + rect.width / 2, y0 = rect.top + rect.height / 2;
@@ -687,12 +696,13 @@ function renderAuthButton() {
     $("#loginLabel").textContent = "로그인";
     btn.classList.remove("signed");
   }
+  const pend = me.admin ? pendingCount() : 0;
+  $("#adminBadge").hidden = !pend;
+  $("#adminBadge").textContent = pend > 99 ? "99+" : pend;
 }
 $("#loginBtn").addEventListener("click", () => {
   if (!user) { openAuth(); return; }
-  $("#acAvatar").textContent = (user.email || "?").charAt(0).toUpperCase();
-  $("#acEmail").textContent = user.email || "";
-  $("#acStats").textContent = `프롬프트 ${store.saves.length}개 · 폴더 ${store.folders.length}개 저장 중`;
+  renderAccount();
   openModal("#accountScrim");
 });
 $("#acArchive").addEventListener("click", () => { closeModal("#accountScrim"); selectTab("archive"); });
@@ -709,6 +719,8 @@ async function handleSession(session) {
   sessionUserId = nu && nu.id;
   user = nu;
   renderAuthButton();
+  await loadMe();
+  await loadPrompts();
   if (user) {
     await mergeLocalIntoRemote();
     await pullRemote();
@@ -716,6 +728,7 @@ async function handleSession(session) {
     loadLocal();
     renderAll();
   }
+  if (news.raw.length) applyNews();
 }
 if (sb) {
   // 콜백 안에서 바로 Supabase를 다시 부르면 멈출 수 있어서 한 박자 뒤에 처리
@@ -737,6 +750,425 @@ function toast(m) {
   toastTimer = setTimeout(() => t.classList.remove("show"), 1900);
 }
 
+/* ================= 7.5) 프롬프트 공유 · 관리자 =================
+   - 로그인한 사람: 홈에 프롬프트를 올림 → '승인 대기'
+   - 관리자: 승인하면 그 즉시 홈에 공개 / 수정 · 숨김 · 삭제 / 뉴스 제목·분류 수정, 숨기기
+   - 누가 관리자인지, 무엇을 바꿀 수 있는지는 Supabase(RLS)가 서버에서 판단함.
+     화면의 관리자 메뉴는 보여주기만 할 뿐, 일반 사용자가 억지로 열어도 저장되지 않음
+   - 사용자가 쓴 글자는 모두 esc() 또는 textContent로만 화면에 넣음 */
+const me = { nick: null, admin: false };
+const NICK_RE = /^[0-9A-Za-z가-힣_]{2,16}$/;
+const STATUS = { pending: "검토 중", approved: "공개", rejected: "반려", hidden: "숨김" };
+const STATUS_HINT = { pending: "관리자가 확인하고 있어요", approved: "홈에 공개됐어요", rejected: "공개되지 않았어요", hidden: "관리자가 잠시 숨겼어요" };
+const stOf = (p) => (STATUS[p.status] ? p.status : "pending");
+const pendingCount = () => PROMPTS.filter((p) => p.status === "pending").length;
+const mine = () => (user ? PROMPTS.filter((p) => p.authorId === user.id) : []);
+
+function dbErrorText(err) {
+  const m = (err && err.message) || "";
+  if (/too_many_pending/.test(m)) return "검토를 기다리는 글이 이미 5개예요. 승인된 뒤에 더 올려 주세요.";
+  if (err && err.code === "23505") return "이미 누가 쓰고 있는 닉네임이에요.";
+  if (err && err.code === "23514") return "입력한 내용을 다시 확인해 주세요.";
+  if (err && err.code === "42501" || /row-level security|permission denied/i.test(m)) return "권한이 없어요. 다시 로그인해 주세요.";
+  if (/JWT|session/i.test(m)) return "로그인이 만료됐어요. 다시 로그인해 주세요.";
+  return "잠시 문제가 생겼어요. 다시 시도해 주세요.";
+}
+
+/* --- 불러오기 --- */
+function rowToPrompt(r) {
+  return {
+    id: r.id, title: r.title, cat: r.cat, tool: r.tool, prompt: r.body,
+    art: r.art, theme: r.theme, img: r.img || "", saves: r.saves_label || "",
+    status: r.status, reject: r.reject_reason || "", created: r.created_at,
+    authorId: r.author_id, author: (r.author && r.author.nickname) || null,
+  };
+}
+let promptsFromDb = false;
+async function loadPrompts() {
+  if (!sb) return;
+  const { data, error } = await sb.from("prompts")
+    .select("id,title,cat,tool,body,art,theme,img,saves_label,status,reject_reason,created_at,author_id,author:profiles(nickname)")
+    .order("created_at", { ascending: false }).order("id");
+  if (error) { console.warn("prompts", error.message); return; }   // 표를 아직 안 만들었으면 기본 예시 그대로
+  if (!data.length && !promptsFromDb) return;
+  promptsFromDb = true;
+  $("#shareRow").hidden = false;   // 서버 표가 준비된 뒤에만 공유 버튼을 보여 줌
+  PROMPTS.splice(0, PROMPTS.length, ...data.map(rowToPrompt));
+  if (current === "home" && !flying) flip($("#grid"), renderAll); else renderAll();
+  if (!$("#accountScrim").hidden && user) renderAccount();
+  if (admOpen()) renderAdmin();
+}
+async function loadMe() {
+  me.nick = null; me.admin = false;
+  if (!user || !sb) return;
+  const [p, a] = await Promise.all([
+    sb.from("profiles").select("nickname").eq("id", user.id).maybeSingle(),
+    sb.rpc("is_admin"),
+  ]);
+  if (p.data) me.nick = p.data.nickname;
+  me.admin = a.data === true;
+}
+async function saveNick(nick) {
+  if (!NICK_RE.test(nick)) return "닉네임은 한글·영문·숫자·_ 2~16자로 정해 주세요.";
+  if (nick === me.nick) return null;
+  const { error } = me.nick
+    ? await sb.from("profiles").update({ nickname: nick }).eq("id", user.id)
+    : await sb.from("profiles").insert({ id: user.id, nickname: nick });
+  if (error) return dbErrorText(error);
+  me.nick = nick;
+  PROMPTS.forEach((p) => { if (p.authorId === user.id) p.author = nick; });
+  return null;
+}
+
+/* --- 내 계정 시트: 닉네임 · 내가 올린 글 · 관리자 입구 --- */
+function thumbHTML(p) { return `<span class="mine-thumb" style="background:${bgOf(p)}" aria-hidden="true">${esc(p.art)}</span>`; }
+function renderAccount() {
+  $("#acAvatar").textContent = (user.email || "?").charAt(0).toUpperCase();
+  $("#acEmail").textContent = user.email || "";
+  $("#acStats").textContent = `프롬프트 ${store.saves.length}개 · 폴더 ${store.folders.length}개 저장 중`;
+  $("#acNick").textContent = me.nick ? `@${me.nick}` : "아직 없어요";
+  $("#acNickEdit").textContent = me.nick ? "바꾸기" : "정하기";
+  $("#nickForm").hidden = true;
+  $("#nickMsg").textContent = "";
+  const list = mine();
+  $("#acMine").innerHTML = list.length ? list.map((p) => `<div class="mine-row">
+      ${thumbHTML(p)}
+      <span class="mine-text"><b>${esc(p.title)}</b><small>${p.status === "rejected" && p.reject ? `반려 사유 · ${esc(p.reject)}` : STATUS_HINT[stOf(p)]}</small></span>
+      <span class="st st-${stOf(p)}">${STATUS[stOf(p)]}</span>
+      <button class="link-btn danger" type="button" data-del-mine="${p.id}">삭제</button>
+    </div>`).join("")
+    : `<p class="ac-empty">아직 올린 프롬프트가 없어요. 나만 알던 프롬프트를 공유해 보세요.</p>`;
+  $("#acAdmin").hidden = !me.admin;
+  const n = pendingCount();
+  $("#acAdminCount").hidden = !(me.admin && n);
+  $("#acAdminCount").textContent = n;
+}
+$("#acNickEdit").addEventListener("click", () => {
+  $("#nickForm").hidden = false;
+  $("#nickInput").value = me.nick || "";
+  $("#nickInput").focus();
+});
+$("#nickForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const btn = $("#nickForm button");
+  btn.disabled = true;
+  const err = await saveNick($("#nickInput").value.trim());
+  btn.disabled = false;
+  if (err) { $("#nickMsg").textContent = err; return; }
+  renderAccount(); renderAll();
+  toast("닉네임을 저장했어요");
+});
+$("#acMine").addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-del-mine]");
+  if (!b) return;
+  if (!b.classList.contains("confirm")) { b.classList.add("confirm"); b.textContent = "정말 삭제?"; return; }
+  b.disabled = true;
+  const { error } = await sb.from("prompts").delete().eq("id", +b.dataset.delMine);
+  if (error) { toast(dbErrorText(error)); b.disabled = false; return; }
+  toast("삭제했어요");
+  await loadPrompts();
+  renderAccount();
+});
+$("#acShare").addEventListener("click", () => { closeModal("#accountScrim"); openSubmit(); });
+$("#acAdmin").addEventListener("click", () => { closeModal("#accountScrim"); openAdmin(); });
+
+/* --- 올리기 · (관리자) 수정 시트 --- */
+const sub = { edit: null, art: "✨", theme: 0, del: false, back: false };
+$("#subCat").innerHTML = CATS.filter((c) => c.id !== "all").map((c) => `<option value="${c.id}">${c.emo} ${c.name}</option>`).join("");
+$("#subTool").innerHTML = TOOLS.map((t) => `<option value="${t}">${t}</option>`).join("") + `<option value="__other">기타 (직접 적기)</option>`;
+$("#subArt").innerHTML = PROMPT_EMOJIS.map((em) => `<button type="button" role="radio" aria-checked="false" data-art="${em}">${em}</button>`).join("");
+$("#subTheme").innerHTML = THEMES.map((bg, i) => `<button type="button" role="radio" aria-checked="false" aria-label="카드 색 ${i + 1}" data-theme="${i}" style="background:${bg}"></button>`).join("");
+
+function syncSubPreview() {
+  $("#subPrev").style.background = THEMES[sub.theme];
+  $("#subPrevArt").textContent = sub.art;
+  $("#subPrevTitle").textContent = $("#subTitle").value.trim() || "제목을 적어 주세요";
+  $("#subArt").querySelectorAll("[data-art]").forEach((b) => b.setAttribute("aria-checked", b.dataset.art === sub.art));
+  $("#subTheme").querySelectorAll("[data-theme]").forEach((b) => b.setAttribute("aria-checked", +b.dataset.theme === sub.theme));
+  $("#subTitleCount").textContent = `${$("#subTitle").value.length} / 40`;
+  $("#subCount").textContent = `${$("#subBody").value.length} / 2000`;
+  $("#subToolOtherWrap").hidden = $("#subTool").value !== "__other";
+}
+$("#subArt").addEventListener("click", (e) => { const b = e.target.closest("[data-art]"); if (b) { sub.art = b.dataset.art; syncSubPreview(); } });
+$("#subTheme").addEventListener("click", (e) => { const b = e.target.closest("[data-theme]"); if (b) { sub.theme = +b.dataset.theme; syncSubPreview(); } });
+["#subTitle", "#subBody"].forEach((s) => $(s).addEventListener("input", syncSubPreview));
+$("#subForm").addEventListener("input", () => { $("#subMsg").textContent = ""; });
+$("#subTool").addEventListener("change", () => { syncSubPreview(); if ($("#subTool").value === "__other") $("#subToolOther").focus(); });
+
+function openSubmit(p, back) {
+  if (!sb) { toast("로그인 서버가 연결되지 않았어요"); return; }
+  if (!user) { toast("로그인하면 내 프롬프트를 공유할 수 있어요"); openAuth(); return; }
+  const editing = !!p && me.admin;
+  const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+  sub.edit = editing ? p.id : null; sub.del = false; sub.back = !!back;
+  sub.art = editing && PROMPT_EMOJIS.includes(p.art) ? p.art : editing ? "✨" : pick(PROMPT_EMOJIS);
+  sub.theme = editing ? (THEMES[p.theme] ? p.theme : 0) : Math.floor(Math.random() * THEMES.length);
+  $("#subHead").textContent = editing ? "프롬프트 수정" : "내 프롬프트 공유하기";
+  $("#subLede").textContent = editing ? `#${p.id}${p.author ? ` · @${p.author}` : " · promme 기본"} · 저장하면 바로 반영돼요`
+    : me.admin ? "관리자 계정이라 올리면 바로 홈에 공개돼요."
+    : "관리자가 확인한 뒤 홈에 공개돼요. 사진 첨부는 곧 열릴 예정이에요.";
+  $("#subNickWrap").hidden = !!me.nick || editing;   // 수정할 때는 닉네임이 필요 없음
+  $("#subNick").value = "";
+  $("#subTitle").value = editing ? p.title : "";
+  $("#subCat").value = editing ? p.cat : state.cat !== "all" ? state.cat : "sns";
+  const known = editing && TOOLS.includes(p.tool);
+  $("#subTool").value = !editing ? "ChatGPT" : known ? p.tool : "__other";
+  $("#subToolOther").value = editing && !known ? p.tool : "";
+  $("#subBody").value = editing ? p.prompt : "";
+  $("#subStatusWrap").hidden = !editing;
+  if (editing) $("#subStatus").value = stOf(p);
+  $("#subSubmit").textContent = editing ? "저장" : me.admin ? "바로 공개하기" : "검토 요청 보내기";
+  const del = $("#subDelete");
+  del.hidden = !editing; del.classList.remove("confirm"); del.textContent = "삭제";
+  $("#subMsg").textContent = "";
+  syncSubPreview();
+  openModal("#submitScrim");
+  ["#subArt", "#subTheme"].forEach((sel) => {   // 휴대폰에서 옆으로 넘기는 줄: 고른 것이 보이게
+    const box = $(sel), on = box.querySelector('[aria-checked="true"]');
+    box.scrollLeft = on ? on.offsetLeft - box.offsetLeft - box.clientWidth / 2 + on.offsetWidth / 2 : 0;
+  });
+  setTimeout(() => ($("#subNickWrap").hidden ? $("#subTitle") : $("#subNick")).focus({ preventScroll: true }), 120);
+}
+function afterSubmit(msg) {
+  closeModal("#submitScrim");
+  toast(msg);
+  if (sub.back) setTimeout(() => openAdmin(), 200);
+}
+$("#subForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const msg = (t, focus) => { $("#subMsg").textContent = t; if (focus) $(focus).focus(); };
+  const title = $("#subTitle").value.trim(), body = $("#subBody").value.trim(), cat = $("#subCat").value;
+  const tool = ($("#subTool").value === "__other" ? $("#subToolOther").value : $("#subTool").value).trim().slice(0, 20);
+  const needNick = !$("#subNickWrap").hidden;
+  if (needNick && !NICK_RE.test($("#subNick").value.trim())) return msg("닉네임은 한글·영문·숫자·_ 2~16자로 정해 주세요.", "#subNick");
+  if (title.length < 2) return msg("제목을 2자 이상 적어 주세요.", "#subTitle");
+  if (!tool) return msg("추천 AI 이름을 적어 주세요.", "#subToolOther");
+  if (body.length < 10) return msg("프롬프트를 10자 이상 적어 주세요.", "#subBody");
+  const btn = $("#subSubmit");
+  btn.disabled = true; msg("");
+  try {
+    if (needNick) {
+      const err = await saveNick($("#subNick").value.trim());
+      if (err) return msg(err, "#subNick");
+      $("#subNickWrap").hidden = true;
+    }
+    const row = { title, cat, tool, body, art: sub.art, theme: sub.theme };
+    if (sub.edit) {
+      const { data, error } = await sb.from("prompts").update({ ...row, status: $("#subStatus").value }).eq("id", sub.edit).select("id");
+      if (error) return msg(dbErrorText(error));
+      if (!data || !data.length) return msg("권한이 없어서 저장하지 못했어요.");
+      afterSubmit("고쳤어요. 홈에 바로 반영돼요");
+    } else {
+      const { error } = await sb.from("prompts").insert(me.admin ? { ...row, status: "approved" } : row);
+      if (error) return msg(dbErrorText(error));
+      afterSubmit(me.admin ? "홈에 바로 공개했어요" : "검토 요청을 보냈어요. 승인되면 홈에 올라가요");
+    }
+    await loadPrompts();
+  } finally {
+    btn.disabled = false;
+  }
+});
+$("#subDelete").addEventListener("click", async () => {
+  const del = $("#subDelete");
+  if (!sub.del) { sub.del = true; del.classList.add("confirm"); del.textContent = "정말 삭제할까요?"; return; }
+  del.disabled = true;
+  const { error } = await sb.from("prompts").delete().eq("id", sub.edit);
+  del.disabled = false;
+  if (error) { $("#subMsg").textContent = dbErrorText(error); return; }
+  afterSubmit("삭제했어요");
+  await loadPrompts();
+});
+$("#shareBtn").addEventListener("click", () => openSubmit());
+$("#sEdit").addEventListener("click", () => { closeModal("#promptScrim"); openSubmit(sheetP); });
+
+/* --- 관리자 시트 --- */
+const ATABS = ["queue", "prompts", "news"];
+const adm = { tab: "queue", q: "", nq: "", rejecting: null, confirmDel: null, editNews: null, limit: 40 };
+const admOpen = () => !$("#adminScrim").hidden;
+function openAdmin(tab) {
+  if (!me.admin) return;
+  if (tab) adm.tab = tab;
+  adm.rejecting = adm.confirmDel = adm.editNews = null;
+  openModal("#adminScrim");
+  setAdminTab(adm.tab, true);
+  requestAnimationFrame(() => moveSlideInd($("#adTabs"), true));
+  loadPrompts();   // 방금 들어온 글까지 새로
+}
+function setAdminTab(t, instant) {
+  const dir = Math.sign(ATABS.indexOf(t) - ATABS.indexOf(adm.tab));
+  adm.tab = t;
+  $("#adTabs").querySelectorAll("[data-atab]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.atab === t));
+  if (instant) renderAdmin(); else slideIn($("#adminBody"), dir, renderAdmin);
+  moveSlideInd($("#adTabs"), instant);
+}
+function renderAdmin() {
+  const n = pendingCount();
+  $("#adTabs [data-atab=queue]").textContent = n ? `승인 대기 ${n}` : "승인 대기";
+  moveSlideInd($("#adTabs"), true);
+  const body = $("#adminBody");
+  if (adm.tab === "queue") body.innerHTML = adminQueueHTML();
+  else if (adm.tab === "prompts") body.innerHTML = adminSearchHTML(adm.q, "제목 · 내용 · 닉네임 검색") + `<div id="adList">${adminPromptListHTML()}</div>`;
+  else body.innerHTML = `<p class="ad-note">뉴스는 3시간마다 새로 모이지만, 여기서 고친 제목·분류와 숨김은 계속 유지돼요.</p>`
+    + adminSearchHTML(adm.nq, "기사 제목 · 출처 검색") + `<div id="adList">${adminNewsListHTML()}</div>`;
+}
+function adminSearchHTML(v, ph) {
+  return `<div class="ad-tools"><input type="search" id="adSearch" value="${esc(v)}" placeholder="${ph}" aria-label="${ph}"></div>`;
+}
+function adminQueueHTML() {
+  const list = PROMPTS.filter((p) => p.status === "pending").sort((a, b) => (a.created || "").localeCompare(b.created || ""));
+  if (!list.length) return `<div class="arc-empty"><span class="big">🎉</span>검토할 프롬프트가 없어요.</div>`;
+  return `<p class="ad-note">오래 기다린 글부터 보여요. 승인하면 그 즉시 홈에 공개돼요.</p>` + list.map((p) => `
+    <article class="ad-card" data-pid="${p.id}">
+      <div class="ad-card-head">
+        ${thumbHTML(p)}
+        <div class="mine-text"><b>${esc(p.title)}</b><small>${p.author ? "@" + esc(p.author) : "작성자 없음"} · ${esc(p.tool)} · ${catName(p.cat)} · ${relTime(p.created)}</small></div>
+      </div>
+      <pre class="ad-body">${esc(p.prompt)}</pre>
+      ${adm.rejecting === p.id ? `
+      <form class="ad-reject" data-reject="${p.id}">
+        <input name="reason" maxlength="200" placeholder="반려 사유 (작성자에게 보여요 · 비워도 돼요)" aria-label="반려 사유">
+        <div class="ad-actions">
+          <button class="btn danger-ghost confirm" type="submit">반려하기</button>
+          <button class="btn ghost" type="button" data-a="reject-cancel">취소</button>
+        </div>
+      </form>` : `
+      <div class="ad-actions">
+        <button class="btn" type="button" data-a="approve">승인 · 공개</button>
+        <button class="btn ghost" type="button" data-a="reject">반려</button>
+        <button class="btn ghost" type="button" data-a="edit">수정</button>
+      </div>`}
+    </article>`).join("");
+}
+function adminPromptListHTML() {
+  const q = adm.q.trim().toLowerCase();
+  const list = PROMPTS.filter((p) => p.status !== "pending" && (!q || (p.title + p.prompt + (p.author || "")).toLowerCase().includes(q)));
+  if (!list.length) return `<div class="arc-empty">찾는 프롬프트가 없어요.</div>`;
+  return list.map((p) => {
+    const on = p.status === "approved", conf = adm.confirmDel === p.id;
+    return `<div class="ad-row" data-pid="${p.id}">
+      ${thumbHTML(p)}
+      <span class="mine-text"><b>${esc(p.title)}</b><small>#${p.id} · ${p.author ? "@" + esc(p.author) : "promme 기본"} · ${catName(p.cat)}${p.status === "rejected" && p.reject ? ` · 사유: ${esc(p.reject)}` : ""}</small></span>
+      <span class="st st-${stOf(p)}">${STATUS[stOf(p)]}</span>
+      <span class="ad-row-actions">
+        <button class="link-btn" type="button" data-a="edit">수정</button>
+        <button class="link-btn" type="button" data-a="${on ? "hide" : "show"}">${on ? "숨기기" : "공개"}</button>
+        <button class="link-btn danger${conf ? " confirm" : ""}" type="button" data-a="delete">${conf ? "정말 삭제?" : "삭제"}</button>
+      </span>
+    </div>`;
+  }).join("");
+}
+function adminNewsListHTML() {
+  const q = adm.nq.trim().toLowerCase();
+  const all = news.raw.map((raw) => ({ raw, v: newsView(raw), o: news.ov.get(raw.id) }))
+    .filter(({ raw, v }) => !q || (v.title + " " + raw.title + " " + raw.source).toLowerCase().includes(q));
+  if (!all.length) return `<div class="arc-empty">${news.raw.length ? "찾는 기사가 없어요." : "불러온 기사가 없어요."}</div>`;
+  const shown = all.slice(0, adm.limit);
+  return shown.map(({ raw, v, o }) => {
+    const edited = o && (o.title || o.tag);
+    if (adm.editNews === raw.id) return `
+      <form class="ad-news-edit" data-nid="${esc(raw.id)}">
+        <input name="title" maxlength="160" value="${esc(v.title)}" aria-label="기사 제목">
+        <div class="ad-actions">
+          <select name="tag" aria-label="분류">${NEWS_TAGS.slice(1).map((t) => `<option value="${t}"${t === v.tag ? " selected" : ""}>${t}</option>`).join("")}</select>
+          <button class="btn" type="submit">저장</button>
+          <button class="btn ghost" type="button" data-a="news-cancel">취소</button>
+          ${edited ? `<button class="btn ghost" type="button" data-a="news-reset">원래대로</button>` : ""}
+        </div>
+        <small class="ad-orig">원래 제목 · ${esc(raw.title)}</small>
+      </form>`;
+    return `<div class="ad-row${v.hidden ? " is-hidden" : ""}" data-nid="${esc(raw.id)}">
+      <span class="ntag t-${v.tag}">${v.tag}</span>
+      <span class="mine-text"><b>${esc(v.title)}</b><small>${esc(raw.source)} · ${relTime(raw.published)}${edited ? " · 수정됨" : ""}${v.hidden ? " · 숨김" : ""}</small></span>
+      <span class="ad-row-actions">
+        <a class="link-btn" href="${esc(raw.url)}" target="_blank" rel="noopener noreferrer">원문</a>
+        <button class="link-btn" type="button" data-a="news-edit">수정</button>
+        <button class="link-btn" type="button" data-a="${v.hidden ? "news-show" : "news-hide"}">${v.hidden ? "보이기" : "숨기기"}</button>
+      </span>
+    </div>`;
+  }).join("") + (all.length > shown.length ? `<button class="btn ghost full" type="button" data-a="news-more">더 보기 · ${all.length - shown.length}개 남음</button>` : "");
+}
+
+async function setStatus(pid, status, okMsg, extra) {
+  const { data, error } = await sb.from("prompts").update({ status, ...(extra || {}) }).eq("id", pid).select("id");
+  if (error || !data || !data.length) { toast(error ? dbErrorText(error) : "권한이 없어요"); return; }
+  toast(okMsg);
+  await loadPrompts();
+}
+async function saveNewsOv(id, patch, okMsg) {
+  const cur = news.ov.get(id) || { hidden: false, title: null, tag: null };
+  const row = { news_id: id, hidden: !!cur.hidden, title: cur.title || null, tag: cur.tag || null, ...patch, updated_at: new Date().toISOString() };
+  const { error } = await sb.from("news_overrides").upsert(row, { onConflict: "news_id" });
+  if (error) { toast(dbErrorText(error)); return false; }
+  news.ov.set(id, row);
+  applyNews();
+  toast(okMsg);
+  return true;
+}
+
+$("#adTabs").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-atab]");
+  if (!b || b.dataset.atab === adm.tab) return;
+  adm.rejecting = adm.confirmDel = adm.editNews = null;
+  setAdminTab(b.dataset.atab);
+});
+$("#adminBody").addEventListener("input", (e) => {
+  if (e.target.id !== "adSearch") return;
+  if (adm.tab === "news") { adm.nq = e.target.value; adm.limit = 40; $("#adList").innerHTML = adminNewsListHTML(); }
+  else { adm.q = e.target.value; adm.confirmDel = null; $("#adList").innerHTML = adminPromptListHTML(); }
+});
+$("#adminBody").addEventListener("click", async (e) => {
+  const b = e.target.closest("[data-a]");
+  if (!b) return;
+  const a = b.dataset.a;
+  const pEl = b.closest("[data-pid]"), nEl = b.closest("[data-nid]");
+  const pid = pEl ? +pEl.dataset.pid : null, nid = nEl ? nEl.dataset.nid : null;
+  const busy = () => { b.disabled = true; };
+  if (a !== "delete") adm.confirmDel = null;
+
+  if (a === "approve") { busy(); await setStatus(pid, "approved", "승인했어요. 홈에 바로 올라갔어요"); }
+  else if (a === "reject") { adm.rejecting = pid; renderAdmin(); const f = $(`[data-reject="${pid}"] input`); if (f) f.focus(); }
+  else if (a === "reject-cancel") { adm.rejecting = null; renderAdmin(); }
+  else if (a === "edit") { const p = byId(pid); if (p) { closeModal("#adminScrim"); openSubmit(p, true); } }
+  else if (a === "hide") { busy(); await setStatus(pid, "hidden", "홈에서 숨겼어요"); }
+  else if (a === "show") { busy(); await setStatus(pid, "approved", "다시 공개했어요"); }
+  else if (a === "delete") {
+    if (adm.confirmDel !== pid) { adm.confirmDel = pid; $("#adList").innerHTML = adminPromptListHTML(); return; }
+    busy();
+    const { error } = await sb.from("prompts").delete().eq("id", pid);
+    adm.confirmDel = null;
+    if (error) { toast(dbErrorText(error)); renderAdmin(); return; }
+    toast("삭제했어요");
+    await loadPrompts();
+  }
+  else if (a === "news-edit") { adm.editNews = nid; $("#adList").innerHTML = adminNewsListHTML(); const f = $(`form[data-nid="${nid}"] input`); if (f) { f.focus(); f.select(); } }
+  else if (a === "news-cancel") { adm.editNews = null; $("#adList").innerHTML = adminNewsListHTML(); }
+  else if (a === "news-reset") { busy(); if (await saveNewsOv(nid, { title: null, tag: null }, "원래 제목·분류로 되돌렸어요")) adm.editNews = null; applyNews(); }
+  else if (a === "news-hide") { busy(); await saveNewsOv(nid, { hidden: true }, "기사를 숨겼어요"); }
+  else if (a === "news-show") { busy(); await saveNewsOv(nid, { hidden: false }, "기사를 다시 보이게 했어요"); }
+  else if (a === "news-more") { adm.limit += 40; $("#adList").innerHTML = adminNewsListHTML(); }
+});
+$("#adminBody").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const f = e.target, btn = f.querySelector('[type="submit"]');
+  if (f.dataset.reject) {
+    btn.disabled = true;
+    const reason = f.elements.reason.value.trim().slice(0, 200);
+    adm.rejecting = null;
+    await setStatus(+f.dataset.reject, "rejected", "반려했어요. 작성자의 내 계정에 사유가 보여요", { reject_reason: reason || null });
+    if (admOpen()) renderAdmin();
+    return;
+  }
+  if (f.dataset.nid) {
+    const raw = news.raw.find((it) => it.id === f.dataset.nid);
+    if (!raw) return;
+    const t = f.elements.title.value.trim(), tag = f.elements.tag.value;
+    if (t.length < 2) { toast("제목을 2자 이상 적어 주세요"); return; }
+    btn.disabled = true;
+    const ok = await saveNewsOv(raw.id, { title: t === raw.title ? null : t.slice(0, 160), tag: tag === raw.tag ? null : tag }, "기사 제목·분류를 고쳤어요");
+    if (ok) { adm.editNews = null; applyNews(); } else btn.disabled = false;
+  }
+});
+
 /* ================= 8) 오늘의 운세 ================= */
 (function () {
   const d = new Date(), seed = d.getFullYear() * 372 + d.getMonth() * 31 + d.getDate();
@@ -745,7 +1177,10 @@ function toast(m) {
   $("#fDate").textContent = `${d.getFullYear()}. ${d.getMonth() + 1}. ${d.getDate()}`;
   $("#fMsg").textContent = msgs[seed % msgs.length];
   $("#fLucky").innerHTML = `<span>행운의 색 · ${colors[seed % 5]}</span><span>행운의 아이템 · ${items[(seed + 2) % 5]}</span>`;
-  $("#fPrompt").addEventListener("click", () => openPrompt(PROMPTS[seed % PROMPTS.length]));
+  $("#fPrompt").addEventListener("click", () => {
+    const pool = PROMPTS.filter((p) => p.status === "approved");
+    if (pool.length) openPrompt(pool[seed % pool.length]);
+  });
 })();
 
 /* ================= 9) 리퀴드 글래스 탭바 ================= */
@@ -1324,7 +1759,7 @@ $("#wikiRoot").addEventListener("keydown", (e) => {
    GitHub Actions가 3시간마다 갱신하는 data/news.json을 읽어
    홈 상단 제목 배너(티커)와 NEWS 탭 목록을 그림. 제목은 모두 textContent로만 넣음(외부 문자열) */
 const NEWS_TAGS = ["전체", "출시", "보안", "할인", "소식"];
-const news = { items: [], tag: "전체", updated: null, failed: false };
+const news = { raw: [], items: [], ov: new Map(), tag: "전체", updated: null, failed: false };
 
 function relTime(iso) {
   const t = Date.parse(iso);
@@ -1399,12 +1834,33 @@ function renderTicker() {
 }
 function renderNews() { renderNewsChips(); renderNewsAsOf(); renderNewsList(); renderTicker(); }
 
+/* 관리자가 고친 제목·분류, 숨긴 기사 (Supabase news_overrides) */
+async function loadNewsOverrides() {
+  if (!sb) return;
+  const { data, error } = await sb.from("news_overrides").select("news_id,hidden,title,tag");
+  if (error) { console.warn("news_overrides", error.message); return; }
+  news.ov = new Map(data.map((o) => [o.news_id, o]));
+}
+function newsView(it) {
+  const o = news.ov.get(it.id);
+  if (!o) return it;
+  return { ...it, title: o.title || it.title, tag: NEWS_TAGS.includes(o.tag) ? o.tag : it.tag, hidden: !!o.hidden };
+}
+function applyNews() {
+  news.items = news.raw.map(newsView).filter((it) => !it.hidden);
+  renderNews();
+  if (admOpen() && adm.tab === "news") renderAdmin();
+}
+
 async function loadNews() {
   try {
-    const res = await fetch(`data/news.json?v=${Math.floor(Date.now() / 600000)}`, { cache: "no-cache" });
+    const [res] = await Promise.all([
+      fetch(`data/news.json?v=${Math.floor(Date.now() / 600000)}`, { cache: "no-cache" }),
+      loadNewsOverrides(),
+    ]);
     if (!res.ok) throw new Error(res.status);
     const data = await res.json();
-    news.items = (data.items || []).map((it) => ({ ...it, url: safeUrl(it.url) }))
+    news.raw = (data.items || []).map((it) => ({ ...it, url: safeUrl(it.url) }))
       .filter((it) => it.url && it.title && NEWS_TAGS.includes(it.tag));
     news.updated = data.updated_at;
     news.failed = false;
@@ -1412,7 +1868,7 @@ async function loadNews() {
     console.warn("news.json", e);
     news.failed = true;
   }
-  renderNews();
+  applyNews();
 }
 $("#newsChips").addEventListener("click", (e) => {
   const b = e.target.closest("[data-ntag]");
