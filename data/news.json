@@ -1,7 +1,70 @@
 {
- "updated_at": "2026-10-16T16:45:44+00:00",
+ "updated_at": "2026-10-16T21:20:17+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "8b992db04d51",
+   "title": "ChatGPT 광고 클릭 370건에도 구매 0건…타기팅 과제",
+   "url": "https://www.tokenpost.kr/news/ai/423554",
+   "source": "tokenpost.kr",
+   "published": "2026-10-16T21:12:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "3a93c17a5ca8",
+   "title": "구글 AI 프로 체험판, 120달러 가치 광고했지만 제미나이 4 아르곤은 못...",
+   "url": "https://www.wikitree.co.kr/articles/1166917",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-16T21:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "0d5dd4672898",
+   "title": "[현장] 토마토 알아보는 냉장고, 문자 보내는 차창…삼성·LG의 AI 신기술",
+   "url": "https://www.ekn.kr/web/view.php?key=20261016021357304",
+   "source": "ekn.kr",
+   "published": "2026-10-16T21:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "3c106a8503c9",
+   "title": "\"AI·양자 위협, 두고 볼 수 없다\"…싱가포르에 모인 보안 전문가들",
+   "url": "https://www.ddaily.co.kr/page/view/2026101514330979495",
+   "source": "ddaily.co.kr",
+   "published": "2026-10-16T21:00:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "e0987f565b8e",
+   "title": "[단독] 한국 신작 3년치 싹쓸이…80t 주문자 앤트로픽이었다",
+   "url": "https://www.joongang.co.kr/article/25470494",
+   "source": "joongang.co.kr",
+   "published": "2026-10-16T21:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "174a0742fed5",
+   "title": "AI 챗봇 건강상담, 오류보다 위험한 건 '보이지 않는 피해'",
+   "url": "https://www.kpanews.co.kr/news/articleView.html?idxno=546569",
+   "source": "kpanews.co.kr",
+   "published": "2026-10-16T20:52:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "c74e5a79a0e1",
+   "title": "India becomes the latest country to report rogue AI agent activity",
+   "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+   "source": "TechCrunch",
+   "published": "2026-10-16T17:52:24+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
   {
    "id": "84c2c565c396",
    "title": "A Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
@@ -1173,6 +1236,15 @@
    "lang": "en"
   },
   {
+   "id": "9db4940a53f8",
+   "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+   "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+   "source": "OpenAI",
+   "published": "2026-10-16T00:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
    "id": "aae90d6b2dab",
    "title": "When it came to Cal AI’s viral success, a small army of influencers paid off",
    "url": "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/",
@@ -1277,78 +1349,6 @@
    "url": "https://www.mt.co.kr/future/2026/10/16/2026100816000531057",
    "source": "mt.co.kr",
    "published": "2026-10-15T20:30:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "24dcac73d42a",
-   "title": "GPT-Live-1.1 순차 배포…한국어 등 새 음성 추가",
-   "url": "https://www.tokenpost.kr/news/ai/423082",
-   "source": "tokenpost.kr",
-   "published": "2026-10-15T20:24:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "6a20a05b8e30",
-   "title": "‘선생님’ 된 AI… 영상으로 로봇 훈련시켜",
-   "url": "https://www.seoul.co.kr/news/economy/IT/2026/10/16/20261016031003?wlog_tag3=naver",
-   "source": "seoul.co.kr",
-   "published": "2026-10-15T20:06:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "b4bb17dfd32f",
-   "title": "[열린세상] AI 개발 속도 둘러싼 논란",
-   "url": "https://www.seoul.co.kr/news/editOpinion/world-stories/2026/10/16/20261016027005?wlog_tag3=naver",
-   "source": "seoul.co.kr",
-   "published": "2026-10-15T20:05:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d5bac5a69bce",
-   "title": "Meta launches an open-weight AI model that runs on Macs",
-   "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
-   "source": "TechCrunch",
-   "published": "2026-10-15T20:04:53+00:00",
-   "tag": "출시",
-   "lang": "en"
-  },
-  {
-   "id": "3dc9ea2db1c3",
-   "title": "구글, 성수동에 ‘제미나이 캠퍼스’ 연다…“Z세대 겨냥”",
-   "url": "https://www.sedaily.com/article/20102092?ref=naver",
-   "source": "sedaily.com",
-   "published": "2026-10-15T20:01:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "a983409c8d0b",
-   "title": "Amazon devices chief Panos Panay sees a future where AI devices replace the need to use apps",
-   "url": "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/",
-   "source": "TechCrunch",
-   "published": "2026-10-15T19:55:25+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "4c852e4a27a0",
-   "title": "\"해킹 가능한 AI, 인터넷서 분리해야\"…과학자들 경고",
-   "url": "https://www.newsis.com/view/NISX20261015_0003827440",
-   "source": "newsis.com",
-   "published": "2026-10-15T19:36:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "726804607595",
-   "title": "[기획] 카카오, AI·투자 두 축 분리",
-   "url": "https://www.kfenews.co.kr/news/articleView.html?idxno=666363",
-   "source": "kfenews.co.kr",
-   "published": "2026-10-15T19:34:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
