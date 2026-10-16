@@ -1,7 +1,151 @@
 {
- "updated_at": "2026-10-16T11:34:36+00:00",
+ "updated_at": "2026-10-16T16:45:44+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "84c2c565c396",
+   "title": "A Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+   "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+   "source": "TechCrunch",
+   "published": "2026-10-16T16:30:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "1db14d807722",
+   "title": "Physical AI is more than robots, says the Nvidia veteran now investing in it",
+   "url": "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/",
+   "source": "TechCrunch",
+   "published": "2026-10-16T16:30:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "1aa8b1ac1c09",
+   "title": "Elorian’s first AI model wants to reason with images, not just about them",
+   "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+   "source": "TechCrunch",
+   "published": "2026-10-16T16:01:37+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "351478776159",
+   "title": "Jev is Vercel’s fastest-adopted AI model ever",
+   "url": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+   "source": "TechCrunch",
+   "published": "2026-10-16T15:33:49+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "ed001dfe0330",
+   "title": "한국어 책 80t 다섯 차례 걸쳐 앤트로픽 갔다",
+   "url": "https://www.joongang.co.kr/article/25470421",
+   "source": "joongang.co.kr",
+   "published": "2026-10-16T15:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "2a8d16fcac1a",
+   "title": "[챗GPT 보이스] \"더 자연스러운 한국어로\"…챗GPT 보이스, 새 목소리 '한...",
+   "url": "https://www.cbci.co.kr/news/articleView.html?idxno=616357",
+   "source": "cbci.co.kr",
+   "published": "2026-10-16T15:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "de3d82224bc1",
+   "title": "Mark Wahlberg on using AI in film ‘the right way’ and being open to an AI clone carrying on his legacy",
+   "url": "https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/",
+   "source": "TechCrunch",
+   "published": "2026-10-16T14:26:51+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "82bd71e8965d",
+   "title": "OpenAI Research Model Spent 3rd-Party Test ETH Without Permission to Deploy Smart Contract",
+   "url": "https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html",
+   "source": "The Hacker News",
+   "published": "2026-10-16T14:03:04+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "311fa86942b3",
+   "title": "Veritas expands its anti-counterfeit chip to jewelry, trophies, and fragrance bottles",
+   "url": "https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods/",
+   "source": "TechCrunch",
+   "published": "2026-10-16T14:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "07ecc61272e9",
+   "title": "AI경영리더협회, 제8차 정기간담회 성황…AI 혁신 이끌 자문위원단 구성",
+   "url": "https://www.ekn.kr/web/view.php?key=20261016020057439",
+   "source": "ekn.kr",
+   "published": "2026-10-16T13:50:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "414af17d3b0d",
+   "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...美 반도체주 동반 하락",
+   "url": "https://www.newspim.com/news/view/20261016001423",
+   "source": "newspim.com",
+   "published": "2026-10-16T13:32:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "e6b0c9baa366",
+   "title": "Replit’s CEO says the future of work is the ‘self-driving company’",
+   "url": "https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company/",
+   "source": "TechCrunch",
+   "published": "2026-10-16T12:55:09+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "2768f55a1369",
+   "title": "제프 딘 전 구글 수석과학자, EBS 'AI 석학 특강'서 제미나이 개발과 AI의...",
+   "url": "https://www.lecturernews.com/news/articleView.html?idxno=212101",
+   "source": "lecturernews.com",
+   "published": "2026-10-16T12:42:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "82caf1551330",
+   "title": "엔비디아, AI PC 'RTX 스파크' 국내 출시…\"에이전트 AI 시대 가속화\"",
+   "url": "https://www.hankyung.com/article/202610166871i",
+   "source": "hankyung.com",
+   "published": "2026-10-16T12:09:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "aaf6a0d86f03",
+   "title": "오픈AI, 크롬용 챗GPT 확장 프로그램 개편… 구글 '제미나이' 맞불",
+   "url": "https://it.chosun.com/news/articleView.html?idxno=2023092172211",
+   "source": "it.chosun.com",
+   "published": "2026-10-16T12:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "61ac6bfaa7c9",
+   "title": "AI Decision Models and Their Impact on AI SOC Platforms",
+   "url": "https://thehackernews.com/2026/10/ai-decision-models-and-their-impact-on.html",
+   "source": "The Hacker News",
+   "published": "2026-10-16T11:30:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
   {
    "id": "fede5658bfff",
    "title": "아정당·SK브로드밴드만의 AI 검색 전략은?…엘리펀트컴퍼니, 21일 ‘202...",
@@ -1020,6 +1164,15 @@
    "lang": "ko"
   },
   {
+   "id": "849b423196d1",
+   "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
+   "url": "https://huggingface.co/blog/reflection-beam",
+   "source": "Hugging Face",
+   "published": "2026-10-16T00:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
    "id": "aae90d6b2dab",
    "title": "When it came to Cal AI’s viral success, a small army of influencers paid off",
    "url": "https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/",
@@ -1196,159 +1349,6 @@
    "url": "https://www.kfenews.co.kr/news/articleView.html?idxno=666363",
    "source": "kfenews.co.kr",
    "published": "2026-10-15T19:34:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "737a15fb3b30",
-   "title": "AI 네이티브 전환, 생존의 문제다 [AI가 바꾸는 세상]",
-   "url": "https://www.hankookilbo.com/news/article/A2026101509190001795?did=NA",
-   "source": "hankookilbo.com",
-   "published": "2026-10-15T19:31:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "e925c3137a8a",
-   "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
-   "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
-   "source": "TechCrunch",
-   "published": "2026-10-15T19:14:26+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "a72d1e4da6b0",
-   "title": "Bringing GPT-Rosalind to academic research labs",
-   "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
-   "source": "OpenAI",
-   "published": "2026-10-15T19:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "35f04bc99ba5",
-   "title": "Bluesky expands its AI-powered Attie app to let anyone build websites, games, and more",
-   "url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
-   "source": "TechCrunch",
-   "published": "2026-10-15T18:56:46+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "e46a25bdb905",
-   "title": "SK텔레콤, 통신·AI 통합 성장전략 추진…사이버보안 협력 확대",
-   "url": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2335707",
-   "source": "webeconomy.co.kr",
-   "published": "2026-10-15T18:44:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "d9d8114df721",
-   "title": "Last chance to save up to $200 on your TechCrunch Founder Summit pass: Early booking ends October 16",
-   "url": "https://techcrunch.com/2026/10/15/last-chance-to-save-up-to-200-on-techcrunch-founder-summit-early-booking-ends-oct-16/",
-   "source": "TechCrunch",
-   "published": "2026-10-15T18:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "dde17f4d9903",
-   "title": "바이트댄스 시드, AI 안전·정렬 연구자 10명 모집",
-   "url": "https://www.tokenpost.kr/news/ai/423034",
-   "source": "tokenpost.kr",
-   "published": "2026-10-15T17:48:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "cab4ab8d5311",
-   "title": "KT, AI 전환 성과 그룹 전반으로 확대…산업현장 안전문화 확산도 추진",
-   "url": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2335976",
-   "source": "webeconomy.co.kr",
-   "published": "2026-10-15T17:32:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "523eb646723a",
-   "title": "씨티그룹, 10년 만의 최고 매출 뒤 AI·사이버 보안 과제",
-   "url": "https://www.tokenpost.kr/news/market/423012",
-   "source": "tokenpost.kr",
-   "published": "2026-10-15T16:40:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "af1d0517a66d",
-   "title": "“빅테크, AI 투자금 반도 못 건져”… ‘투자 절벽’ 오면 반도체 치명...",
-   "url": "https://www.chosun.com/economy/stock-finance/2026/10/16/B4UTYD2BNRAPNFKY6TOQZB7AZM/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-   "source": "chosun.com",
-   "published": "2026-10-15T15:43:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "5848e0b63b0f",
-   "title": "챗GPT vs 제미나이, 광고로 엿보는 사업 전략",
-   "url": "https://www.chosun.com/economy/tech_it/2026/10/16/5B7D6DZ5HFFRFDAZUMV6U4RWZU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-   "source": "chosun.com",
-   "published": "2026-10-15T15:35:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "2c9392a52f20",
-   "title": "AI agents are coming to Rivian’s cars",
-   "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
-   "source": "TechCrunch",
-   "published": "2026-10-15T15:02:36+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "244831af6248",
-   "title": "Google’s Universal Cart shopping tool launches in the US",
-   "url": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
-   "source": "TechCrunch",
-   "published": "2026-10-15T14:29:33+00:00",
-   "tag": "출시",
-   "lang": "en"
-  },
-  {
-   "id": "3ef475cb849d",
-   "title": "요즘 Z세대들 '제미나이' 이렇게 사용한다... 구글 맞춤형 온오프라인 ...",
-   "url": "https://gamefocus.co.kr/detail.php?number=179819",
-   "source": "gamefocus.co.kr",
-   "published": "2026-10-15T14:18:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "75865dca44c9",
-   "title": "코히어, AI 보안 스타트업 AISLE 인수",
-   "url": "https://biz.chosun.com/it-science/ict/2026/10/15/PIF4ZYOKZZGGVA6Y2BPCHSUYJU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-   "source": "biz.chosun.com",
-   "published": "2026-10-15T14:15:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "a678873210a0",
-   "title": "TechCrunch Disrupt 2026: Last day",
-   "url": "https://techcrunch.com/2026/10/15/techcrunch-disrupt-2026-last-day/",
-   "source": "TechCrunch",
-   "published": "2026-10-15T14:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "e9b18357d342",
-   "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...TSMC 호실적도 못 막은 AI주 매도세",
-   "url": "https://www.newspim.com/news/view/20261015001327",
-   "source": "newspim.com",
-   "published": "2026-10-15T13:30:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
