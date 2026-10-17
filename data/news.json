@@ -1,7 +1,151 @@
 {
- "updated_at": "2026-10-17T04:37:46+00:00",
+ "updated_at": "2026-10-17T10:54:03+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "df1146cb6849",
+   "title": "[AI 모델 신작] BFL ‘플럭스 3 이미지 클라인’ 등 5종",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216368",
+   "source": "AI타임스",
+   "published": "2026-10-17T10:47:45+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "ffd788e9b360",
+   "title": "AI 코딩도 LLM만으론 부족…레플릿, ‘결정론적 시뮬레이터’로 검증",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216367",
+   "source": "AI타임스",
+   "published": "2026-10-17T10:27:01+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "99e6fefa4a7e",
+   "title": "오픈AI 도청 사건에 드러난 AI 첩보전…기업들은 이미 ‘스파이 경계’",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216366",
+   "source": "AI타임스",
+   "published": "2026-10-17T09:45:28+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d01ec352acb3",
+   "title": "GPT-6 아스트라, 미공개 물리 문제 98% 해결…전문가 오류도 발견",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216365",
+   "source": "AI타임스",
+   "published": "2026-10-17T09:06:23+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "aaa6242ab82b",
+   "title": "엔트로픽, 클로드 학습에 한강·황석영 작품 무단 활용 정황",
+   "url": "https://www.jnilbo.com/news/articleView.html?idxno=90000074207",
+   "source": "jnilbo.com",
+   "published": "2026-10-17T09:04:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "f0868d7e21f0",
+   "title": "앤트로픽 '책 사냥'의 그림자…한강·김영하 작품도 '무단 다운로드'",
+   "url": "https://bizhankook.com/articles/anthropic-ai-unauthorized-book-downloads.html",
+   "source": "bizhankook.com",
+   "published": "2026-10-17T09:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "efb1006cefb5",
+   "title": "AI 해킹도구 ‘아르텍스’ 돌아오는데…금융권 보안 ‘경고등’",
+   "url": "https://biz.heraldcorp.com/article/10905544?ref=naver",
+   "source": "biz.heraldcorp.com",
+   "published": "2026-10-17T09:00:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "f1e6156c9ecf",
+   "title": "앤트로픽, 한국 유명 작가 영문판 작품도 '클로드' 학습에 무단 활용......",
+   "url": "https://www.livebiz.today/news/articleView.html?idxno=205686",
+   "source": "livebiz.today",
+   "published": "2026-10-17T08:28:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "aba53fa330f5",
+   "title": "앤트로픽, 한강·황석영 등 21종 작품 AI 학습 무단 사용 '파문'",
+   "url": "https://www.financialpost.co.kr/news/articleView.html?idxno=281004",
+   "source": "financialpost.co.kr",
+   "published": "2026-10-17T08:20:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "e34c2d4ac652",
+   "title": "전 오픈AI 연구원 “AI 내부 읽을 수 있다” 주장…기대·반론 엇갈려",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216364",
+   "source": "AI타임스",
+   "published": "2026-10-17T08:02:23+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "71d727047a88",
+   "title": "한강·황석영 등 한국 작가 책 21종, 앤트로픽 저작권 보상 대상에",
+   "url": "https://www.newscj.com/news/articleView.html?idxno=3441022",
+   "source": "newscj.com",
+   "published": "2026-10-17T06:54:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "167fd18d1368",
+   "title": "오픈AI, 크롬용 '챗GPT' 확장 기능 강화...\"열린 탭 분석하고 직접 제어\"",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216360",
+   "source": "AI타임스",
+   "published": "2026-10-17T06:40:58+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "af3af632756d",
+   "title": "[AI 이슈트렌드] 삼전 최대 실적에도 코스피 붕괴…쿠팡 먹통·인천 흉기난동 등 주목",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216363",
+   "source": "AI타임스",
+   "published": "2026-10-17T06:17:31+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "73f38e04081f",
+   "title": "앤트로픽이 한강·황석영·김영하 작가 책도 무단 학습했다고",
+   "url": "https://economist.co.kr/article/view/ecn202610170007",
+   "source": "economist.co.kr",
+   "published": "2026-10-17T06:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "398498ee18a1",
+   "title": "앤트로픽 3분기 매출 168억달러…성장률 142%→45%로 둔화",
+   "url": "https://www.sedaily.com/article/20102773?ref=naver",
+   "source": "sedaily.com",
+   "published": "2026-10-17T05:33:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "74ce3455e06e",
+   "title": "한강도 당했다…앤트로픽, 책 21종 AI 학습 '무단 활용'",
+   "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008802130&plink=ORI&cooper=NAVER",
+   "source": "news.sbs.co.kr",
+   "published": "2026-10-17T05:17:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "0ba4504c9063",
    "title": "앤트로픽, 미 의회에 자체 AI 안전 법안 제안…\"정부 개입 제한·일부 주법 대체\"",
@@ -1205,150 +1349,6 @@
    "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2481054",
    "source": "enewstoday.co.kr",
    "published": "2026-10-16T04:27:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "193b940055b2",
-   "title": "앤트로픽, 첫 투자자 설명회 뒤 IPO 기대 하향…“몸값 2조→1.5조 논의”",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216328",
-   "source": "AI타임스",
-   "published": "2026-10-16T04:17:19+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d42081f1ce17",
-   "title": "금융권 해킹에 등장한 아르텍스, AI 보안 플랫폼으로 재등장",
-   "url": "https://www.g-enews.com/view.php?ud=202610161209494350cd0bfacc1c_1",
-   "source": "g-enews.com",
-   "published": "2026-10-16T04:16:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "e7fc6d93b56f",
-   "title": "스렛북, '아르텍스' 기반 AI 해킹 플랫폼 상용화 예고...금융권 연쇄 해...",
-   "url": "https://www.cwn.kr/news/articleView.html?idxno=59549",
-   "source": "cwn.kr",
-   "published": "2026-10-16T04:10:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "7913498fd9b3",
-   "title": "[AI+인문] ‚AI는 창조계급을 없애지 못한다' — 창조계급론 전문가 리처...",
-   "url": "https://www.greened.kr/news/articleView.html?idxno=352084",
-   "source": "greened.kr",
-   "published": "2026-10-16T03:48:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "879122f6b1f5",
-   "title": "FTC, 오픈AI·앤트로픽에 소환장 발부…\"AI 안전사고·소비자 피해 조사\"",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216326",
-   "source": "AI타임스",
-   "published": "2026-10-16T03:35:02+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "83887cfa470e",
-   "title": "엔비디아, 기업용 에이전트 겨냥 120B ‘네모트론 3.5 슈퍼 VL’ 오픈 공개",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216322",
-   "source": "AI타임스",
-   "published": "2026-10-16T03:09:13+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "b0fb20fe71ec",
-   "title": "출판계 “AI 기업, 책 이용에 정당한 대가 지급하라” 공동성명",
-   "url": "https://www.hani.co.kr/arti/culture/book/1282731.html",
-   "source": "hani.co.kr",
-   "published": "2026-10-16T03:04:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "f32ba4c15054",
-   "title": "제미나이와 챗GPT 광고의 공통점: 출산과 결혼",
-   "url": "https://ditoday.com/%ec%a0%9c%eb%af%b8%eb%82%98%ec%9d%b4%ec%99%80-%ec%b1%97gpt-%ea%b4%91%ea%b3%a0%ec%9d%98-%ea%b3%b5%ed%86%b5%ec%a0%90-%ec%b6%9c%ec%82%b0%ea%b3%bc-%ea%b2%b0%ed%98%bc/",
-   "source": "ditoday.com",
-   "published": "2026-10-16T03:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "0da6cc8f951d",
-   "title": "삼성 갤럭시 S26 울트라·AI 냉장고·6K 모니터, 美 타임지 '올해 최고 발...",
-   "url": "https://www.autodaily.co.kr/news/articleView.html?idxno=601212",
-   "source": "autodaily.co.kr",
-   "published": "2026-10-16T02:50:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "3811de16dfed",
-   "title": "中 보안기업, 韓 금융권 해킹에 악용된 AI '아르텍스' 상용화",
-   "url": "https://www.newsis.com/view/NISX20261016_0003828869",
-   "source": "newsis.com",
-   "published": "2026-10-16T02:38:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "cc7a170734f8",
-   "title": "AI ‘옥석 가리기’…챗GPT·클로드 뜨고, 퍼플렉시티 고전",
-   "url": "https://biz.heraldcorp.com/article/10904958?ref=naver",
-   "source": "biz.heraldcorp.com",
-   "published": "2026-10-16T02:37:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "773dd661f703",
-   "title": "'본인 확인 완료'의 배신 … AI가 무너뜨린 금융인증 ['효율의 환상' AI ...",
-   "url": "https://biz.newdaily.co.kr/site/data/html/2026/10/16/2026101600120.html",
-   "source": "biz.newdaily.co.kr",
-   "published": "2026-10-16T02:36:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "c3202e40886f",
-   "title": "신한라이프, AI 가입설계 시스템 기능 강화 'LICO 2.0' 도입",
-   "url": "https://www.newsmap.co.kr/news/articleView.html?idxno=4086",
-   "source": "newsmap.co.kr",
-   "published": "2026-10-16T02:32:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ba22165fa7d6",
-   "title": "태양광으로 청정 수소 뽑아낸다…선하이드로젠, 효율 12.3% 기록",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216229",
-   "source": "AI타임스",
-   "published": "2026-10-16T02:30:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "1c0733e5f2f8",
-   "title": "신한라이프, AI 가입설계 ‘LICO 2.0’ 출시",
-   "url": "https://biz.heraldcorp.com/article/10904940?ref=naver",
-   "source": "biz.heraldcorp.com",
-   "published": "2026-10-16T02:28:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "5cb0586f1880",
-   "title": "[이용호의 손에 잡히는 인공지능] AI에게 일을 맡기는 시대, 사람은 무...",
-   "url": "https://www.lecturernews.com/news/articleView.html?idxno=212057",
-   "source": "lecturernews.com",
-   "published": "2026-10-16T02:28:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
