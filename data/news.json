@@ -1,7 +1,34 @@
 {
- "updated_at": "2026-10-17T10:54:03+00:00",
+ "updated_at": "2026-10-17T15:42:00+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "eccbf3132165",
+   "title": "제미나이 4 아르곤, ARC-AGI-3 97.5% 찍었지만 소프트웨어 공학 지수는 6...",
+   "url": "https://www.wikitree.co.kr/articles/1167042",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-17T15:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "ddb841ccd3a4",
+   "title": "연세대 수시 시험서 AI 안경 활용 부정행위 적발... 국내선 첫 사례",
+   "url": "https://www.ggilbo.com/news/articleView.html?idxno=1186539",
+   "source": "ggilbo.com",
+   "published": "2026-10-17T11:20:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "1d709c8e45a6",
+   "title": "앤트로픽, 한강·김영하 등 한국 작가 책 21종 무단 AI 학습",
+   "url": "https://view.asiae.co.kr/article/2026101719522687247",
+   "source": "view.asiae.co.kr",
+   "published": "2026-10-17T10:59:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "df1146cb6849",
    "title": "[AI 모델 신작] BFL ‘플럭스 3 이미지 클라인’ 등 5종",
@@ -1322,33 +1349,6 @@
    "url": "https://www.topstarnews.net/news/articleView.html?idxno=16248938",
    "source": "topstarnews.net",
    "published": "2026-10-16T04:40:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "7f5f18c5ba50",
-   "title": "티오리, 앤트로픽 사이버 검증 프로그램 합류…오픈AI 이어 글로벌 기술...",
-   "url": "https://www.widedaily.com/news/articleView.html?idxno=302033",
-   "source": "widedaily.com",
-   "published": "2026-10-16T04:28:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "60a3b1ba57a3",
-   "title": "검색하려다 수다 떨겠네…챗GPT·제미나이, 음성 AI 경쟁",
-   "url": "https://www.segye.com/newsView/20261016511526?OutUrl=naver",
-   "source": "segye.com",
-   "published": "2026-10-16T04:28:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "7d19d8d78f68",
-   "title": "한림성심대, 직원 대상 AI 활용 교육 실시",
-   "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2481054",
-   "source": "enewstoday.co.kr",
-   "published": "2026-10-16T04:27:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
