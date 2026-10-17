@@ -1,7 +1,34 @@
 {
- "updated_at": "2026-10-17T15:42:00+00:00",
+ "updated_at": "2026-10-17T20:42:57+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "0dabc6c10b97",
+   "title": "Anthropic says its workforce has become less junior and is spending more time in meetings",
+   "url": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+   "source": "TechCrunch",
+   "published": "2026-10-17T20:21:19+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "cb1d4016a4c3",
+   "title": "마이크로소프트, 코파일럿용 앤트로픽 모델 연 20억달러 지출 보도",
+   "url": "https://www.tokenpost.kr/news/ai/423800",
+   "source": "tokenpost.kr",
+   "published": "2026-10-17T20:14:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "3b2586548b80",
+   "title": "딥시크, V4.1 플래시 업데이트…“더 빠르고 가볍게”",
+   "url": "https://www.dt.co.kr/article/12089581?ref=naver",
+   "source": "dt.co.kr",
+   "published": "2026-10-17T16:41:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
   {
    "id": "eccbf3132165",
    "title": "제미나이 4 아르곤, ARC-AGI-3 97.5% 찍었지만 소프트웨어 공학 지수는 6...",
@@ -1322,33 +1349,6 @@
    "url": "https://www.aitimes.com/news/articleView.html?idxno=216321",
    "source": "AI타임스",
    "published": "2026-10-16T04:50:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "e9d8d5898037",
-   "title": "구글 딥마인드 \"AI 자기개선 가속 증거 없다\"…업계 경고와 온도차",
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=707712",
-   "source": "digitaltoday.co.kr",
-   "published": "2026-10-16T04:46:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "902754a25660",
-   "title": "티오리, 오픈AI 이어 앤트로픽도 뚫었다…보안 특화 AI 접근권 확보",
-   "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=873545",
-   "source": "hansbiz.co.kr",
-   "published": "2026-10-16T04:40:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "30dcd83dcf54",
-   "title": "박태웅 \"질문이 답보다 만 배 중요\"…AI 공부법 강조(정준희의 질문공방...",
-   "url": "https://www.topstarnews.net/news/articleView.html?idxno=16248938",
-   "source": "topstarnews.net",
-   "published": "2026-10-16T04:40:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
