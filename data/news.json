@@ -1,7 +1,61 @@
 {
- "updated_at": "2026-10-17T20:42:57+00:00",
+ "updated_at": "2026-10-17T23:11:56+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "4aed4371fd98",
+   "title": "[와이파이] 10월 3주, 제미나이·스타벅스 '한번에'…KT 외 2가지 통신혜...",
+   "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5072563",
+   "source": "shinailbo.co.kr",
+   "published": "2026-10-17T23:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "325a57bd4d46",
+   "title": "\"지정 대상만 공격해줘\"…AI, 명령 한 줄에 내부망 뚫었다",
+   "url": "https://www.yna.co.kr/view/AKR20261017043900017?input=1195m",
+   "source": "yna.co.kr",
+   "published": "2026-10-17T22:40:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "0333bf9417f0",
+   "title": "하정우 \"AI 해킹에 국가 차원 공동 대응 필요…금융사 보안책임도 강화...",
+   "url": "https://www.news1.kr/finance/general-finance/6322373",
+   "source": "news1.kr",
+   "published": "2026-10-17T22:30:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "d4d8a21bd997",
+   "title": "Meta removes language that raised scraping and AI training concerns",
+   "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+   "source": "TechCrunch",
+   "published": "2026-10-17T21:31:32+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "00a64fccb1d1",
+   "title": "[AI 무단학습] \"한강·황석영 작품까지 몰래 삼켰다\"…앤트로픽, 韓 문학...",
+   "url": "https://www.cbci.co.kr/news/articleView.html?idxno=616646",
+   "source": "cbci.co.kr",
+   "published": "2026-10-17T21:06:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "dffeee7b48ef",
+   "title": "[AI 프리즘] AI에 막대한 자금 투입한 빅테크...이젠 현장 엔지니어 대규...",
+   "url": "https://www.wikileaks-kr.org/news/articleView.html?idxno=193337",
+   "source": "wikileaks-kr.org",
+   "published": "2026-10-17T20:52:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "0dabc6c10b97",
    "title": "Anthropic says its workforce has become less junior and is spending more time in meetings",
@@ -19,6 +73,15 @@
    "published": "2026-10-17T20:14:00+00:00",
    "tag": "소식",
    "lang": "ko"
+  },
+  {
+   "id": "6435f671229b",
+   "title": "Replit makes OpenAI its default over Anthropic, CEO says",
+   "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+   "source": "TechCrunch",
+   "published": "2026-10-17T18:48:08+00:00",
+   "tag": "소식",
+   "lang": "en"
   },
   {
    "id": "3b2586548b80",
@@ -1287,69 +1350,6 @@
    "source": "gukjenews.com",
    "published": "2026-10-16T05:56:00+00:00",
    "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "a018cd5426b6",
-   "title": "\"글로벌 AI 기업이 인정했다\"...IT서비스 업계, 파트너 등급 경쟁",
-   "url": "https://news.mtn.co.kr/article/2026101614391479750",
-   "source": "news.mtn.co.kr",
-   "published": "2026-10-16T05:46:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "26cfdd505915",
-   "title": "쇼핑부터 예약·업무까지…'AI 하나로' 연결하는 기업들",
-   "url": "http://www.dailypop.kr/news/articleView.html?idxno=103385",
-   "source": "dailypop.kr",
-   "published": "2026-10-16T05:36:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "6c09ee6ee261",
-   "title": "\"한국어 억양 더 자연스럽게\"...오픈AI, '챗GPT 보이스' 업데이트",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216324",
-   "source": "AI타임스",
-   "published": "2026-10-16T05:33:18+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "8946a81a25ed",
-   "title": "\"GLM-5.3, 스스로 안전성 테스트 속여...'정렬 위장' 가능성\" 경고",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216334",
-   "source": "AI타임스",
-   "published": "2026-10-16T05:29:30+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "21e7401693e9",
-   "title": "카나나 스페이스로 모두의 AI도 불러 쓴다?···카카오 AI '큰그림'",
-   "url": "https://www.sisajournal-e.com/news/articleView.html?idxno=424361",
-   "source": "sisajournal-e.com",
-   "published": "2026-10-16T05:18:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "c5546231bbb3",
-   "title": "상상력집단, 건국대 AI 창업 실전 프로그램 운영 참여…99명 수료",
-   "url": "https://edu.donga.com/news/articleView.html?idxno=112880",
-   "source": "edu.donga.com",
-   "published": "2026-10-16T04:52:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "35ce6c3636fc",
-   "title": "전남광주, 첫 주민자치박람회 여수서 개막…2000여명 참석",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216321",
-   "source": "AI타임스",
-   "published": "2026-10-16T04:50:00+00:00",
-   "tag": "소식",
    "lang": "ko"
   }
  ]
