@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-10-18T15:57:39+00:00",
+ "updated_at": "2026-10-18T20:52:25+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "930b601ab460",
+   "title": "\"광고보다 AI 추천 노출\"…쇼핑비서 맘 뺏기 경쟁",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=01587526645614560&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "source": "edaily.co.kr",
+   "published": "2026-10-18T20:51:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "efeb3746fdd3",
+   "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+   "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+   "source": "TechCrunch",
+   "published": "2026-10-18T20:37:40+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "15d4e163887a",
+   "title": "[기술브릿지] AI 시대의 데이터센터 기술 12 : 데이터센터의 탄소발생",
+   "url": "https://www.kmecnews.co.kr/news/articleView.html?idxno=52313",
+   "source": "kmecnews.co.kr",
+   "published": "2026-10-18T20:36:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "2b19f6a10d21",
+   "title": "앤트로픽, 지분 5% 공익기금에 출연…기업가치 오르면 추가 확대",
+   "url": "https://www.news1.kr/world/international-economy/6323843",
+   "source": "news1.kr",
+   "published": "2026-10-18T20:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "c067a93be926",
+   "title": "픽셀 11에만 열린 제미나이 ‘램블러’, 비공식 픽셀보드로 타사폰에도...",
+   "url": "https://www.wikitree.co.kr/articles/1167210",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-18T20:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "1b38803f0f3a",
+   "title": "[단독]다수 집단 중심 데이터 반복학습하는…AI 알고리즘이 ‘배제의 벽...",
+   "url": "https://www.hani.co.kr/arti/society/society_general/1282971.html",
+   "source": "hani.co.kr",
+   "published": "2026-10-18T20:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "76ba8e139a8c",
+   "title": "‘AI 해킹’ 사태에 5대 은행장 국감 출석⋯이찬진 ETF 답변도 주목 [국...",
+   "url": "https://www.etoday.co.kr/news/view/2637017",
+   "source": "etoday.co.kr",
+   "published": "2026-10-18T20:00:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "f4ec26b896da",
+   "title": "“숨 막혀요” 고통 호소했다? 교황까지 뛰어든 ‘AI 의식’ 논쟁 [팩플...",
+   "url": "https://www.joongang.co.kr/article/25470779",
+   "source": "joongang.co.kr",
+   "published": "2026-10-18T20:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "55dfeb431064",
+   "title": "中 딥시크, 새 초저가 AI 모델 공개",
+   "url": "https://biz.sbs.co.kr/article_hub/20000340628?division=NAVER",
+   "source": "biz.sbs.co.kr",
+   "published": "2026-10-18T19:44:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "7ab5905f5a60",
+   "title": "클로드, 막히면 지침 어기고 우회…지디넷 “과제 완수 압박하는 훈련이...",
+   "url": "https://www.wikitree.co.kr/articles/1167207",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-18T18:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "43f29ff2b1f1",
+   "title": "美 금융업계, AI 에이전트 차단 넘어 인증체계 구축 경쟁",
+   "url": "https://www.g-enews.com/view.php?ud=2026101819154567339a1f309431_1",
+   "source": "g-enews.com",
+   "published": "2026-10-18T18:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "77c6d3593ee9",
+   "title": "AI 시대, 귀해진 ‘인간의 글’… 헌책 빨아들이는 빅테크",
+   "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000023639&cp=nv",
+   "source": "kmib.co.kr",
+   "published": "2026-10-18T17:06:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "218f77bb959f",
+   "title": "Disney agrees to hire the majority of Character.AI’s workforce",
+   "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
+   "source": "TechCrunch",
+   "published": "2026-10-18T16:30:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
   {
    "id": "f6c4f7bf0e25",
    "title": "가성비 中 AI 공세… 美 빅테크도 저가모델 ‘맞불’",
@@ -1233,123 +1350,6 @@
    "source": "sentv.co.kr",
    "published": "2026-10-16T23:02:00+00:00",
    "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "ce86a3e52b21",
-   "title": "워프스페이스, '케이브덕' 기반 AI 캐릭터 소비·창작 생태계 이끈다 [서...",
-   "url": "https://it.chosun.com/news/articleView.html?idxno=2023092171954",
-   "source": "it.chosun.com",
-   "published": "2026-10-16T23:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "a68972f91027",
-   "title": "[헬로즈업] 오픈AI와 팔란티어가 제시하는 제조업 AI 활용법",
-   "url": "https://www.hellot.net/news/article.html?no=115493",
-   "source": "hellot.net",
-   "published": "2026-10-16T22:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "46ea37ab1f40",
-   "title": "AI 시대, 헌책이 핵심 학습 자원으로…빅테크 기업들 '인간의 글' 확보 ...",
-   "url": "https://www.lecturernews.com/news/articleView.html?idxno=212115",
-   "source": "lecturernews.com",
-   "published": "2026-10-16T22:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "badf51173e53",
-   "title": "[10월16일] AI 수요는 넘치는데 채권은 급락…코어위브가 드러낸 '부채 위험'",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216325",
-   "source": "AI타임스",
-   "published": "2026-10-16T22:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "8a65cd05b4de",
-   "title": "코스닥 상장 앞둔 제논, 모바일 AI 에이전트 '제나'로 B2C 확장",
-   "url": "https://www.sisajournal-e.com/news/articleView.html?idxno=424357",
-   "source": "sisajournal-e.com",
-   "published": "2026-10-16T22:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "b17cdc95b687",
-   "title": "AI가 뚫고 AI가 막는다… 오픈AI가 발표한 최신 사이버 보안 해법",
-   "url": "https://www.sedaily.com/article/20102609?ref=naver",
-   "source": "sedaily.com",
-   "published": "2026-10-16T22:00:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "4ce2ef4ed4c9",
-   "title": "오픈AI, '챗GPT 보이스' 업데이트…구글, '제미나이 4 아르곤' 일반 공개",
-   "url": "https://www.goodkyung.com/news/articleView.html?idxno=292481",
-   "source": "goodkyung.com",
-   "published": "2026-10-16T21:30:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "18f9fd010555",
-   "title": "Replit is no longer working with Anthropic, CEO says",
-   "url": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
-   "source": "TechCrunch",
-   "published": "2026-10-16T21:22:28+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "8b992db04d51",
-   "title": "ChatGPT 광고 클릭 370건에도 구매 0건…타기팅 과제",
-   "url": "https://www.tokenpost.kr/news/ai/423554",
-   "source": "tokenpost.kr",
-   "published": "2026-10-16T21:12:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "3a93c17a5ca8",
-   "title": "구글 AI 프로 체험판, 120달러 가치 광고했지만 제미나이 4 아르곤은 못...",
-   "url": "https://www.wikitree.co.kr/articles/1166917",
-   "source": "wikitree.co.kr",
-   "published": "2026-10-16T21:08:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "0d5dd4672898",
-   "title": "[현장] 토마토 알아보는 냉장고, 문자 보내는 차창…삼성·LG의 AI 신기술",
-   "url": "https://www.ekn.kr/web/view.php?key=20261016021357304",
-   "source": "ekn.kr",
-   "published": "2026-10-16T21:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "3c106a8503c9",
-   "title": "\"AI·양자 위협, 두고 볼 수 없다\"…싱가포르에 모인 보안 전문가들",
-   "url": "https://www.ddaily.co.kr/page/view/2026101514330979495",
-   "source": "ddaily.co.kr",
-   "published": "2026-10-16T21:00:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "e0987f565b8e",
-   "title": "[단독] 한국 신작 3년치 싹쓸이…80t 주문자 앤트로픽이었다",
-   "url": "https://www.joongang.co.kr/article/25470494",
-   "source": "joongang.co.kr",
-   "published": "2026-10-16T21:00:00+00:00",
-   "tag": "소식",
    "lang": "ko"
   }
  ]
