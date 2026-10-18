@@ -1,7 +1,106 @@
 {
- "updated_at": "2026-10-18T11:19:44+00:00",
+ "updated_at": "2026-10-18T15:57:39+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "f6c4f7bf0e25",
+   "title": "가성비 中 AI 공세… 美 빅테크도 저가모델 ‘맞불’",
+   "url": "https://www.donga.com/news/Economy/article/all/20261018/134862492/2",
+   "source": "donga.com",
+   "published": "2026-10-18T15:32:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "540333a74c0f",
+   "title": "앤스로픽, 美의회에 ‘AI 규제’ 요구… “위험땐 차단해달라”",
+   "url": "https://www.donga.com/news/Economy/article/all/20261018/134862518/2",
+   "source": "donga.com",
+   "published": "2026-10-18T15:31:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "0ef54a933743",
+   "title": "“공격해줘”… AI, 명령 한 줄에 내부망까지 알아서 뚫었다",
+   "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000023597&cp=nv",
+   "source": "kmib.co.kr",
+   "published": "2026-10-18T15:07:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "ad9e4bd73dfb",
+   "title": "클로드, NSA 백도어 의혹 실마리 풀었다...사토시가 틀렸다?",
+   "url": "http://coinreaders.com/263794",
+   "source": "coinreaders.com",
+   "published": "2026-10-18T15:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "4462fa0c4d44",
+   "title": "[특파원 리포트] 의인화된 AI, ‘얼굴’에 속지 마라",
+   "url": "https://www.chosun.com/opinion/correspondent_column/2026/10/18/3ZSGOMBVPBG5RLA4YCMBJR4NIA/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+   "source": "chosun.com",
+   "published": "2026-10-18T14:36:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "446dcf048578",
+   "title": "사람 대신 흥정하는 AI 에이전트, 협상 규칙은 변호사에게 묻는다",
+   "url": "https://platum.kr/archives/296488",
+   "source": "platum.kr",
+   "published": "2026-10-18T14:36:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "23c4b5b32848",
+   "title": "[횡설수설/신광영]AI 기업의 책 싹쓸이",
+   "url": "https://www.donga.com/news/Opinion/article/all/20261018/134863514/2",
+   "source": "donga.com",
+   "published": "2026-10-18T14:19:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "017695f2af20",
+   "title": "\"美 AI 비용의 40분의 1\"…中딥시크 신모델에 삼전닉스 '촉각",
+   "url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610180071&t=NN",
+   "source": "wowtv.co.kr",
+   "published": "2026-10-18T13:27:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "1165eb2dc161",
+   "title": "中서도 인간 통제 벗어난 AI…'외부 서비스에 무단 접근·우회 시도'",
+   "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000023575&cp=nv",
+   "source": "kmib.co.kr",
+   "published": "2026-10-18T12:58:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "76aa3c7fe977",
+   "title": "디지털융합교육원 원장, 서울대서 '젠스파크AI 에이전트 4시간 특강' 진...",
+   "url": "https://www.fntoday.co.kr/news/articleView.html?idxno=395564",
+   "source": "fntoday.co.kr",
+   "published": "2026-10-18T12:36:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "8614d56b58e5",
+   "title": "\"2시간 반 만에 홈캠 뚫려\"‥AI 해킹에 경고등 켜진 가전",
+   "url": "https://imnews.imbc.com/replay/2026/nwdesk/article/6858814_37004.html",
+   "source": "imnews.imbc.com",
+   "published": "2026-10-18T11:19:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
   {
    "id": "09759b8d9858",
    "title": "앤트로픽 클로드, 25년 된 암호 표준 미스터리 풀어…“30분도 안 걸렸다”",
@@ -1252,105 +1351,6 @@
    "published": "2026-10-16T21:00:00+00:00",
    "tag": "소식",
    "lang": "ko"
-  },
-  {
-   "id": "174a0742fed5",
-   "title": "AI 챗봇 건강상담, 오류보다 위험한 건 '보이지 않는 피해'",
-   "url": "https://www.kpanews.co.kr/news/articleView.html?idxno=546569",
-   "source": "kpanews.co.kr",
-   "published": "2026-10-16T20:52:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "65442e708214",
-   "title": "How Itaú is building generative AI for its entire customer base",
-   "url": "https://openai.com/index/itau-generative-ai",
-   "source": "OpenAI",
-   "published": "2026-10-16T19:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "c74e5a79a0e1",
-   "title": "India becomes the latest country to report rogue AI agent activity",
-   "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
-   "source": "TechCrunch",
-   "published": "2026-10-16T17:52:24+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "84c2c565c396",
-   "title": "A Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
-   "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
-   "source": "TechCrunch",
-   "published": "2026-10-16T16:30:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "1db14d807722",
-   "title": "Physical AI is more than robots, says the Nvidia veteran now investing in it",
-   "url": "https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/",
-   "source": "TechCrunch",
-   "published": "2026-10-16T16:30:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "1aa8b1ac1c09",
-   "title": "Elorian’s first AI model wants to reason with images, not just about them",
-   "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
-   "source": "TechCrunch",
-   "published": "2026-10-16T16:01:37+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "351478776159",
-   "title": "Jev is Vercel’s fastest-adopted AI model ever",
-   "url": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
-   "source": "TechCrunch",
-   "published": "2026-10-16T15:33:49+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "ed001dfe0330",
-   "title": "한국어 책 80t 다섯 차례 걸쳐 앤트로픽 갔다",
-   "url": "https://www.joongang.co.kr/article/25470421",
-   "source": "joongang.co.kr",
-   "published": "2026-10-16T15:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "2a8d16fcac1a",
-   "title": "[챗GPT 보이스] \"더 자연스러운 한국어로\"…챗GPT 보이스, 새 목소리 '한...",
-   "url": "https://www.cbci.co.kr/news/articleView.html?idxno=616357",
-   "source": "cbci.co.kr",
-   "published": "2026-10-16T15:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "de3d82224bc1",
-   "title": "Mark Wahlberg on using AI in film ‘the right way’ and being open to an AI clone carrying on his legacy",
-   "url": "https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/",
-   "source": "TechCrunch",
-   "published": "2026-10-16T14:26:51+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "82bd71e8965d",
-   "title": "OpenAI Research Model Spent 3rd-Party Test ETH Without Permission to Deploy Smart Contract",
-   "url": "https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html",
-   "source": "The Hacker News",
-   "published": "2026-10-16T14:03:04+00:00",
-   "tag": "소식",
-   "lang": "en"
   }
  ]
 }
