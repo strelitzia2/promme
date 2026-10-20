@@ -1,7 +1,106 @@
 {
- "updated_at": "2026-10-20T14:22:01+00:00",
+ "updated_at": "2026-10-20T19:21:32+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "2e553dc45565",
+   "title": "Google has joined Amazon in attacking Nvidia’s stronghold with AI app developers",
+   "url": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
+   "source": "TechCrunch",
+   "published": "2026-10-20T18:38:24+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "b799bf523cce",
+   "title": "ChatGPT now lets you lock your chats",
+   "url": "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/",
+   "source": "TechCrunch",
+   "published": "2026-10-20T18:36:53+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "4eb9f7080b11",
+   "title": "NVIDIA Cosmos3-H-Dreams: Bringing Clinical Surgery to Life Through Generative Simulation",
+   "url": "https://huggingface.co/blog/nvidia/cosmos3-h-dreams",
+   "source": "Hugging Face",
+   "published": "2026-10-20T18:17:47+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "7fe075e5e5f0",
+   "title": "Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei",
+   "url": "https://techcrunch.com/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei/",
+   "source": "TechCrunch",
+   "published": "2026-10-20T17:55:12+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "319f79c551ee",
+   "title": "Meta’s Muse hits 10M U.S. downloads in 40 days, a milestone reached by only 11 other apps",
+   "url": "https://techcrunch.com/2026/10/20/metas-muse-hits-10m-u-s-downloads-in-40-days-a-milestone-reached-by-only-11-other-apps/",
+   "source": "TechCrunch",
+   "published": "2026-10-20T17:12:48+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "a9efd22910e6",
+   "title": "해킹 문턱 낮춘 AI,어떻게 막을까[MT시평/장항배]",
+   "url": "https://www.mt.co.kr/opinion/2026/10/21/2026102009461163015",
+   "source": "mt.co.kr",
+   "published": "2026-10-20T17:00:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "ca293d8533a3",
+   "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+   "url": "https://huggingface.co/blog/allenai/fairstress",
+   "source": "Hugging Face",
+   "published": "2026-10-20T16:09:19+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "87c5cb39af2e",
+   "title": "Plants can speak using electricity, so this startup built an AI model to decipher their language",
+   "url": "https://techcrunch.com/2026/10/20/plants-can-speak-using-electricity-so-this-startup-built-an-ai-model-to-decipher-their-language/",
+   "source": "TechCrunch",
+   "published": "2026-10-20T16:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "94e7f4f5c0e5",
+   "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
+   "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+   "source": "Hugging Face",
+   "published": "2026-10-20T15:19:48+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "7b072440272a",
+   "title": "클로드 코드로 TCL 구글TV 앱 25개를 껐더니 메모리 192MB가 83MB로 줄었다",
+   "url": "https://www.wikitree.co.kr/articles/1167807",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-20T15:12:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "e58b37887b11",
+   "title": "AI 챗봇에 '보육시설' 범행 계획 말했다가…호주서 20대 체포",
+   "url": "https://www.hankyung.com/article/2026102044297",
+   "source": "hankyung.com",
+   "published": "2026-10-20T14:22:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "b3c5441d5c67",
    "title": "Figma co-founder Dylan Field thinks MCP is not a perfect protocol",
@@ -9,6 +108,15 @@
    "source": "TechCrunch",
    "published": "2026-10-20T14:13:32+00:00",
    "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "0dfa738d1635",
+   "title": "Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites",
+   "url": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
+   "source": "The Hacker News",
+   "published": "2026-10-20T14:07:17+00:00",
+   "tag": "보안",
    "lang": "en"
   },
   {
@@ -228,6 +336,15 @@
    "lang": "ko"
   },
   {
+   "id": "b3fcb2e42d32",
+   "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+   "url": "https://openai.com/index/ted-taylor-restaurant",
+   "source": "OpenAI",
+   "published": "2026-10-20T10:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
    "id": "6297ecede8b9",
    "title": "AI 해킹 기술 탓하더니…대형 정보유출 부른 건 ‘보안 부실’",
    "url": "https://www.kukinews.com/article/view/kuk202610200226",
@@ -260,6 +377,15 @@
    "url": "https://www.yna.co.kr/view/AKR20261020161800084?input=1195m",
    "source": "yna.co.kr",
    "published": "2026-10-20T09:20:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "67769199f753",
+   "title": "트럼프, 연방기관서 ‘中 딥시크’ 전면 퇴출",
+   "url": "https://www.fnnews.com/news/202610201817472853",
+   "source": "fnnews.com",
+   "published": "2026-10-20T09:19:00+00:00",
    "tag": "소식",
    "lang": "ko"
   },
@@ -1074,6 +1200,24 @@
    "lang": "en"
   },
   {
+   "id": "dbaa90254253",
+   "title": "OpenAI acquires Orchestra Bio",
+   "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+   "source": "OpenAI",
+   "published": "2026-10-20T00:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "84cd8d44e982",
+   "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
+   "url": "https://huggingface.co/blog/hf-torchtpu",
+   "source": "Hugging Face",
+   "published": "2026-10-20T00:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
    "id": "af785ee58a41",
    "title": "AI 웜이 우리 집 오븐까지 장악할까?…IoT 봇넷, 위협 수준 진단",
    "url": "https://www.itworld.co.kr/article/4237349/ai-웜이-우리-집-오븐까지-장악할까-iot-봇넷-위협-수준-진.html",
@@ -1207,150 +1351,6 @@
    "published": "2026-10-19T22:49:27+00:00",
    "tag": "소식",
    "lang": "en"
-  },
-  {
-   "id": "3d0fe6ef6d33",
-   "title": "딥시크, 미국의 퇴출 조치에 글로벌 영업 타격, 제3자 서비스도 금지",
-   "url": "https://www.newspim.com/news/view/20261020000026",
-   "source": "newspim.com",
-   "published": "2026-10-19T22:39:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "0e19bec78e36",
-   "title": "Microsoft says AI agents are like insider threats as ‘frontier models can’t be trusted’",
-   "url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
-   "source": "TechCrunch",
-   "published": "2026-10-19T22:04:28+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "4593dc373424",
-   "title": "금융권 잇단 해킹사고에…“AI 기반 방어 등 보안역량 강화”",
-   "url": "https://www.nongmin.com/article/20261019500728",
-   "source": "nongmin.com",
-   "published": "2026-10-19T22:01:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "ad4ff30d8b65",
-   "title": "[10월19일] 뇌 읽는 AI, 공상과학을 현실로 이끄는 기술들",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216396",
-   "source": "AI타임스",
-   "published": "2026-10-19T22:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "07e749f58711",
-   "title": "[기고] AI 안경이 들어온 시험장, 공정성은 어떻게 지킬 것인가",
-   "url": "https://www.newspim.com/news/view/20261014000230",
-   "source": "newspim.com",
-   "published": "2026-10-19T22:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "8555af6863e4",
-   "title": "[보험사 AX 레이스②] 보험사·설계사·가입자 모두 '윈윈'…AI 오류 책임...",
-   "url": "https://www.news2day.co.kr/article/20261019500332",
-   "source": "news2day.co.kr",
-   "published": "2026-10-19T21:56:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "31acecfd5094",
-   "title": "머스크 “미국 모든 어린이에게 스페이스X 주식 1주씩”…14조원 규모",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216418",
-   "source": "AI타임스",
-   "published": "2026-10-19T21:41:29+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "cf95435f6f89",
-   "title": "美 연방기관서 中 딥시크 퇴출…외부업체 서비스도 제한",
-   "url": "https://www.dt.co.kr/article/12089986?ref=naver",
-   "source": "dt.co.kr",
-   "published": "2026-10-19T21:36:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "03729caa097c",
-   "title": "[서학개미 안테나] 엔스케일, 앤트로픽과 450억달러 AI 컴퓨팅 계약 논의",
-   "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1728394",
-   "source": "ebn.co.kr",
-   "published": "2026-10-19T21:32:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "03f4676c3622",
-   "title": "[AI 프리즘] 인공지능이 '통제 불능'이 되면 법적 책임은 누구에게?",
-   "url": "https://www.wikileaks-kr.org/news/articleView.html?idxno=193284",
-   "source": "wikileaks-kr.org",
-   "published": "2026-10-19T21:14:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "17a8b7830a0c",
-   "title": "빌려 쓰는 AI의 유통기한 [이승현의 AI 네이티브]",
-   "url": "https://it.chosun.com/news/articleView.html?idxno=2023092172347",
-   "source": "it.chosun.com",
-   "published": "2026-10-19T21:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "6351d80db329",
-   "title": "“대화만으로 AI 에이전트 제작·수정”…일레븐랩스, 신규 기능 공개",
-   "url": "https://www.sedaily.com/article/20103412?ref=naver",
-   "source": "sedaily.com",
-   "published": "2026-10-19T21:00:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "fddfa5769f05",
-   "title": "미국, 연방기관서 딥시크 퇴출…기반 기술 활용 외부 서비스도 포함",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216417",
-   "source": "AI타임스",
-   "published": "2026-10-19T20:29:07+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "bbd460cd5a6e",
-   "title": "브레이브, BAT 보상 광고 연말까지 줄인다…AI 에이전트 결제 지원",
-   "url": "https://www.tokenpost.kr/news/cryptocurrency/424527",
-   "source": "tokenpost.kr",
-   "published": "2026-10-19T20:14:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "8a1ba0c934b0",
-   "title": "Amazon is taking its biggest shot at Nvidia yet with new TorchNeuron dev tool",
-   "url": "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/",
-   "source": "TechCrunch",
-   "published": "2026-10-19T20:09:24+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "960253d96346",
-   "title": "AI가 키운 일자리 불안…AI 회사가 달랜다",
-   "url": "https://www.sedaily.com/article/20103416?ref=naver",
-   "source": "sedaily.com",
-   "published": "2026-10-19T20:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
   }
  ]
 }
