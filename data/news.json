@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-10-23T11:48:22+00:00",
+ "updated_at": "2026-10-23T17:15:38+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "298c8de07d18",
+   "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+   "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+   "source": "OpenAI",
+   "published": "2026-10-23T17:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "74bc0e276e12",
+   "title": "\"반도체, 주도주 역할 끝났다\"…전문가 \"AI 투자, 다른 분야도 봐야\"",
+   "url": "https://www.newsis.com/view/NISX20261023_0003838757",
+   "source": "newsis.com",
+   "published": "2026-10-23T17:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d5dfb55b0129",
+   "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+   "url": "https://huggingface.co/blog/allenai/litpivot",
+   "source": "Hugging Face",
+   "published": "2026-10-23T16:15:50+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "1e2dbc920418",
+   "title": "대한민국 모빌리티, 로봇, AI·ICT 부문 혁신 기업 성과 다룬 “FIX 2026 이...",
+   "url": "https://it.donga.com/109761/",
+   "source": "it.donga.com",
+   "published": "2026-10-23T16:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d72ac4298509",
+   "title": "Spotify Aims to Handle Music Requests Routed Through AI Assistants",
+   "url": "https://econotimes.com/Spotify-Aims-to-Handle-Music-Requests-Routed-Through-AI-Assistants-1761376",
+   "source": "econotimes.com",
+   "published": "2026-10-23T15:44:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "47c1d92dedd3",
+   "title": "“한 문장도 안 썼다더니”…공쿠르상 후보작서 포착된 ‘AI 흔적’에 출...",
+   "url": "https://www.sedaily.com/article/20105586?ref=naver",
+   "source": "sedaily.com",
+   "published": "2026-10-23T15:43:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "f06544620de7",
+   "title": "[천자칼럼] PHP 결함 찾아낸 AI",
+   "url": "https://www.hankyung.com/article/2026102317581",
+   "source": "hankyung.com",
+   "published": "2026-10-23T15:27:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "f066368e0f3a",
+   "title": "AI 투자 불안에 국채 급등…메타 증자·스페이스X 통신 진출 주목[박신...",
+   "url": "https://www.hankyung.com/article/202610242083i",
+   "source": "hankyung.com",
+   "published": "2026-10-23T15:22:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "510e1c84fa51",
+   "title": "커서는 11월 12일 오픈AI 모델 끊기고, 코덱스는 월 20달러에 GPT-6.1 쓴다",
+   "url": "https://www.wikitree.co.kr/articles/1168697",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-23T15:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "ea8e3829aa2d",
+   "title": "[2026국감] 프런티어 AI 기록 부실 공방… PHP 보안·통신사 책임론도",
+   "url": "https://www.newscj.com/news/articleView.html?idxno=3442718",
+   "source": "newscj.com",
+   "published": "2026-10-23T14:50:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "e789ae39ca7e",
+   "title": "\"0에서 1 만드는 AI\"…AWS·앤스로픽 \"한 명의 챔피언이 조직 바꾼다\"",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=06970006645615872&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "source": "edaily.co.kr",
+   "published": "2026-10-23T14:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "beda0a9908ed",
+   "title": "[스코어보드-과방위]로봇 세우고 4.6조 AI 예산 추적…'정책국감' 가능성...",
+   "url": "https://www.mt.co.kr/politics/2026/10/23/2026102320380945781",
+   "source": "mt.co.kr",
+   "published": "2026-10-23T12:17:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "03acccabb0d9",
+   "title": "“AI 써서 99점” 자랑글에 발칵…건국대, 600명 대면 재시험",
+   "url": "https://www.donga.com/news/Society/article/all/20261023/134899611/2",
+   "source": "donga.com",
+   "published": "2026-10-23T11:51:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "e664f94da4ac",
    "title": "Etsy Tightens Seller Rules to Bar AI-Generated Recipes and Patterns",
@@ -1083,6 +1200,15 @@
    "lang": "en"
   },
   {
+   "id": "6430909168b5",
+   "title": "Does Your Model Run on AWS Trainium? Look It Up",
+   "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+   "source": "Hugging Face",
+   "published": "2026-10-23T00:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
    "id": "d8830d2b1fcd",
    "title": "래블업, 신한DS에 AI 모델 관리 SW 첫 공급…금융권 첫 고객",
    "url": "https://www.edaily.co.kr/News/Read?newsId=02961846645615872&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
@@ -1225,132 +1351,6 @@
    "published": "2026-10-22T21:02:00+00:00",
    "tag": "소식",
    "lang": "ko"
-  },
-  {
-   "id": "18d98eb26ef8",
-   "title": "﻿다시 열린 오픈 웨이트의 계절 [정원훈의 AI 트렌드]",
-   "url": "https://it.chosun.com/news/articleView.html?idxno=2023092172617",
-   "source": "it.chosun.com",
-   "published": "2026-10-22T21:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "6baab217189b",
-   "title": "[AI와 인간] AI 해킹, '기계 속도' 공격에 기본기로",
-   "url": "https://www.cctoday.co.kr/news/articleView.html?idxno=2238870",
-   "source": "cctoday.co.kr",
-   "published": "2026-10-22T21:02:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "7b148afb31ee",
-   "title": "중소금융사 300곳에 보안 지원…금보원, AI 점검·훈련 무상 개방 추진",
-   "url": "https://www.sedaily.com/article/20105054?ref=naver",
-   "source": "sedaily.com",
-   "published": "2026-10-22T21:01:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "a1c990325ac6",
-   "title": "\"차량 설계 검토, 단 몇 시간 만에\"… 日 에픽AI, '中 속도전' 맞설 AI 보...",
-   "url": "https://www.g-enews.com/view.php?ud=202610221530216980c8c1c064d_1",
-   "source": "g-enews.com",
-   "published": "2026-10-22T20:26:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "06c73c19aeb0",
-   "title": "[런던인사이트] 메타의 180억 달러 합의와 AI 유해성 소송",
-   "url": "https://www.sedaily.com/article/20104837?ref=naver",
-   "source": "sedaily.com",
-   "published": "2026-10-22T20:01:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "fdd63fed9f1e",
-   "title": "메타·오픈AI 이어 앤트로픽도 AI에이전트 '클로드 듀엣' 공개",
-   "url": "https://www.yna.co.kr/view/AKR20261023006600091?input=1195m",
-   "source": "yna.co.kr",
-   "published": "2026-10-22T20:00:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "0ed200d7fc1f",
-   "title": "“AI 잘 써요? 결과도 검증해보세요”…확 바뀐 대기업 신입의 조건 [팩...",
-   "url": "https://www.joongang.co.kr/article/25472153",
-   "source": "joongang.co.kr",
-   "published": "2026-10-22T20:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "19d8dca22f7c",
-   "title": "경일대 앵커사업본부, 구미 지역 고령층 대상 생성형 AI 교육 실시",
-   "url": "https://biz.heraldcorp.com/article/10911983?ref=naver",
-   "source": "biz.heraldcorp.com",
-   "published": "2026-10-22T19:34:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "e80dadf4b5f9",
-   "title": "창과 방패 든 생성형 AI···사이버 전장 '초지능 해킹전쟁' 점화",
-   "url": "https://www.globale.co.kr/news/articleView.html?idxno=41179",
-   "source": "globale.co.kr",
-   "published": "2026-10-22T19:18:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "fe52d49759b6",
-   "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
-   "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
-   "source": "TechCrunch",
-   "published": "2026-10-22T19:07:09+00:00",
-   "tag": "출시",
-   "lang": "en"
-  },
-  {
-   "id": "27825e300358",
-   "title": "Build more responsive apps with the Decisions API",
-   "url": "https://openai.com/index/decisions-api",
-   "source": "OpenAI",
-   "published": "2026-10-22T19:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "865ffb65f1d5",
-   "title": "Canva releases its first image generation model",
-   "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
-   "source": "TechCrunch",
-   "published": "2026-10-22T19:00:00+00:00",
-   "tag": "출시",
-   "lang": "en"
-  },
-  {
-   "id": "5d204276414b",
-   "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
-   "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
-   "source": "TechCrunch",
-   "published": "2026-10-22T19:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "d26ae9b2d9ce",
-   "title": "Microsoft’s Mustafa Suleyman says its AI outperforms doctors on hard cases as he chases ‘medical superintelligence’",
-   "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
-   "source": "TechCrunch",
-   "published": "2026-10-22T18:43:53+00:00",
-   "tag": "소식",
-   "lang": "en"
   }
  ]
 }
