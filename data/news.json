@@ -1,7 +1,178 @@
 {
- "updated_at": "2026-10-24T04:46:08+00:00",
+ "updated_at": "2026-10-24T11:13:43+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "80ad7d1c664b",
+   "title": "오픈AI 연구원 3명 해고, ‘순환 추론’ 유출 조사서 비롯…시그널 대화 쟁점",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216616",
+   "source": "AI타임스",
+   "published": "2026-10-24T10:53:21+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "bda373c22156",
+   "title": "오픈AI, AI 보안 우회로 중단했던 모델 학습 재개…인터넷 차단 강화",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216615",
+   "source": "AI타임스",
+   "published": "2026-10-24T10:13:05+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "4e04066126f0",
+   "title": "\"비상물품 사흘치 준비하세요\"… 전 세계 AI 보안 우려",
+   "url": "https://www.newscj.com/news/articleView.html?idxno=3442805",
+   "source": "newscj.com",
+   "published": "2026-10-24T09:42:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "2baf43481b56",
+   "title": "SK “AI 데이터센터 5GW에 464조 필요”…글로벌 빅테크와 투자 협상",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216614",
+   "source": "AI타임스",
+   "published": "2026-10-24T09:37:43+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "99bd7616e045",
+   "title": "\"내 말 듣고 있었나\"… 삼성 TV '주변 소리 수집' 주장에 오픈AI 계정 정...",
+   "url": "https://www.kpinews.kr/newsView/1065604418870384",
+   "source": "kpinews.kr",
+   "published": "2026-10-24T09:24:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "8267bf90371a",
+   "title": "Twilio CMO Says AI-Supported Campaign Preparation Takes Under a Day",
+   "url": "https://econotimes.com/Twilio-CMO-Says-AI-Supported-Campaign-Preparation-Takes-Under-a-Day-1762264",
+   "source": "econotimes.com",
+   "published": "2026-10-24T09:16:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "80c99fc419cd",
+   "title": "앤트로픽, 구글 클라우드서 최신 기능 쓰는 '관리형 클로드' 출시",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216613",
+   "source": "AI타임스",
+   "published": "2026-10-24T09:03:54+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "10271f0c38c9",
+   "title": "구글 클라우드, 에이전트 전용 '컴퓨팅 엔진' 출시…마이크로VM으로 보안 격리",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216608",
+   "source": "AI타임스",
+   "published": "2026-10-24T08:30:12+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "a4b3cee695d8",
+   "title": "\"자체 AI가 보안망 뚫었다\"…오픈AI, 몸값마저 1500억달러 하향",
+   "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=875901",
+   "source": "hansbiz.co.kr",
+   "published": "2026-10-24T08:30:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "a0c6cb062daf",
+   "title": "앤트로픽, 클로드로 오픈소스 123개 라이브러리 검증...수십 년 버그도 발견",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216612",
+   "source": "AI타임스",
+   "published": "2026-10-24T08:01:33+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "687c7fba0cb5",
+   "title": "고객 계좌 접근하는 AI…美 주요 은행 대책 마련 고심",
+   "url": "https://www.ikbc.co.kr/article/view/kbc202610240023",
+   "source": "ikbc.co.kr",
+   "published": "2026-10-24T07:41:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "306bc883b865",
+   "title": "구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216607",
+   "source": "AI타임스",
+   "published": "2026-10-24T07:18:18+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "48b4cf68703f",
+   "title": "중국계 AI 해킹 도구 확산…韓日 금융기관도 공격받았다",
+   "url": "https://www.hankyung.com/article/202610242500i",
+   "source": "hankyung.com",
+   "published": "2026-10-24T07:09:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "7fd689b357b4",
+   "title": "메타 '뮤즈' 아시아 첫발...네이버 \"국내 도입 시 허용 여부 검토\"",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216600",
+   "source": "AI타임스",
+   "published": "2026-10-24T07:07:08+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "250e20cd35c6",
+   "title": "오픈AI, 통제망 탈출했던 최상위 모델 훈련 재개",
+   "url": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5226876",
+   "source": "mbn.mk.co.kr",
+   "published": "2026-10-24T05:47:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "495a7c6c60a8",
+   "title": "앤트로픽, '클로드 듀엣' 공개…자리 비워도 알아서 업무 이어간다",
+   "url": "https://www.newsway.co.kr/news/view?ud=2026102315041326410",
+   "source": "newsway.co.kr",
+   "published": "2026-10-24T05:22:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "62cdd40c2e2d",
+   "title": "LH, AI 활용 직원 139명 추가 선발…현장 업무 적용 확대",
+   "url": "https://www.betanews.net/article/view/beta202610240079",
+   "source": "betanews.net",
+   "published": "2026-10-24T05:20:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "667386aa5b3c",
+   "title": "\"돈은 폭풍처럼 벌었는데 통장은 마이너스?\"…빅테크 수익화 시험대[AI ...",
+   "url": "https://www.newsis.com/view/NISX20261023_0003838590",
+   "source": "newsis.com",
+   "published": "2026-10-24T05:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "e0a777a295b1",
+   "title": "[안광섭 AI 진테제] 대규모 LLM이 불평등 증폭?",
+   "url": "https://zdnet.co.kr/view/?no=20261024135151",
+   "source": "zdnet.co.kr",
+   "published": "2026-10-24T04:52:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "239285178c6b",
    "title": "영국 \"AI 기업 자율규제 못 믿는다\"…사이버 방어 강화",
@@ -1179,177 +1350,6 @@
    "source": "datanet.co.kr",
    "published": "2026-10-23T04:36:00+00:00",
    "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "937efa30f9f2",
-   "title": "AI 에이전트도 '빨리빨리'...한국, 오픈AI '닷츠' 이용 세계 3위",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216560",
-   "source": "AI타임스",
-   "published": "2026-10-23T04:33:37+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "12619f542704",
-   "title": "LH, AI 프론티어 3기 139명 선발…이성훈 사장 \"전사적 AX 성과 창출 지...",
-   "url": "http://www.sisacast.kr/news/articleView.html?idxno=101258",
-   "source": "sisacast.kr",
-   "published": "2026-10-23T04:32:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "0b5a3a72f03c",
-   "title": "NNT, AI 인용 패턴 리포트 발간",
-   "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=875508",
-   "source": "hansbiz.co.kr",
-   "published": "2026-10-23T04:32:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "b9c09d2079d5",
-   "title": "앤트로픽 핵심팀 \"이제 개발자도 코드 안 짠다…사실상 전부 클로드가 ...",
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=709536",
-   "source": "digitaltoday.co.kr",
-   "published": "2026-10-23T04:32:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "2dae0c1686c2",
-   "title": "LH 'AI 프론티어' 3기 출범… 직원 주도 AI 업무혁신 확대",
-   "url": "https://www.newscj.com/news/articleView.html?idxno=3442586",
-   "source": "newscj.com",
-   "published": "2026-10-23T04:26:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "7af17e610711",
-   "title": "AI 도입은 늘었는데 성과는 제자리…AWS가 내놓은 '정착' 해법은?",
-   "url": "https://www.ddaily.co.kr/page/view/2026102312035046026",
-   "source": "ddaily.co.kr",
-   "published": "2026-10-23T04:19:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "f63ad230a853",
-   "title": "한화솔루션, AWS·앤스로픽과 협업...내년 AI 에이전트로 사업 성과 낸다",
-   "url": "https://www.edaily.co.kr/News/Read?newsId=03981926645615872&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-   "source": "edaily.co.kr",
-   "published": "2026-10-23T04:17:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "634de4d17bc6",
-   "title": "이세돌, AI 도발에 판매직 도전…정재형 \"10년은 일한 사람 같다\" ('백수...",
-   "url": "https://mhnse.com/news/articleView.html?idxno=1609978",
-   "source": "mhnse.com",
-   "published": "2026-10-23T04:17:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "71f292e0dd7e",
-   "title": "'백수 이세돌' 이세돌, 이번엔 제미나이 대결…\"판매왕 되면 AI 관두겠다...",
-   "url": "https://www.slist.kr/news/articleView.html?idxno=775864",
-   "source": "slist.kr",
-   "published": "2026-10-23T04:14:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "800f2cc0b12c",
-   "title": "“제미나이에 물어봤다”…李 ‘AI 질문’ 논쟁 계속",
-   "url": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000556481",
-   "source": "ichannela.com",
-   "published": "2026-10-23T04:10:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "7f5635e1c847",
-   "title": "\"오픈AI 내부 모니터링 시스템 허점 대거 발견\"...외부 평가서 드러나",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216564",
-   "source": "AI타임스",
-   "published": "2026-10-23T04:06:18+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "3602c8887bef",
-   "title": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony.ai and Nvidia",
-   "url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
-   "source": "TechCrunch",
-   "published": "2026-10-23T04:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "681e3fcb40a8",
-   "title": "앤트로픽, 개인 AI 에이전트 '클로드 듀엣' 공개…메타·오픈AI와 정면 ...",
-   "url": "https://theopiniontimes.news/%ec%95%a4%ed%8a%b8%eb%a1%9c%ed%94%bd-%ea%b0%9c%ec%9d%b8-ai-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8a%b8-%ed%81%b4%eb%a1%9c%eb%93%9c-%eb%93%80%ec%97%a3-%ea%b3%b5%ea%b0%9c%eb%a9%94%ed%83%80%c2%b7/",
-   "source": "theopiniontimes.news",
-   "published": "2026-10-23T03:56:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "629fa9a84b95",
-   "title": "이정헌 의원 “통신요금 감면 넘어 AI·콘텐츠 지원”…‘디지털 바우처...",
-   "url": "https://www.ceoscoredaily.com/page/view/2026102312405002447",
-   "source": "ceoscoredaily.com",
-   "published": "2026-10-23T03:42:00+00:00",
-   "tag": "할인",
-   "lang": "ko"
-  },
-  {
-   "id": "2fa6e56027d1",
-   "title": "딥시크, IPO 앞두고 20조 대규모 투자 유치...상하이 증시 상장 가속",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216571",
-   "source": "AI타임스",
-   "published": "2026-10-23T03:39:20+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "480db8f82b2e",
-   "title": "국내 스타트업 AI 모델 '코실로', 젠슨 황 GTC 베를린 기조연설에 소개",
-   "url": "https://platum.kr/archives/296909",
-   "source": "platum.kr",
-   "published": "2026-10-23T03:36:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "42c1be14a46c",
-   "title": "한화솔루션은 클로드, 카카오는 모두의 AI…AWS가 뒷받침한 한국 AX",
-   "url": "https://zdnet.co.kr/view/?no=20261023122822",
-   "source": "zdnet.co.kr",
-   "published": "2026-10-23T03:30:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "f519d2646d60",
-   "title": "오픈AI, 투자 열기 주춤하자 목표 기업가치 200조 낮춰",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216570",
-   "source": "AI타임스",
-   "published": "2026-10-23T03:22:03+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "3c148bba2125",
-   "title": "\"대통령도 제미나이에 물었다는데\"...AI의 달콤한 맞장구",
-   "url": "https://www.ytn.co.kr/_ln/0106_202610231218570107",
-   "source": "ytn.co.kr",
-   "published": "2026-10-23T03:18:00+00:00",
-   "tag": "소식",
    "lang": "ko"
   }
  ]
