@@ -1,7 +1,115 @@
 {
- "updated_at": "2026-10-24T11:13:43+00:00",
+ "updated_at": "2026-10-24T16:03:22+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "688136660c10",
+   "title": "Block’s new voice model sounds eerily human",
+   "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+   "source": "TechCrunch",
+   "published": "2026-10-24T16:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "e4ac1d3f295a",
+   "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
+   "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+   "source": "TechCrunch",
+   "published": "2026-10-24T15:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "3910bdbed6ce",
+   "title": "[AI 계좌접근 비상] 승인 없는 자금 이동 우려… 美 대형은행, AI 계좌 접...",
+   "url": "https://www.cbci.co.kr/news/articleView.html?idxno=618935",
+   "source": "cbci.co.kr",
+   "published": "2026-10-24T15:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d7b7731ed5d8",
+   "title": "[오픈AI 훈련재개] 보안 강화 마친 오픈AI, 무단이탈 소동 딛고 최상위 ...",
+   "url": "https://www.cbci.co.kr/news/articleView.html?idxno=618930",
+   "source": "cbci.co.kr",
+   "published": "2026-10-24T15:00:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "1986f5398989",
+   "title": "문샷AI, 공격 능력 낮춰도 평가점수 81%…오픈AI도 보안 검증 과제",
+   "url": "https://sateconomy.co.kr/news/view/1065619413607759",
+   "source": "sateconomy.co.kr",
+   "published": "2026-10-24T14:50:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "4a535eced667",
+   "title": "Here are the top AI agents that can live in your text messages",
+   "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
+   "source": "TechCrunch",
+   "published": "2026-10-24T14:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "32f74f6fb81f",
+   "title": "국방정보통신협회, AI 기반 국방 사이버보안 대응 전략 논의",
+   "url": "https://www.etnews.com/20261024000039",
+   "source": "etnews.com",
+   "published": "2026-10-24T12:48:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "5d603b393086",
+   "title": "같은 LLM이 누군가엔 선물, 누군가엔 상실…코딩 에이전트가 프로그래머...",
+   "url": "https://www.wikitree.co.kr/articles/1168843",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-24T12:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "0135084723a8",
+   "title": "피차이 “클라우드 매출 포기하더라도 첨단 AI 개발에 컴퓨팅 우선 투입”",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216618",
+   "source": "AI타임스",
+   "published": "2026-10-24T11:38:59+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "a0d6362ef0c3",
+   "title": "10년 묵은 취약점 찾아낸 AI…PHP 사태로 본 보안 속도전",
+   "url": "https://www.lcnews.co.kr/news/articleView.html?idxno=210201",
+   "source": "lcnews.co.kr",
+   "published": "2026-10-24T11:24:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "6aaf4000eb61",
+   "title": "오픈AI, \"AI 안전성, 기업 혼자서는 확보 못 한다\"…폴란드와 공동 검증...",
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42418",
+   "source": "aitimes.kr",
+   "published": "2026-10-24T11:18:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "3a1a036ef73a",
+   "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
+   "url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
+   "source": "The Hacker News",
+   "published": "2026-10-24T11:03:33+00:00",
+   "tag": "출시",
+   "lang": "en"
+  },
   {
    "id": "80ad7d1c664b",
    "title": "오픈AI 연구원 3명 해고, ‘순환 추론’ 유출 조사서 비롯…시그널 대화 쟁점",
@@ -10,6 +118,15 @@
    "published": "2026-10-24T10:53:21+00:00",
    "tag": "보안",
    "lang": "ko"
+  },
+  {
+   "id": "afec56c7243a",
+   "title": "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads",
+   "url": "https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html",
+   "source": "The Hacker News",
+   "published": "2026-10-24T10:36:33+00:00",
+   "tag": "소식",
+   "lang": "en"
   },
   {
    "id": "bda373c22156",
@@ -89,6 +206,15 @@
    "url": "https://www.aitimes.com/news/articleView.html?idxno=216612",
    "source": "AI타임스",
    "published": "2026-10-24T08:01:33+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "f89230581d0e",
+   "title": "중국 국영 통신망서 수출 금지 엔비디아 칩 또 포착…첨단 'B300' 32개 확인",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216617",
+   "source": "AI타임스",
+   "published": "2026-10-24T07:55:00+00:00",
    "tag": "소식",
    "lang": "ko"
   },
@@ -1224,132 +1350,6 @@
    "source": "enewstoday.co.kr",
    "published": "2026-10-23T05:15:00+00:00",
    "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "8544e998bb8e",
-   "title": "메타, 부채 위험 지표 사상 최고에 주가 7% 급락…AI 지출·현금 적자 부담",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216578",
-   "source": "AI타임스",
-   "published": "2026-10-23T05:12:53+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "df0b8c97ec5e",
-   "title": "LH, ‘LH AI 프론티어’ 출범…직원 주도 AI 혁신 가속",
-   "url": "https://www.lawissue.co.kr/view.php?ud=20261023140434857467191f6c6e_12",
-   "source": "lawissue.co.kr",
-   "published": "2026-10-23T05:06:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "03cb4dcbc768",
-   "title": "메타·오픈AI에 도전장 낸 앤트로픽…'클로드 듀엣'으로 AI 비서 경쟁 가...",
-   "url": "https://www.joongangenews.com/news/articleView.html?idxno=557626",
-   "source": "joongangenews.com",
-   "published": "2026-10-23T05:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "43a5ca11e737",
-   "title": "앤트로픽, 일하는 AI 에이전트 ‘클로드 듀엣’ 공개",
-   "url": "https://byline.network/?p=9004111222624404",
-   "source": "byline.network",
-   "published": "2026-10-23T05:00:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "0f2258d8c183",
-   "title": "AI 키우는데 안전망은?…과기부 국감서 대응책 촉구(종합)",
-   "url": "https://www.news1.kr/it-science/cc-newmedia/6329891",
-   "source": "news1.kr",
-   "published": "2026-10-23T04:54:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "cd039ab0544a",
-   "title": "밀양시, 공공 AI 도입 앞두고 개인정보·보안 위험 점검",
-   "url": "http://www.breaknews.com/1245221",
-   "source": "breaknews.com",
-   "published": "2026-10-23T04:50:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "e727b56c5328",
-   "title": "에임인텔리전스, 오픈AI와 손잡고 AI가 찾은 보안 허점 검증",
-   "url": "https://www.newsis.com/view/NISX20261023_0003838371",
-   "source": "newsis.com",
-   "published": "2026-10-23T04:48:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "4ea2b79d08cf",
-   "title": "AI 반도체 기판 장비 납기 최대 30개월…韓 소부장 기업에 새로운 기회...",
-   "url": "https://www.joongangenews.com/news/articleView.html?idxno=557761",
-   "source": "joongangenews.com",
-   "published": "2026-10-23T04:48:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "84b06784b3cf",
-   "title": "센티넬원, AI 위협 탐지 역량 1년 새 23배↑…“방어에도 AI 적극 활용”",
-   "url": "https://www.etnews.com/20261023000195",
-   "source": "etnews.com",
-   "published": "2026-10-23T04:44:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "531f2a046432",
-   "title": "세종사이버대 만화애니메이션학과, 생성형 AI 활용 웹툰·영상 제작 실무...",
-   "url": "https://www.ekn.kr/web/view.php?key=20261023029590362",
-   "source": "ekn.kr",
-   "published": "2026-10-23T04:44:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "5bad434b81c6",
-   "title": "오픈AI, ‘데브데이 익스체인지 서울’ 성료…韓 개발자들과 AI 활용 논...",
-   "url": "https://www.mk.co.kr/article/12184068",
-   "source": "mk.co.kr",
-   "published": "2026-10-23T04:43:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "da63fda11309",
-   "title": "MS ‘AI 의사’, 실제 의사보다 진단 정확도 2배 높았다",
-   "url": "https://www.mk.co.kr/article/12184067",
-   "source": "mk.co.kr",
-   "published": "2026-10-23T04:43:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "7683173fba28",
-   "title": "에임인텔리전스, 오픈AI 연계 앱 보안 평가 서비스 출시",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216562",
-   "source": "AI타임스",
-   "published": "2026-10-23T04:36:52+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "cbd40f2190c6",
-   "title": "탈레스, AI 기반 역분석 대응하는 '센티넬 엔벨로프 플러스' 공개",
-   "url": "https://www.datanet.co.kr/news/articleView.html?idxno=215315",
-   "source": "datanet.co.kr",
-   "published": "2026-10-23T04:36:00+00:00",
-   "tag": "출시",
    "lang": "ko"
   }
  ]
