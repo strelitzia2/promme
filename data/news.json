@@ -1,7 +1,43 @@
 {
- "updated_at": "2026-10-24T16:03:22+00:00",
+ "updated_at": "2026-10-24T20:56:53+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "914f21d11bc2",
+   "title": "[AI 프리즘] 앤트로픽 \"AI 에이전트로 초급 채용 급감\"…전문가들 \"IPO 앞...",
+   "url": "https://www.wikileaks-kr.org/news/articleView.html?idxno=193681",
+   "source": "wikileaks-kr.org",
+   "published": "2026-10-24T20:48:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "ef99dc74e718",
+   "title": "SW 코드 검증 'AI 감리팀'·전고체 전지용 '맞춤 양극재' 기술 주목",
+   "url": "https://www.mt.co.kr/future/2026/10/25/2026101915174930671",
+   "source": "mt.co.kr",
+   "published": "2026-10-24T20:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "59534a8423ba",
+   "title": "오픈AI, 인터넷 끊고 AI 훈련…'가상 웹'으로 대체",
+   "url": "https://www.g-enews.com/view.php?ud=2026102420584326339a1f309431_1",
+   "source": "g-enews.com",
+   "published": "2026-10-24T19:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "dbe76530e989",
+   "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+   "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+   "source": "TechCrunch",
+   "published": "2026-10-24T19:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
   {
    "id": "688136660c10",
    "title": "Block’s new voice model sounds eerily human",
@@ -1313,42 +1349,6 @@
    "url": "https://www.gosiweek.com/article/1065593630296876",
    "source": "gosiweek.com",
    "published": "2026-10-23T06:18:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "6e2510947482",
-   "title": "“지난주 세차장으로 안내해”…구글, 차량용 '제미나이'에 개인화 기능 도입",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216587",
-   "source": "AI타임스",
-   "published": "2026-10-23T06:12:17+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "6bab9c4e0e11",
-   "title": "상상력집단, 350곳 이상 기업·기관 생성형 AI 요금제 검토부터 라이선...",
-   "url": "https://www.enetnews.co.kr/news/articleView.html?idxno=55638",
-   "source": "enetnews.co.kr",
-   "published": "2026-10-23T06:02:00+00:00",
-   "tag": "할인",
-   "lang": "ko"
-  },
-  {
-   "id": "07ef96f9cbd4",
-   "title": "[AI 모델 신작] 드림랩스·앤트그룹·일레븐랩스, 로봇·음성 AI 공개 등 8종",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216580",
-   "source": "AI타임스",
-   "published": "2026-10-23T05:40:35+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "17d926d368d7",
-   "title": "세종사이버대, AI 기반 웹툰·영상 제작 실습 특강 개최",
-   "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2483824",
-   "source": "enewstoday.co.kr",
-   "published": "2026-10-23T05:15:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
