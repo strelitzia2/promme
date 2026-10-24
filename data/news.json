@@ -1,7 +1,88 @@
 {
- "updated_at": "2026-10-24T20:56:53+00:00",
+ "updated_at": "2026-10-24T23:21:41+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "904463e927e3",
+   "title": "표정 보고 기분 맞춰 대화…'감정 읽는 AI' 만든다",
+   "url": "https://zdnet.co.kr/view/?no=20261023110909",
+   "source": "zdnet.co.kr",
+   "published": "2026-10-24T23:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "fe636d96efc3",
+   "title": "위험성 알려줘도 공격 지속…영국 AI보안연구소가 밝힌 AI 안전 허점",
+   "url": "https://zdnet.co.kr/view/?no=20261024144522",
+   "source": "zdnet.co.kr",
+   "published": "2026-10-24T23:00:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "3d89bb3242b5",
+   "title": "AI 해킹과 PHP 취약점에 맞서는 은행들의 1천억 보안 예산 확대 계획",
+   "url": "https://www.gokorea.kr/news/articleView.html?idxno=882618",
+   "source": "gokorea.kr",
+   "published": "2026-10-24T22:42:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "cb45b540fecb",
+   "title": "정연태의 전문지식 GPT 혁명 ⑧ | 엔비디아가 설계하는 AI 산업혁명의 미...",
+   "url": "https://www.koreaittimes.com/news/articleView.html?idxno=158481",
+   "source": "koreaittimes.com",
+   "published": "2026-10-24T22:14:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "7fc1e19319c1",
+   "title": "[굿모닝! AI 리포트] 앤트로픽, AI 에이전트 '클로드 듀엣' 선봬…오픈A...",
+   "url": "https://www.goodkyung.com/news/articleView.html?idxno=292721",
+   "source": "goodkyung.com",
+   "published": "2026-10-24T21:30:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d4ad75150597",
+   "title": "[AI 클로즈업] 내 일을 맡길 AI는 누구… 듀엣·닷츠·뮤즈, 개인 에이전...",
+   "url": "https://www.ddaily.co.kr/page/view/2026102310555652890",
+   "source": "ddaily.co.kr",
+   "published": "2026-10-24T21:01:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "a48bd9d5fed7",
+   "title": "오픈AI, 구글클라우드에도 공급⋯AI 모델 '멀티클라우드' 경쟁",
+   "url": "http://www.inews24.com/view/2018447",
+   "source": "inews24.com",
+   "published": "2026-10-24T21:01:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "9b472ad5fe5c",
+   "title": "돈만 기부하던 시대 지났다…AI 빅테크의 새 나눔법",
+   "url": "https://it.chosun.com/news/articleView.html?idxno=2023092172597",
+   "source": "it.chosun.com",
+   "published": "2026-10-24T21:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "431621b86d54",
+   "title": "구글·오픈AI·앤트로픽 연구자들의 경고…\"AI 통제할 시간 얼마 안 남아...",
+   "url": "http://weekly.chosun.com/news/articleView.html?idxno=56469",
+   "source": "weekly.chosun.com",
+   "published": "2026-10-24T21:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "914f21d11bc2",
    "title": "[AI 프리즘] 앤트로픽 \"AI 에이전트로 초급 채용 급감\"…전문가들 \"IPO 앞...",
@@ -1269,87 +1350,6 @@
    "source": "electimes.com",
    "published": "2026-10-23T07:26:00+00:00",
    "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "edda914ed889",
-   "title": "충남 AI디지털배움터, 웅도·고파도 찾아 AI·디지털 교육",
-   "url": "https://www.dt.co.kr/article/12090897?ref=naver",
-   "source": "dt.co.kr",
-   "published": "2026-10-23T07:25:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ed0d1ad4bb80",
-   "title": "순천 서면서 어린이 가족캠프…은어잡기·전통놀이 진행",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216514",
-   "source": "AI타임스",
-   "published": "2026-10-23T07:05:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "28ca236ba190",
-   "title": "독점작이 PC로 포팅되고 게임도 복사…인공지능이 바꾸고 있는 게임 시...",
-   "url": "https://game.donga.com/124802/",
-   "source": "game.donga.com",
-   "published": "2026-10-23T06:58:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "e0bd9b2b85cd",
-   "title": "인티그리트, 로봇 예측형 AI 특허 4건 등록…개방형 휴머노이드 플랫폼 개발 확대",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216593",
-   "source": "AI타임스",
-   "published": "2026-10-23T06:54:40+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "4007ab1ec964",
-   "title": "바클레이즈, AI 도입 늘리며 5000명 감원…개발자 등 지원 부서에 집중",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216590",
-   "source": "AI타임스",
-   "published": "2026-10-23T06:45:15+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "cf1ddb310a36",
-   "title": "컴트루테크놀로지, 내달 'AI DLP' 신기능 선보인다",
-   "url": "https://www.boannews.com/news/articleView.html?idxno=146709",
-   "source": "boannews.com",
-   "published": "2026-10-23T06:38:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "c179b8446804",
-   "title": "LH, 'AI 프론티어' 3기 출범…현장 중심 업무 혁신 추진",
-   "url": "https://www.bizwork.co.kr/news/articleView.html?idxno=420157",
-   "source": "bizwork.co.kr",
-   "published": "2026-10-23T06:38:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "4b1076b12140",
-   "title": "테슬라, AI·로봇 투자 축소에 주가 하락…'미래 가치' 의구심",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216574",
-   "source": "AI타임스",
-   "published": "2026-10-23T06:25:13+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "775a2ca6a530",
-   "title": "AI가 코드를 짜주는 시대…연세IT미래교육원, 개발 기초·AI 활용 연계 교...",
-   "url": "https://www.gosiweek.com/article/1065593630296876",
-   "source": "gosiweek.com",
-   "published": "2026-10-23T06:18:00+00:00",
-   "tag": "소식",
    "lang": "ko"
   }
  ]
