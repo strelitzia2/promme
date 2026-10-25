@@ -1,7 +1,88 @@
 {
- "updated_at": "2026-10-25T11:43:18+00:00",
+ "updated_at": "2026-10-25T16:32:11+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "f312280d8e9a",
+   "title": "AI 기업들 “해킹위험 낮추자” 안전장치 강화",
+   "url": "https://www.donga.com/news/Economy/article/all/20261025/134905019/2",
+   "source": "donga.com",
+   "published": "2026-10-25T15:31:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "e2623b0d7b68",
+   "title": "\"강원 고유 콘텐츠, AI 입혀 관광·예술시장 공략해야\"",
+   "url": "https://www.kado.net/news/articleView.html?idxno=2080283",
+   "source": "kado.net",
+   "published": "2026-10-25T15:06:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "02d2288427be",
+   "title": "메인라인, 기업용 생성형 AI 통합플랫폼 'AIFuze'에 문서 생성 기능 탑재",
+   "url": "https://www.insnews.co.kr/news/articleView.html?idxno=93429",
+   "source": "insnews.co.kr",
+   "published": "2026-10-25T15:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "184e8c7ac949",
+   "title": "인천시, AI·ICT 활용 스마트서비스 확대…2028년 신규사업 발굴 본격화",
+   "url": "http://www.newstown.co.kr/news/articleView.html?idxno=719610",
+   "source": "newstown.co.kr",
+   "published": "2026-10-25T14:39:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "611184d5aa6f",
+   "title": "The hottest AI wearables and gadgets you should know about",
+   "url": "https://techcrunch.com/2026/10/25/the-hottest-ai-wearables-and-gadgets-you-should-know-about/",
+   "source": "TechCrunch",
+   "published": "2026-10-25T14:10:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "b8a8d6427424",
+   "title": "[독자위원회]‘고독사 안전망’ 기획 눈길… ‘AI 해킹’ 금융권 보안소...",
+   "url": "https://www.donga.com/news/Opinion/article/all/20261025/134905794/2",
+   "source": "donga.com",
+   "published": "2026-10-25T14:10:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "09a2486ca4ba",
+   "title": "\"AI 시대 보안, 에이전트가 패치할 수 있게 기업 SW 코드 다시 짜야\"",
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=709766",
+   "source": "digitaltoday.co.kr",
+   "published": "2026-10-25T12:14:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "9cd4de7245ec",
+   "title": "앤트로픽, 서브에이전트 대신 스킬 쓴 단일 에이전트가 한 비교에서 약...",
+   "url": "https://www.wikitree.co.kr/articles/1169013",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-25T12:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "5b8d8a6a12e6",
+   "title": "시험 범위 무단 이탈해 공격, 거짓말까지…또 통제 벗어난 AI",
+   "url": "https://www.khan.co.kr/article/202610252058025",
+   "source": "khan.co.kr",
+   "published": "2026-10-25T11:58:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "2c07ca098c6e",
    "title": "가상 섬에 홀로 둔 AI, 스스로 놀이 만들고 개발자도 몰랐던 기술 발견",
@@ -1268,87 +1349,6 @@
    "url": "https://www.christiantoday.co.kr/news/378115",
    "source": "christiantoday.co.kr",
    "published": "2026-10-23T22:40:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "a5e78de6d8bd",
-   "title": "서울 주택난, 제미나이에게 물어봤습니다[부동산 취재로그]",
-   "url": "https://www.edaily.co.kr/News/Read?newsId=01774486645616200&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-   "source": "edaily.co.kr",
-   "published": "2026-10-23T22:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "189292fda1dd",
-   "title": "[10월23일] AI 토큰 가격에 베팅하는 금융상품까지…컴퓨팅, 석유처럼 거래되나",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216572",
-   "source": "AI타임스",
-   "published": "2026-10-23T22:00:00+00:00",
-   "tag": "할인",
-   "lang": "ko"
-  },
-  {
-   "id": "67ab64203109",
-   "title": "Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell",
-   "url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
-   "source": "TechCrunch",
-   "published": "2026-10-23T21:59:19+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "b5cbcb6067e2",
-   "title": "“990억이 9조원으로”…앤트로픽 상장 앞두고 대박 난 '이 기업'",
-   "url": "https://magazine.hankyung.com/business/article/202610231302b",
-   "source": "magazine.hankyung.com",
-   "published": "2026-10-23T21:44:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ed91cd9bb1e6",
-   "title": "How, and Why, We’re Adding A.I. Tools to NYT Cooking",
-   "url": "https://www.nytimes.com/2026/10/23/insider/cooking-recipes-ai.html?partner=naver",
-   "source": "nytimes.com",
-   "published": "2026-10-23T21:24:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "d400e94bd3df",
-   "title": "[AI 프리즘] \"아마존과 반대로\"…월마트, AI 에이전트 전용 결제·관리 ...",
-   "url": "https://www.wikileaks-kr.org/news/articleView.html?idxno=193589",
-   "source": "wikileaks-kr.org",
-   "published": "2026-10-23T21:12:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "7475343e6b20",
-   "title": "AI 해킹 위협 커지는데…출연연 보안 인력·인프라 태부족",
-   "url": "https://www.cctoday.co.kr/news/articleView.html?idxno=2238935",
-   "source": "cctoday.co.kr",
-   "published": "2026-10-23T21:02:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "2b2ca20142bd",
-   "title": "해독제도 AI가 만든다…클로드, 64시간 동안 단백질 31만개 설계",
-   "url": "https://www.newsis.com/view/NISX20261021_0003835514",
-   "source": "newsis.com",
-   "published": "2026-10-23T21:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "86a174819699",
-   "title": "[분석] 이재명 대통령은 왜 챗GPT 대신 ‘제미나이’를 썼을까",
-   "url": "https://www.ekn.kr/web/view.php?key=20261024021080154",
-   "source": "ekn.kr",
-   "published": "2026-10-23T21:00:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
