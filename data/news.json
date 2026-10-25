@@ -1,7 +1,88 @@
 {
- "updated_at": "2026-10-25T16:32:11+00:00",
+ "updated_at": "2026-10-25T20:57:31+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "d345b73c9a04",
+   "title": "거대 베팅 꺼리는 사이 벌어진 격차…美 인공지능 독주에 숨죽인 아시아...",
+   "url": "https://www.g-enews.com/view.php?ud=20261026052812766fbbec65dfb_1",
+   "source": "g-enews.com",
+   "published": "2026-10-25T20:38:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "b0c0aa600643",
+   "title": "인터넷 끊어도 스스로 접속한 AI… 오픈AI 훈련 11일간 멈췄다",
+   "url": "https://www.seoul.co.kr/news/economy/IT/2026/10/26/20261026029002?wlog_tag3=naver",
+   "source": "seoul.co.kr",
+   "published": "2026-10-25T20:05:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "4fbe71ca225c",
+   "title": "[미국 특징주] \"AI가 스스로 해킹할라\"…오픈AI, 프런티어 모델 인터넷 ...",
+   "url": "https://www.newspim.com/news/view/20261026000014",
+   "source": "newspim.com",
+   "published": "2026-10-25T20:04:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "bcdaf0f555cb",
+   "title": "안전·복지·교통에 AI 더한다… 스마트한 일상 펼치는 청주",
+   "url": "https://www.seoul.co.kr/news/publicnews/local_govern/news_local/2026/10/26/20261026020002?wlog_tag3=naver",
+   "source": "seoul.co.kr",
+   "published": "2026-10-25T20:04:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "b9120bf619fd",
+   "title": "한국인 10만명 신상 턴 그 AI…“해킹해줘” 딱 한마디 했더니",
+   "url": "https://www.joongang.co.kr/article/25472713",
+   "source": "joongang.co.kr",
+   "published": "2026-10-25T20:00:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "9b75549db669",
+   "title": "머스크, 그록으로 ‘오디세이’ 첫 7분 내놨다…17억 달러 놀런 영화에...",
+   "url": "https://www.wikitree.co.kr/articles/1169034",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-25T18:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "3eda0d6ae7e3",
+   "title": "PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking",
+   "url": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
+   "source": "The Hacker News",
+   "published": "2026-10-25T17:19:46+00:00",
+   "tag": "보안",
+   "lang": "en"
+  },
+  {
+   "id": "f30fccc11088",
+   "title": "포토샵·유튜브·AI 동시작업 거뜬… ‘일하는 기기’로 진화",
+   "url": "https://www.kmib.co.kr/article/20261025501529",
+   "source": "kmib.co.kr",
+   "published": "2026-10-25T17:16:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "b23877b88e69",
+   "title": "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
+   "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+   "source": "TechCrunch",
+   "published": "2026-10-25T16:57:32+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
   {
    "id": "f312280d8e9a",
    "title": "AI 기업들 “해킹위험 낮추자” 안전장치 강화",
@@ -1268,87 +1349,6 @@
    "url": "https://www.aitimes.com/news/articleView.html?idxno=216555",
    "source": "AI타임스",
    "published": "2026-10-24T00:25:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "5812166b8e03",
-   "title": "광양전통숯불구이축제, 다회용기 31만개 사용…폐기물 3.5톤 감축 추산",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216517",
-   "source": "AI타임스",
-   "published": "2026-10-24T00:25:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "b18c38734132",
-   "title": "LLM '명령'에 두 글자 추가했더니…로봇이 한 섬뜩한 행동",
-   "url": "https://zdnet.co.kr/view/?no=20261023193807",
-   "source": "zdnet.co.kr",
-   "published": "2026-10-24T00:18:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "f1b7de12c412",
-   "title": "여수, 노인일자리 ‘두부먹자’ 개소…취약계층 500명 식사 지원",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216532",
-   "source": "AI타임스",
-   "published": "2026-10-24T00:15:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "f8bdb48d78b3",
-   "title": "구글 ‘제미나이 4 카본’ 외부 테스트설…“3D 개선됐지만 속도 느려”",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216604",
-   "source": "AI타임스",
-   "published": "2026-10-24T00:05:59+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "44c53d98adbf",
-   "title": "신물질 찾고 기획까지…K뷰티 ‘AI 혁신’",
-   "url": "https://economist.co.kr/article/view/ecn202610200035",
-   "source": "economist.co.kr",
-   "published": "2026-10-24T00:01:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "a2628648a059",
-   "title": "대통령도 물어봤다는데…\"네 말이 맞아\" 간신 진화한 AI 경고 [홍민성의...",
-   "url": "https://www.hankyung.com/article/202610230813g",
-   "source": "hankyung.com",
-   "published": "2026-10-24T00:01:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "48b8d8d6a254",
-   "title": "문샷 ‘키미 K3.1 프로’, AAII 전체 4위…오픈웨이트 1위 등극",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216603",
-   "source": "AI타임스",
-   "published": "2026-10-23T23:22:34+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "f699a3e5cdaf",
-   "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
-   "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
-   "source": "TechCrunch",
-   "published": "2026-10-23T23:05:49+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "58a871ad31da",
-   "title": "대통령까지 답변 근거로 AI 제시하는 시대… 성경적 관점은",
-   "url": "https://www.christiantoday.co.kr/news/378115",
-   "source": "christiantoday.co.kr",
-   "published": "2026-10-23T22:40:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
