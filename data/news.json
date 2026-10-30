@@ -1,7 +1,178 @@
 {
- "updated_at": "2026-10-30T10:11:16+00:00",
+ "updated_at": "2026-10-30T18:04:35+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "b2263e9f8412",
+   "title": "nemotron-halloween",
+   "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+   "source": "Hugging Face",
+   "published": "2026-10-30T17:57:24+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "a457451f7b0a",
+   "title": "Zest’s new AI agent finds restaurants and books reservations over text",
+   "url": "https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/",
+   "source": "TechCrunch",
+   "published": "2026-10-30T17:47:12+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "24ced51a3095",
+   "title": "\"40만 원대에 제미나이·서클투서치 탑재\"… '갤럭시 A18 LTE' 상륙",
+   "url": "https://www.woodkorea.co.kr/news/articleView.html?idxno=92267",
+   "source": "woodkorea.co.kr",
+   "published": "2026-10-30T17:20:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "fc6c72287137",
+   "title": "Google’s first data center satellite is online and writing poetry",
+   "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
+   "source": "TechCrunch",
+   "published": "2026-10-30T17:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "d906f2ca87fc",
+   "title": "Theranos whistleblower Tyler Shultz warns that the AI boom is ‘a great opportunity to go deceive people’",
+   "url": "https://techcrunch.com/2026/10/30/theranos-whistleblower-tyler-shultz-warns-that-the-ai-boom-is-a-great-opportunity-to-go-deceive-people/",
+   "source": "TechCrunch",
+   "published": "2026-10-30T16:03:45+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "16a52642f8b5",
+   "title": "아발론엑스, 최대 1000만달러 지원…중소기업 AI 침투시험 출시",
+   "url": "https://www.tokenpost.kr/news/ai/430270",
+   "source": "tokenpost.kr",
+   "published": "2026-10-30T15:02:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "33fb6695d899",
+   "title": "인크로스, '2026 아이엠 리포트' 발표…생성형 AI 이용률 85%·유료 결제...",
+   "url": "https://www.thedailypost.kr/news/articleView.html?idxno=116562",
+   "source": "thedailypost.kr",
+   "published": "2026-10-30T14:54:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "9caae87debb6",
+   "title": "[데스크에서] ‘AI 국정 자문’의 함정",
+   "url": "https://www.chosun.com/opinion/desk/2026/10/30/4LA2QJMAUZFPTHPIWNL7TTQTD4/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+   "source": "chosun.com",
+   "published": "2026-10-30T14:36:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "f12129454709",
+   "title": "챗GPT·클로드 믿고 AI 프로그램 깔았는데...코인 채굴 해킹 비상",
+   "url": "http://coinreaders.com/266489",
+   "source": "coinreaders.com",
+   "published": "2026-10-30T14:02:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "62373f3f48e1",
+   "title": "Skip the small talk: Make game-changing connections at TechCrunch Founder Summit with Braindate",
+   "url": "https://techcrunch.com/2026/10/30/skip-the-small-talk-make-game-changing-connections-at-techcrunch-founder-summit-with-braindate/",
+   "source": "TechCrunch",
+   "published": "2026-10-30T14:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "e9e7beb52b83",
+   "title": "DoorDash said it’s only received ‘several hundred’ orders from AI agents",
+   "url": "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/",
+   "source": "TechCrunch",
+   "published": "2026-10-30T13:54:25+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "d74629dfe8b1",
+   "title": "\"행정도 AI 시대\"…동국대 WISE캠퍼스, 교직원 AI 실무교육 확대",
+   "url": "https://www.gukjenews.com/news/articleView.html?idxno=3738118",
+   "source": "gukjenews.com",
+   "published": "2026-10-30T13:14:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "f63058a65b72",
+   "title": "5 days left: Your last chance to connect, scale, and save at TechCrunch Founder Summit 2026",
+   "url": "https://techcrunch.com/2026/10/30/5-days-left-your-last-chance-to-connect-scale-and-save-at-techcrunch-founder-summit-2026/",
+   "source": "TechCrunch",
+   "published": "2026-10-30T13:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "3e4e3eed2bbf",
+   "title": "Can AI data centers be mass-produced like cars? This startup aims to find out",
+   "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out/",
+   "source": "TechCrunch",
+   "published": "2026-10-30T13:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "ecf283cb1cb7",
+   "title": "가짜 클로드 코드 확장이 커서에서 11시간 퍼졌다…최대 5,000명 SSH 백도...",
+   "url": "https://www.wikitree.co.kr/articles/1170601",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-30T12:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "726dd13ab2fa",
+   "title": "오렌지 사이버디펜스, 미스트랄 보안 모델 초기 접근권 받아",
+   "url": "https://www.tokenpost.kr/news/ai/430164",
+   "source": "tokenpost.kr",
+   "published": "2026-10-30T12:08:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "de07904f49be",
+   "title": "인크로스, 생성형 AI 이용자 85% 시대…유료 구독자 월평균 3만 6천 원 지...",
+   "url": "https://www.venturesquare.net/1124471/",
+   "source": "venturesquare.net",
+   "published": "2026-10-30T11:41:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "ee5a51b7cc30",
+   "title": "Cognizant Organizes OpenAI Delivery Group of More Than 25,000 Professiona...",
+   "url": "https://econotimes.com/Cognizant-Organizes-OpenAI-Delivery-Group-of-More-Than-25-000-Professionals-1766746",
+   "source": "econotimes.com",
+   "published": "2026-10-30T10:38:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "bedd646b47bc",
+   "title": "엔비디아, 네이버 3대 주주로…1.3조 다음 달 6일 납입",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216835",
+   "source": "AI타임스",
+   "published": "2026-10-30T10:36:17+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "e9a4e9e7c1d3",
    "title": "['클릭' 증시] 알파벳 쇼크에 급락세...AI 실망인가 구글 추락인가",
@@ -100,6 +271,24 @@
    "published": "2026-10-30T09:00:00+00:00",
    "tag": "소식",
    "lang": "ko"
+  },
+  {
+   "id": "c7606af40dbb",
+   "title": "Community safety report and new protections for teens",
+   "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+   "source": "OpenAI",
+   "published": "2026-10-30T09:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "ad2cc061f552",
+   "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor",
+   "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+   "source": "The Hacker News",
+   "published": "2026-10-30T08:55:47+00:00",
+   "tag": "보안",
+   "lang": "en"
   },
   {
    "id": "146d6a3d68b1",
@@ -1161,195 +1350,6 @@
    "source": "newscj.com",
    "published": "2026-10-29T11:08:00+00:00",
    "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "20722593bfe1",
-   "title": "AI 에이전트 기록 공백 6가지…권한 변경·승인 이력 빠졌다",
-   "url": "https://www.tokenpost.kr/news/ai/429255",
-   "source": "tokenpost.kr",
-   "published": "2026-10-29T10:56:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d73bf1090e3d",
-   "title": "[혁신기업] “AI 판 키운다”… 오라클, 구글 칩부터 오픈AI 서비스까지...",
-   "url": "https://www.dt.co.kr/article/12092214?ref=naver",
-   "source": "dt.co.kr",
-   "published": "2026-10-29T10:05:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "0a4537085ebb",
-   "title": "[사설] AI 해킹 범죄 고도화…수사 공백 해소 시급하다",
-   "url": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=1700&key=20261030.22019008654",
-   "source": "kookje.co.kr",
-   "published": "2026-10-29T09:59:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "90809279156a",
-   "title": "“제조업·교육·의료·문화 결합한 AI 플랫폼 조성해야”",
-   "url": "https://www.kmib.co.kr/article/20261029502267",
-   "source": "kmib.co.kr",
-   "published": "2026-10-29T09:54:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d1d35965da94",
-   "title": "AI 투자에 엇갈린 빅테크 주가…알파벳 10% 급락·MS 4% 상승",
-   "url": "https://www.newspim.com/news/view/20261029001379",
-   "source": "newspim.com",
-   "published": "2026-10-29T09:53:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "36c9328e9c73",
-   "title": "오픈AI 'GPT-6 아스트라' 노린 중국 딥시크·문샷AI…최첨단 기술 무단 ...",
-   "url": "https://www.joongangenews.com/news/articleView.html?idxno=559677",
-   "source": "joongangenews.com",
-   "published": "2026-10-29T09:30:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "88e2c41e7cdf",
-   "title": "SK텔레콤, AI 중심 업무방식 재설계 가속화",
-   "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202610291759024280842",
-   "source": "dnews.co.kr",
-   "published": "2026-10-29T09:20:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "14254735ad6d",
-   "title": "[박종원 칼럼] 킬 스위치는 누가 쥐는가: 자기개선하는 AI 시대의 안전",
-   "url": "https://www.safetimes.co.kr/news/articleView.html?idxno=246994",
-   "source": "safetimes.co.kr",
-   "published": "2026-10-29T09:20:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "6dda4ba804bc",
-   "title": "사번받은 AI, 일하는 비용 줄인다… SKT '토큰 효율화' 승부",
-   "url": "https://www.fnnews.com/news/202610291815326513",
-   "source": "fnnews.com",
-   "published": "2026-10-29T09:17:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "716813918d49",
-   "title": "[금융zip] 기업은행, 재경부·과기부 선정 '공공기관 AI 혁신 챌린지' 우...",
-   "url": "https://www.getnews.co.kr/news/articleView.html?idxno=885346",
-   "source": "getnews.co.kr",
-   "published": "2026-10-29T09:12:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "f8d0149a1856",
-   "title": "Candidate Websites Are Filled With A.I.-Written Text, Analysis Shows",
-   "url": "https://www.nytimes.com/2026/10/29/us/politics/campaign-websites-artificial-intelligence.html?partner=naver",
-   "source": "nytimes.com",
-   "published": "2026-10-29T09:04:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "3d1b3834f21c",
-   "title": "Invasion of the Sexy A.I. Joke Thieves",
-   "url": "https://www.nytimes.com/2026/10/29/arts/ai-bots-jokes-theft-comedians.html?partner=naver",
-   "source": "nytimes.com",
-   "published": "2026-10-29T09:03:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "55ce2dba722f",
-   "title": "금투업계도 해킹 공포…AI 시대 맞춰 보안체계 재점검 목소리",
-   "url": "https://www.wikileaks-kr.org/news/articleView.html?idxno=193937",
-   "source": "wikileaks-kr.org",
-   "published": "2026-10-29T09:02:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "565c46d82f41",
-   "title": "앤트로픽, 1인 신약 개발사 인수...클로드로 직접 치료제 개발",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216778",
-   "source": "AI타임스",
-   "published": "2026-10-29T09:00:15+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "825d41bae113",
-   "title": "AAII 평가 대폭 개편에 순위 변동…구글 1위·오픈AI 약진",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216802",
-   "source": "AI타임스",
-   "published": "2026-10-29T09:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d28967fce9c6",
-   "title": "How we detect frontier model misalignment",
-   "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
-   "source": "OpenAI",
-   "published": "2026-10-29T09:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "061658cda27a",
-   "title": "AI도 사번 받고 출근…SKT, 잘 쓰는 AI 위한 ‘1인 1 AI 에이전트’ 성과...",
-   "url": "https://www.kukinews.com/article/view/kuk202610290206",
-   "source": "kukinews.com",
-   "published": "2026-10-29T08:54:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "50f9f80af844",
-   "title": "엔비디아, 40개 언어 지원하는 음성 인식 AI 공개…오픈 모델 최고 정확도 달성",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216779",
-   "source": "AI타임스",
-   "published": "2026-10-29T08:50:02+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "9a9c1d73eff0",
-   "title": "삼성SDS, AI·클라우드·물류 동반 성장…AI 풀스택 실행 '속도' (종합)",
-   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242562",
-   "source": "itdaily.kr",
-   "published": "2026-10-29T08:48:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d8e7b8c00a53",
-   "title": "실무에 바로 쓰는 일잘러의 GPT-6 아스트라 활용법",
-   "url": "https://www.kyosu.net/news/articleView.html?idxno=211837",
-   "source": "kyosu.net",
-   "published": "2026-10-29T08:46:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "71ff03ff0e98",
-   "title": "필리핀 TESDA에 오른 구글 무료 AI 교사과정",
-   "url": "https://www.tokenpost.kr/news/ai/429186",
-   "source": "tokenpost.kr",
-   "published": "2026-10-29T08:40:00+00:00",
-   "tag": "할인",
    "lang": "ko"
   }
  ]
