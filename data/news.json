@@ -1,7 +1,70 @@
 {
- "updated_at": "2026-10-31T12:44:43+00:00",
+ "updated_at": "2026-10-31T19:21:26+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "71d8d65acf63",
+   "title": "액센츄어 직원 개인 클로드 코드, 국방부 망 관리자 권한 쥐었다는 의혹...",
+   "url": "https://www.wikitree.co.kr/articles/1170769",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-31T18:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "60e29d47cc82",
+   "title": "\"이 메일은 AI 에이전트가 썼습니다\", 편집부 메일함에 닿은 글로벌 PR의...",
+   "url": "https://platum.kr/archives/297502",
+   "source": "platum.kr",
+   "published": "2026-10-31T17:06:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "c10fef6ec816",
+   "title": "OpenAI reportedly lowers funding target for new round",
+   "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/",
+   "source": "TechCrunch",
+   "published": "2026-10-31T16:12:55+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "dd47dbcc8f4d",
+   "title": "[구글 우주 AI] 궤도상 위성서 TPU 구동 성공한 구글…프로젝트 선캐처...",
+   "url": "https://www.cbci.co.kr/news/articleView.html?idxno=621750",
+   "source": "cbci.co.kr",
+   "published": "2026-10-31T15:16:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "f34de4bbf7ce",
+   "title": "챗GPT 공유 링크 열고 버튼 한 번 누르면 공격자 코드 실행…비공개 대...",
+   "url": "https://www.wikitree.co.kr/articles/1170763",
+   "source": "wikitree.co.kr",
+   "published": "2026-10-31T15:10:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "e3710693161d",
+   "title": "변호사, AI 활용률 55%로 급증했지만 \"AI 때문에 업무 늘었다\"",
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42524",
+   "source": "aitimes.kr",
+   "published": "2026-10-31T14:16:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "2944508e10ee",
+   "title": "AI 보안 경쟁 축 '탐지→자동 대응'…시장 성장도 가속",
+   "url": "https://www.etnews.com/20261031000030",
+   "source": "etnews.com",
+   "published": "2026-10-31T13:31:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
   {
    "id": "dede767ae910",
    "title": "크롬 자동완성, 제미나이가 지메일서 저장 안 한 예약번호 찾아 제안…...",
@@ -1287,69 +1350,6 @@
    "source": "AI타임스",
    "published": "2026-10-30T06:45:00+00:00",
    "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "76771c1b6343",
-   "title": "[월가의 AI 봉쇄] ㊦ 韓 은행 보안 던전 열어보니···검증 0건, 위험 관...",
-   "url": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=260423",
-   "source": "womaneconomy.co.kr",
-   "published": "2026-10-30T06:30:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "dc18edbb1ffe",
-   "title": "\"포크송을 댄스곡으로\"…스포티파이, AI 리믹스 내년 초 출시",
-   "url": "https://www.edaily.co.kr/News/Read?newsId=04621526645618168&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-   "source": "edaily.co.kr",
-   "published": "2026-10-30T06:26:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "5c4dafdc66fa",
-   "title": "\"5천만원 보내줘\" 말하면 '척척'…은행권 AI 경쟁에 '보안' 우려",
-   "url": "http://www.newsfc.co.kr/news/articleView.html?idxno=82112",
-   "source": "newsfc.co.kr",
-   "published": "2026-10-30T06:10:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "847e74efc62d",
-   "title": "HBM 키운 안현 美로···SK하이닉스, AI 판 다시 짠다",
-   "url": "http://www.finomy.com/news/articleView.html?idxno=265166",
-   "source": "finomy.com",
-   "published": "2026-10-30T05:24:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "9e18a437c434",
-   "title": "동국대 WISE캠퍼스, AI 기반 교육·행정 혁신에 속도",
-   "url": "http://www.newsprime.co.kr/news/article.html?no=753093",
-   "source": "newsprime.co.kr",
-   "published": "2026-10-30T05:18:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "2e5a783898f4",
-   "title": "Bolsonaro Ally Blames ChatGPT for “President-Elect” Text in Flávio Le...",
-   "url": "https://econotimes.com/Bolsonaro-Ally-Blames-ChatGPT-for-President-Elect-Text-in-Fl-vio-Letter-1766457",
-   "source": "econotimes.com",
-   "published": "2026-10-30T03:56:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "e5d300f1f008",
-   "title": "한국딥러닝, AI로 IBK기업은행 보이스피싱 업무 자동화",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216827",
-   "source": "AI타임스",
-   "published": "2026-10-30T02:32:16+00:00",
-   "tag": "보안",
    "lang": "ko"
   }
  ]
