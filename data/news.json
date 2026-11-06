@@ -1,7 +1,196 @@
 {
- "updated_at": "2026-11-06T11:05:39+00:00",
+ "updated_at": "2026-11-06T19:29:56+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "29c568495a81",
+   "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+   "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+   "source": "TechCrunch",
+   "published": "2026-11-06T18:44:38+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "016e849ea3ab",
+   "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+   "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+   "source": "TechCrunch",
+   "published": "2026-11-06T18:44:20+00:00",
+   "tag": "출시",
+   "lang": "en"
+  },
+  {
+   "id": "fc8f30aee8f3",
+   "title": "How a Blue Wave midterm might reshape the AI industry",
+   "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+   "source": "TechCrunch",
+   "published": "2026-11-06T18:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "0b13002039f4",
+   "title": "과학 이미지 AI 평가…최고 64%·비용 격차 99배",
+   "url": "https://www.tokenpost.kr/news/ai/434221",
+   "source": "tokenpost.kr",
+   "published": "2026-11-06T17:50:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "ef57b5d47585",
+   "title": "After the midterms, is the AI industry in for a rough two years?",
+   "url": "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/",
+   "source": "TechCrunch",
+   "published": "2026-11-06T17:23:52+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "6c28c0196063",
+   "title": "체크포인트, 챗GPT 락다운 모드 뚫었다…팝업 허점 하나로 대화·파일 빼...",
+   "url": "https://www.wikitree.co.kr/articles/1172580",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-06T16:40:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "7c70b636a2cf",
+   "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+   "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+   "source": "TechCrunch",
+   "published": "2026-11-06T15:54:47+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "fef2f9bf33f9",
+   "title": "[ON 선데이] 내 편만 드는 AI 조언자",
+   "url": "https://www.joongang.co.kr/article/25476497",
+   "source": "joongang.co.kr",
+   "published": "2026-11-06T15:29:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "9a8c5631f41f",
+   "title": "Codex Usage Records Surface ‘gpt-6.2-astra’ Identifier",
+   "url": "https://econotimes.com/Codex-Usage-Records-Surface-gpt-6-2-astra-Identifier-1772116",
+   "source": "econotimes.com",
+   "published": "2026-11-06T15:08:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "17e04fbcf2b3",
+   "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
+   "url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
+   "source": "The Hacker News",
+   "published": "2026-11-06T14:58:32+00:00",
+   "tag": "보안",
+   "lang": "en"
+  },
+  {
+   "id": "8c2d1396b8e4",
+   "title": "포스트에이아이, 한국인 데이터셋 기반 소셜트윈 플랫폼 ‘SONA AI’ 출시",
+   "url": "https://www.asiatoday.co.kr/kn/view.php?key=20261106002325344",
+   "source": "asiatoday.co.kr",
+   "published": "2026-11-06T14:38:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "4a6109d50595",
+   "title": "After blocking Muse, Amazon now lets users text Alexa to help them shop",
+   "url": "https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/",
+   "source": "TechCrunch",
+   "published": "2026-11-06T14:10:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "be1ba71e55b7",
+   "title": "ToyBlocks: A controlled world for robot learning and evaluation",
+   "url": "https://huggingface.co/blog/allenai/toyblocks",
+   "source": "Hugging Face",
+   "published": "2026-11-06T14:00:48+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "0bea652d3dcd",
+   "title": "단국대 이용진 교수팀, 의대생 진료 실습용 'AI 가상 환자' 답변 검증 체...",
+   "url": "https://biz.newdaily.co.kr/site/data/html/2026/11/06/2026110600311.html",
+   "source": "biz.newdaily.co.kr",
+   "published": "2026-11-06T14:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "6627e4331ccc",
+   "title": "Australian students embrace AI as universities expand access",
+   "url": "https://econotimes.com/Australian-students-embrace-AI-as-universities-expand-access-1772067",
+   "source": "econotimes.com",
+   "published": "2026-11-06T13:18:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "a394d9aad7a2",
+   "title": "Underdog shows off a 32MB speech model in new demo",
+   "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
+   "source": "TechCrunch",
+   "published": "2026-11-06T13:02:16+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "1f3694f5e3c9",
+   "title": "Physicl raises $10M to make the digital world real enough for robots",
+   "url": "https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/",
+   "source": "TechCrunch",
+   "published": "2026-11-06T13:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "cc1f40f9580f",
+   "title": "시큐리티스코어카드, AI 공급망 보안 평가 'TPRM 벤치마크' 출시",
+   "url": "https://www.dailysecu.com/news/articleView.html?idxno=209344",
+   "source": "dailysecu.com",
+   "published": "2026-11-06T12:48:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "6d849eae7071",
+   "title": "클로드 코드 만드는 엔지니어가 경고한 ‘인지적 항복’…퀴즈 통과해...",
+   "url": "https://www.wikitree.co.kr/articles/1172558",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-06T12:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "cea41b0360f6",
+   "title": "Malicious Browser Extensions Could Use Claude Dispatch to Run Code on Users' Computers",
+   "url": "https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html",
+   "source": "The Hacker News",
+   "published": "2026-11-06T12:06:35+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "242f9ca216eb",
+   "title": "OpenAI's Images 2.6 Update Adds GIF Creation and Codex Image Tools",
+   "url": "https://econotimes.com/OpenAI-s-Images-2-6-Update-Adds-GIF-Creation-and-Codex-Image-Tools-1772032",
+   "source": "econotimes.com",
+   "published": "2026-11-06T11:46:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
   {
    "id": "1d1024e51854",
    "title": "한전KDN, 'AI·디지털 전환 가속'... 4대 전력ICT 핵심 기술 공개",
@@ -172,6 +361,15 @@
    "published": "2026-11-06T08:00:00+00:00",
    "tag": "할인",
    "lang": "ko"
+  },
+  {
+   "id": "bc8f9eac1966",
+   "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+   "url": "https://openai.com/index/partnering-with-hacktron",
+   "source": "OpenAI",
+   "published": "2026-11-06T08:00:00+00:00",
+   "tag": "보안",
+   "lang": "en"
   },
   {
    "id": "d861c5bf4cb5",
@@ -831,6 +1029,15 @@
    "lang": "en"
   },
   {
+   "id": "cfd4354afa14",
+   "title": "Measuring how AI agents handle everyday wet-lab science",
+   "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+   "source": "OpenAI",
+   "published": "2026-11-06T00:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
    "id": "32aca8112beb",
    "title": "비자 AI 쇼핑 에이전트 22종 시험했더니…TV·노트북 구매 43% 실패",
    "url": "https://www.edaily.co.kr/News/Read?newsId=03466966645643096&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
@@ -1144,213 +1351,6 @@
    "published": "2026-11-05T16:16:45+00:00",
    "tag": "소식",
    "lang": "en"
-  },
-  {
-   "id": "cda1711ebe2e",
-   "title": "AI 암호 공격 개선…지캐시 보호 거래는 다른 증명 방식",
-   "url": "https://www.tokenpost.kr/news/blockchain/433391",
-   "source": "tokenpost.kr",
-   "published": "2026-11-05T15:48:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ff015bf9534a",
-   "title": "동대문구, 8일 초등생 ‘AI·로봇 경진대회’",
-   "url": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160286348084113",
-   "source": "siminilbo.co.kr",
-   "published": "2026-11-05T15:36:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "04d79e64fa8a",
-   "title": "인력 대폭 줄인 빅테크… ‘AI 비용’ 지원도 줄인다",
-   "url": "https://www.donga.com/news/Economy/article/all/20261105/134974523/2",
-   "source": "donga.com",
-   "published": "2026-11-05T15:31:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "aecc9a23fd3c",
-   "title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure",
-   "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/",
-   "source": "TechCrunch",
-   "published": "2026-11-05T15:19:05+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "4e8b45d26471",
-   "title": "앤트로픽 FlashProve, 증명엔 GPU 72배 들지만 검증은 CPU로 17초면 끝난...",
-   "url": "https://www.wikitree.co.kr/articles/1172275",
-   "source": "wikitree.co.kr",
-   "published": "2026-11-05T15:10:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "b60064477162",
-   "title": "[문소영의 직격인터뷰] “미국 AI 기업의 국내 도서 대량 매집, 구한말을...",
-   "url": "https://www.joongang.co.kr/article/25476219",
-   "source": "joongang.co.kr",
-   "published": "2026-11-05T15:10:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "cc1cefce9e60",
-   "title": "미래에셋그룹, AI·보안 중심 조직개편···40대·여성 리더 발탁 확대",
-   "url": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=260751",
-   "source": "womaneconomy.co.kr",
-   "published": "2026-11-05T14:46:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "7583e05c42c5",
-   "title": "미래에셋그룹, '미래에셋 3.0' 실행 가속…AI·디지털 인재 전진 배치",
-   "url": "https://www.econovill.com/news/articleView.html?idxno=756195",
-   "source": "econovill.com",
-   "published": "2026-11-05T14:44:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "c9efcd5ee343",
-   "title": "Aina’s smart ring has a screen, a joystick, and a mic so you can talk to AI agents",
-   "url": "https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/",
-   "source": "TechCrunch",
-   "published": "2026-11-05T14:42:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "ca634c65f614",
-   "title": "[AI MY 뉴스] 뉴욕 반도체주 프리뷰...민주당 압승에 반도체주 대체로 약...",
-   "url": "https://www.newspim.com/news/view/20261105001535",
-   "source": "newspim.com",
-   "published": "2026-11-05T14:28:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "5ea6f104b1e8",
-   "title": "Box taps Nvidia’s Nemotron for new agent-first content retrieval system",
-   "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/",
-   "source": "TechCrunch",
-   "published": "2026-11-05T14:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "fd04855a6f41",
-   "title": "A YC startup is putting $1M behind 5 unsolved materials science problems for AI",
-   "url": "https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/",
-   "source": "TechCrunch",
-   "published": "2026-11-05T13:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "6d8ae8d8aa49",
-   "title": "해커 1명이 수백 명 몫…AI 해킹의 위력 [해킹의 습격]",
-   "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8705319&ref=A",
-   "source": "news.kbs.co.kr",
-   "published": "2026-11-05T12:45:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "0653f65b7e60",
-   "title": "AWS, AI 보안 서비스 ‘컨티뉴엄’ 출시…코드 취약점 검증부터 수정안...",
-   "url": "https://www.venturesquare.net/1126066/",
-   "source": "venturesquare.net",
-   "published": "2026-11-05T12:38:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "9df310870cf4",
-   "title": "전화 한 통에 롯데타워 모델링 ‘뚝딱’…가장 똑똑하고 비싼 AI 비서 ‘...",
-   "url": "https://www.mk.co.kr/article/12199055",
-   "source": "mk.co.kr",
-   "published": "2026-11-05T12:31:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "1b1148ce72c6",
-   "title": "구글, 캐나다서 제미나이로 룰루레몬 상품 바로 결제…한 번에 한 품목...",
-   "url": "https://www.wikitree.co.kr/articles/1172257",
-   "source": "wikitree.co.kr",
-   "published": "2026-11-05T12:10:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d94f47b36633",
-   "title": "Agility is the first pure humanoid robot company on the stock market. Are you buying?",
-   "url": "https://techcrunch.com/2026/11/05/agility-is-the-first-pure-humanoid-robot-company-on-the-stock-market-are-you-buying/",
-   "source": "TechCrunch",
-   "published": "2026-11-05T12:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "61d4b5ef23e3",
-   "title": "\"AI 해킹, AI로 막아야\"…보안 위협 해법은",
-   "url": "http://www.yonhapnewstv.co.kr/news/MYH20261105201320Abg",
-   "source": "yonhapnewstv.co.kr",
-   "published": "2026-11-05T11:14:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "b5da17e49318",
-   "title": "미래에셋그룹, '미래에셋 3.0' 조직개편 단행...AI·디지털·금융보안 리...",
-   "url": "https://www.greened.kr/news/articleView.html?idxno=353984",
-   "source": "greened.kr",
-   "published": "2026-11-05T10:57:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "444397e26549",
-   "title": "라온시큐어, 인증 넘어 'AI·양자'···금융보안 판 키운다",
-   "url": "http://www.finomy.com/news/articleView.html?idxno=265771",
-   "source": "finomy.com",
-   "published": "2026-11-05T09:46:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "46161d489241",
-   "title": "오픈AI, AI로 리눅스 취약점 948개 찾아 공격 코드 작성",
-   "url": "https://www.tokenpost.kr/news/breaking/433226",
-   "source": "tokenpost.kr",
-   "published": "2026-11-05T09:44:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "c87c4268f719",
-   "title": "“당연히 ‘카트라이더’인 줄 알았는데…” 게임 AI 복제에 대기업도 ...",
-   "url": "https://biz.heraldcorp.com/article/10927474?ref=naver",
-   "source": "biz.heraldcorp.com",
-   "published": "2026-11-05T09:41:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ca11f16dc347",
-   "title": "미래에셋그룹, AI·디지털 중심 인사…‘미래에셋 3.0’ 속도",
-   "url": "https://www.mydaily.co.kr/page/view/2026110518315832353",
-   "source": "mydaily.co.kr",
-   "published": "2026-11-05T09:34:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
   }
  ]
 }
