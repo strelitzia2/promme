@@ -1,7 +1,304 @@
 {
- "updated_at": "2026-11-07T00:58:11+00:00",
+ "updated_at": "2026-11-07T10:24:37+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "39e5f43a9006",
+   "title": "오픈AI, '클로드 코드' 성공 주역 캣 우 영입…핵심 제품 총괄 맡아",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217134",
+   "source": "AI타임스",
+   "published": "2026-11-07T10:05:17+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "b1a60fdf1132",
+   "title": "삼성 첫 AI 안경 출시 임박…젠틀몬스터·워비파커, 12일 예약 시작",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217133",
+   "source": "AI타임스",
+   "published": "2026-11-07T09:14:54+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "3946bc6e8ec7",
+   "title": "씽킹 머신스, 성능 대폭 높인 '잉클링 2' 공개…중국 오픈 모델에 도전",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217132",
+   "source": "AI타임스",
+   "published": "2026-11-07T08:45:42+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "12ff860139b6",
+   "title": "로봇 계획·동작 분업…앤트로픽 평가서 응답속도 격차",
+   "url": "https://www.tokenpost.kr/news/ai/434447",
+   "source": "tokenpost.kr",
+   "published": "2026-11-07T08:42:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "e15927a20669",
+   "title": "앤트로픽 내부 시스템 무단 접근…클로드 계정 정보 노출 가능성",
+   "url": "https://byline.network/?p=9004111222626673",
+   "source": "byline.network",
+   "published": "2026-11-07T08:36:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d5eb89945ec2",
+   "title": "인성디지털, AIS 2026서 소나타입 공급망 보안 플랫폼 소개…AI 코딩 단...",
+   "url": "https://www.dailysecu.com/news/articleView.html?idxno=209377",
+   "source": "dailysecu.com",
+   "published": "2026-11-07T08:18:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "d0bbbf98bb3f",
+   "title": "바이두, 딥시크 앞선 '어니 5.5' 베이스 모델 공개…한국·유럽 사용 제한",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217131",
+   "source": "AI타임스",
+   "published": "2026-11-07T08:08:12+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "7091b29339db",
+   "title": "미 중간선거 후폭풍…민주당, 빅테크 대대적 조사·AI 규제 추진",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217130",
+   "source": "AI타임스",
+   "published": "2026-11-07T07:43:57+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "e191f4918c13",
+   "title": "[AIS 2026] 망 끊으면 안전할까…김승주 교수 \"AI 시대 보안, 자산 파악부...",
+   "url": "https://www.dailysecu.com/news/articleView.html?idxno=209369",
+   "source": "dailysecu.com",
+   "published": "2026-11-07T06:46:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "804a43c3361e",
+   "title": "Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
+   "url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+   "source": "The Hacker News",
+   "published": "2026-11-07T06:44:17+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "b9f2ccf9251c",
+   "title": "메타, AI로 맞춤형 앱 만드는 '뮤즈 스페이스' 출시",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217128",
+   "source": "AI타임스",
+   "published": "2026-11-07T06:39:27+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "98c499cf3f4c",
+   "title": "AI 해킹 에이전트, 실험실 벗어나 실제 기업 해킹해 고객정보까지 무단...",
+   "url": "https://www.dailysecu.com/news/articleView.html?idxno=209367",
+   "source": "dailysecu.com",
+   "published": "2026-11-07T06:22:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "6ec5caaa3637",
+   "title": "[AI 이슈트렌드] 강호동 구속영장 1위…미 중간선거·바이낸스 해킹 뒤이어",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217129",
+   "source": "AI타임스",
+   "published": "2026-11-07T06:08:35+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "5ae52f293f90",
+   "title": "[AIS 2026] 브로드컴 이요한 이사 \"AI 해킹 빨라지는데 패치는 제자리…...",
+   "url": "https://www.dailysecu.com/news/articleView.html?idxno=209364",
+   "source": "dailysecu.com",
+   "published": "2026-11-07T06:04:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "41a30729f310",
+   "title": "앤트로픽 상장 몸값 다시 낮아지나…기술주 충격에 1,600조원대 평가도...",
+   "url": "https://www.jemin.com/news/articleView.html?idxno=846405",
+   "source": "jemin.com",
+   "published": "2026-11-07T05:58:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "8b0e764df3b5",
+   "title": "[AIS 2026] 안병욱 깃랩 SA \"코딩은 AI 속도, 취약점 처리는 사람 속도…...",
+   "url": "https://www.dailysecu.com/news/articleView.html?idxno=209362",
+   "source": "dailysecu.com",
+   "published": "2026-11-07T05:56:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "4fc78837cf72",
+   "title": "'수능' AI 안경 부정행위 경보에 메타·삼성·구글도 긴장",
+   "url": "https://economist.co.kr/article/view/ecn202611070006",
+   "source": "economist.co.kr",
+   "published": "2026-11-07T05:35:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "4fecc8ef1a48",
+   "title": "오픈AI, 외부 전문기업과 취약점 공동 점검…연결 서비스 방어망 강화",
+   "url": "https://www.jemin.com/news/articleView.html?idxno=846400",
+   "source": "jemin.com",
+   "published": "2026-11-07T04:24:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "4b82a299667f",
+   "title": "[테크톡노트] 공식 경로로 받았는데 악성코드…AI 공급망의 허점",
+   "url": "https://www.yna.co.kr/view/AKR20261106119600017?input=1195m",
+   "source": "yna.co.kr",
+   "published": "2026-11-07T04:10:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "13df33a2fcef",
+   "title": "AI야, AI야…어느 브랜드가 제일 예뻐? [AI 딥다이브]",
+   "url": "https://www.mk.co.kr/article/12191511",
+   "source": "mk.co.kr",
+   "published": "2026-11-07T04:01:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d6c70edbb8f9",
+   "title": "동아大, '2026 AI Innovation Week' 축제 가져",
+   "url": "https://www.getnews.co.kr/news/articleView.html?idxno=886374",
+   "source": "getnews.co.kr",
+   "published": "2026-11-07T03:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "0491593ec5de",
+   "title": "[청년발언대] AI 산업의 성장과 점점 비싸지는 스마트폰",
+   "url": "https://www.youthdaily.co.kr/news/article.html?no=229498",
+   "source": "youthdaily.co.kr",
+   "published": "2026-11-07T03:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "ccba2c7582b3",
+   "title": "앤스로픽, AI 시제품 시험해 제품화…계획은 매달 다시 짠다",
+   "url": "https://www.tokenpost.kr/news/ai/434381",
+   "source": "tokenpost.kr",
+   "published": "2026-11-07T02:26:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "5874de8b8cc2",
+   "title": "‘로컬 AI 시대’, 엔비디아 ‘RTX 스파크’가 그리는 미래",
+   "url": "https://byline.network/?p=9004111222626594",
+   "source": "byline.network",
+   "published": "2026-11-07T02:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "8b9602814443",
+   "title": "유럽 16개국서 데이터센터 반대 공동 행동…MS 건설 현장 난입",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217126",
+   "source": "AI타임스",
+   "published": "2026-11-07T01:57:42+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "2eed6d752f6b",
+   "title": "[내면 지도 그리기] 41 Inner Mapping: 나를 찾는 지도",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217125",
+   "source": "AI타임스",
+   "published": "2026-11-07T01:44:58+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "901480a2eb94",
+   "title": "오픈AI, 기업가치 1.25조달러에 110억달러 유치…투자 목표는 하향",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217117",
+   "source": "AI타임스",
+   "published": "2026-11-07T01:44:21+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "932378bb6c00",
+   "title": "동아대, AI·SW 혁신 축제… 6개 분야 22개 프로그램 운영",
+   "url": "https://view.asiae.co.kr/article/2026110710232337189",
+   "source": "view.asiae.co.kr",
+   "published": "2026-11-07T01:44:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "c2107a5a7cf6",
+   "title": "Crusoe sells troubled Wyoming data center project to Google",
+   "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+   "source": "TechCrunch",
+   "published": "2026-11-07T01:40:28+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "26435e94e991",
+   "title": "동료 AI를 믿어도 될까, 앤트로픽 '사보타주' 실험이 던진 질문",
+   "url": "https://www.inven.co.kr/webzine/news/?news=323109",
+   "source": "inven.co.kr",
+   "published": "2026-11-07T01:20:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d1096cf68c59",
+   "title": "TSMC, 엔비디아 요청에 3D D램 검토…삼성·SK하이닉스와 경쟁하나",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217123",
+   "source": "AI타임스",
+   "published": "2026-11-07T01:19:37+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "11ab5dfdddca",
+   "title": "오픈AI CFO \"중간선거 결과와 관계없이 데이터센터 투자 계속할 것\"",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217119",
+   "source": "AI타임스",
+   "published": "2026-11-07T01:03:29+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "6626c8a29004",
+   "title": "[AI카툰] Bob, Senior IT guy - 밥, 결혼정보회사에서 알바",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217124",
+   "source": "AI타임스",
+   "published": "2026-11-07T01:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "516a2fda356b",
    "title": "테슬라, 판매 부진 사이버트럭 접고 로보택시 역량 집중",
@@ -9,6 +306,15 @@
    "source": "AI타임스",
    "published": "2026-11-07T00:57:09+00:00",
    "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "c217d3ff70d9",
+   "title": "예진, 한국어 특화 8B AI 모델 공개…사전학습부터 독자 개발",
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217114",
+   "source": "AI타임스",
+   "published": "2026-11-07T00:55:00+00:00",
+   "tag": "출시",
    "lang": "ko"
   },
   {
@@ -1043,312 +1349,6 @@
    "url": "https://www.aitimes.kr/news/articleView.html?idxno=42618",
    "source": "aitimes.kr",
    "published": "2026-11-06T01:08:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "36d72fc21db3",
-   "title": "숙명여대, 구글과 청년 AI 교육 '제미나이 아카데미' 개최",
-   "url": "https://www.newsis.com/view/NISX20261106_0003857377",
-   "source": "newsis.com",
-   "published": "2026-11-06T01:07:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "e81de6f30560",
-   "title": "기획부터 검증까지 ‘AI활용’ 능력 평가… “인공지능 잘 쓰는 사람이...",
-   "url": "https://www.munhwa.com/article/11629266?ref=naver",
-   "source": "munhwa.com",
-   "published": "2026-11-06T01:03:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "5577fb0bf75d",
-   "title": "오픈AI, 최고 해킹 위험 등급 'GPT-6 사이버' 출시…일반 공개 금지",
-   "url": "https://www.newsis.com/view/NISX20261106_0003857398",
-   "source": "newsis.com",
-   "published": "2026-11-06T01:03:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "7d279e88ce9f",
-   "title": "오픈AI, 보안 특화 ‘GPT-6 사이버’ 공개… “해커보다 먼저 취약점 찾...",
-   "url": "https://biz.chosun.com/it-science/ict/2026/11/06/7ZINBIRE7VBMJIO6L2F6K65HOA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-   "source": "biz.chosun.com",
-   "published": "2026-11-06T01:03:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "c45def230185",
-   "title": "미래에셋그룹, AI·디지털 중심 조직개편…테크 리더십 강화",
-   "url": "https://www.lcnews.co.kr/news/articleView.html?idxno=210954",
-   "source": "lcnews.co.kr",
-   "published": "2026-11-06T01:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "7b2bd9e0a409",
-   "title": "\"쇼핑 좀 대신해 줘\" AI 비서에게 맡겼더니 벌어진 일",
-   "url": "https://www.fortunekorea.co.kr/news/articleView.html?idxno=54668",
-   "source": "fortunekorea.co.kr",
-   "published": "2026-11-06T01:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "847ef7dc50bb",
-   "title": "\"AI 시뮬레이션 기술로 엔지니어링 AI판 클로드 코드 목표\"",
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=713182",
-   "source": "digitaltoday.co.kr",
-   "published": "2026-11-06T01:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "957f2c0b1497",
-   "title": "호텔 직원도 챗GPT 쓴다…파라다이스, 10개 계열사에 AI 도입",
-   "url": "https://www.news1.kr/industry/hotel-tourism/6345252",
-   "source": "news1.kr",
-   "published": "2026-11-06T00:58:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "852c918e2dfa",
-   "title": "오픈AI, 기업용 AI 사업으로 성장축 이동…2027년 증시 입성 가능성 시사",
-   "url": "https://www.jemin.com/news/articleView.html?idxno=846324",
-   "source": "jemin.com",
-   "published": "2026-11-06T00:56:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "16df65576292",
-   "title": "AI모델 '클로드' 개발사 앤트로픽, 이달 말 상장(IPO) 계획 어긋나나...뉴...",
-   "url": "http://www.beyondpost.co.kr/view.php?ud=2026110609491540522aaae0046f_30",
-   "source": "beyondpost.co.kr",
-   "published": "2026-11-06T00:54:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "122f2291f0f3",
-   "title": "오픈AI, 보안 특화 AI 'GPT-6 사이버' 공개",
-   "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2489202",
-   "source": "enewstoday.co.kr",
-   "published": "2026-11-06T00:51:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "ef4431914854",
-   "title": "단국대 이용진 교수팀, AI 가상 환자 평가 체계 개발",
-   "url": "https://www.newsis.com/view/NISX20261106_0003857472",
-   "source": "newsis.com",
-   "published": "2026-11-06T00:51:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "366f17987e7b",
-   "title": "세일러 \"코인시장 진짜 위협은 AI 해커\"",
-   "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=880523",
-   "source": "hansbiz.co.kr",
-   "published": "2026-11-06T00:48:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "3daa4b66391a",
-   "title": "오픈AI, 보안 특화 'GPT-6 사이버' 공개…파이어폭스 취약점 81건 발견",
-   "url": "https://www.ajunews.com/view/20261106094105960",
-   "source": "ajunews.com",
-   "published": "2026-11-06T00:48:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "90bc1383c4b8",
-   "title": "단국대, AI 가상환자 평가체계로 의대생 교육 혁신",
-   "url": "https://www.viva100.com/article/20261106500151",
-   "source": "viva100.com",
-   "published": "2026-11-06T00:48:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "19f4cf491fca",
-   "title": "[AI와 중소기업의 미래]⑦ 전기·전자·ICT 업종 AI 전환 로드맵",
-   "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8705763&ref=A",
-   "source": "news.kbs.co.kr",
-   "published": "2026-11-06T00:43:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "114653a9bbc5",
-   "title": "미국, AI 투자 제동 걸리나…규제 우려에 나스닥 급락",
-   "url": "https://zdnet.co.kr/view/?no=20261106093246",
-   "source": "zdnet.co.kr",
-   "published": "2026-11-06T00:35:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "f6a67bc0f3a1",
-   "title": "“만들기는 쉬워졌지만 발견은 어려워졌다”…몰로코, 광고 최적화 AI ‘...",
-   "url": "https://it.donga.com/109853/",
-   "source": "it.donga.com",
-   "published": "2026-11-06T00:34:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "9b208abdace3",
-   "title": "파라다이스그룹, '챗GPT 엔터프라이즈' 도입…계열사 10곳 적용",
-   "url": "http://digitalchosun.dizzo.com/site/data/html_dir/2026/11/06/2026110680023.html",
-   "source": "digitalchosun.dizzo.com",
-   "published": "2026-11-06T00:12:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "c79f193c3f79",
-   "title": "앤트로픽, 비공개 AI 모델로 차세대 모델 훈련…안전 연구진이 짚은 3가...",
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=713227",
-   "source": "digitaltoday.co.kr",
-   "published": "2026-11-06T00:08:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "4f41501fdc6e",
-   "title": "파라다이스그룹에 AI 업무혁신 바람… 10개 계열사 챗GPT 활용",
-   "url": "https://view.asiae.co.kr/article/2026110606200495432",
-   "source": "view.asiae.co.kr",
-   "published": "2026-11-06T00:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "e012a3d9dcc7",
-   "title": "[AI리더의 서가] 실전 AX 리포트",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216791",
-   "source": "AI타임스",
-   "published": "2026-11-06T00:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "82196d4ece0a",
-   "title": "Egyptian and Nigerian English join the Open ASR Leaderboard",
-   "url": "https://huggingface.co/blog/open-asr-leaderboard-liva",
-   "source": "Hugging Face",
-   "published": "2026-11-06T00:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "cfd4354afa14",
-   "title": "Measuring how AI agents handle everyday wet-lab science",
-   "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
-   "source": "OpenAI",
-   "published": "2026-11-06T00:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
-  },
-  {
-   "id": "32aca8112beb",
-   "title": "비자 AI 쇼핑 에이전트 22종 시험했더니…TV·노트북 구매 43% 실패",
-   "url": "https://www.edaily.co.kr/News/Read?newsId=03466966645643096&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-   "source": "edaily.co.kr",
-   "published": "2026-11-05T23:57:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "9f1dfbef9847",
-   "title": "파라다이스, 업계 최초 기업용 AI 도입···AX 전환 속도",
-   "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2489162",
-   "source": "enewstoday.co.kr",
-   "published": "2026-11-05T23:55:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "4a21f3c49986",
-   "title": "단국대-서울대 공동연구팀 AI 가상 환자 평가 체계 개발.. '세계 3대 머신...",
-   "url": "https://www.veritas-a.com/news/articleView.html?idxno=635579",
-   "source": "veritas-a.com",
-   "published": "2026-11-05T23:48:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "b07e3bf29ce6",
-   "title": "오픈AI, 해킹 예방하는 AI 'GPT-6 사이버' 공개[글로벌AI브리핑]",
-   "url": "https://www.fnnews.com/news/202611060750128124",
-   "source": "fnnews.com",
-   "published": "2026-11-05T23:46:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "c99b98f626ba",
-   "title": "남는 스마트폰 33만대 묶어 AI 돌린다…데이터센터 대안 실험 주목",
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=713206",
-   "source": "digitaltoday.co.kr",
-   "published": "2026-11-05T23:46:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "b7a440b516c8",
-   "title": "단국대 이용진 교수팀, AI 가상 환자 평가 체계 개발 'NeurIPS 2026' 채택",
-   "url": "https://news.unn.net/news/articleView.html?idxno=600088",
-   "source": "news.unn.net",
-   "published": "2026-11-05T23:40:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "707f34df6e84",
-   "title": "[아이온의 AI:온] 인류 지식 삼킨 AI…'데이터 기근'",
-   "url": "https://news.tvchosun.com/site/data/html_dir/2026/11/06/2026110690073.html",
-   "source": "news.tvchosun.com",
-   "published": "2026-11-05T23:39:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ed2af332bbe7",
-   "title": "연어, 암모니아, AI... 실적의 시간 다가온 오너 2세의 GS건설 신사업",
-   "url": "https://www.meconomynews.com/news/articleView.html?idxno=203282",
-   "source": "meconomynews.com",
-   "published": "2026-11-05T23:34:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "50c65cf95e37",
-   "title": "용산꿈나무도서관 '서울 AI 동행버스' 유치… 시니어 디지털 장벽 허문...",
-   "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1309115",
-   "source": "jeonmae.co.kr",
-   "published": "2026-11-05T23:32:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "7dc231d11f8c",
-   "title": "AI 시대에 당신의 뇌를 지키는 법",
-   "url": "https://www.esquirekorea.co.kr/article/1911622",
-   "source": "esquirekorea.co.kr",
-   "published": "2026-11-05T23:02:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
