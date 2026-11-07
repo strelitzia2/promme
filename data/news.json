@@ -1,7 +1,70 @@
 {
- "updated_at": "2026-11-07T10:24:37+00:00",
+ "updated_at": "2026-11-07T17:46:38+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "926aea25f099",
+   "title": "오픈AI 300억 달러 목표 못 채우고 앤트로픽 IPO 몸값도 1조 1,000억 달러...",
+   "url": "https://www.wikitree.co.kr/articles/1172740",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-07T16:42:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "282310a63bab",
+   "title": "이스라엘 AI 이용자 29.3%, 챗GPT에 마음 털어놨다…심각한 고통 집단은...",
+   "url": "https://www.wikitree.co.kr/articles/1172735",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-07T15:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "11c4338ce552",
+   "title": "제미나이 옴니 1.2 플래시, 길이는 경쟁작 절반인데 초당 0.07달러로 30% ...",
+   "url": "https://www.wikitree.co.kr/articles/1172725",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-07T13:52:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "811e250a999d",
+   "title": "그라비티, AI 게임 플랫폼 ‘아이완’ 공개",
+   "url": "https://www.gameshot.net/common/con_view.php?code=GA6aef0c5190f4c",
+   "source": "gameshot.net",
+   "published": "2026-11-07T11:38:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "f61046363897",
+   "title": "젠슨 황, 파산 위기 넘긴 엔비디아를 AI 제국으로…성공의 열쇠는 'CUDA'",
+   "url": "https://www.betanews.net/article/view/beta202611070011",
+   "source": "betanews.net",
+   "published": "2026-11-07T11:30:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "1601276c785c",
+   "title": "국민대 'KAIL 과실비율' 서비스, OpenAI 심사 통과…ChatGPT 플러그인으...",
+   "url": "https://www.newstnt.com/news/articleView.html?idxno=727262",
+   "source": "newstnt.com",
+   "published": "2026-11-07T11:30:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "1b2ef26889b0",
+   "title": "전문가 3만명 연결한 생성형 AI 평가 플랫폼 공개",
+   "url": "https://www.tokenpost.kr/news/ai/434482",
+   "source": "tokenpost.kr",
+   "published": "2026-11-07T11:24:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
   {
    "id": "39e5f43a9006",
    "title": "오픈AI, '클로드 코드' 성공 주역 캣 우 영입…핵심 제품 총괄 맡아",
@@ -206,6 +269,15 @@
    "url": "https://www.tokenpost.kr/news/ai/434381",
    "source": "tokenpost.kr",
    "published": "2026-11-07T02:26:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "041f67f80bba",
+   "title": "단국대 이용진 교수팀, AI 가상 환자 평가체계 개발…세계적 학회 채택",
+   "url": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3040120",
+   "source": "kihoilbo.co.kr",
+   "published": "2026-11-07T02:16:00+00:00",
    "tag": "소식",
    "lang": "ko"
   },
@@ -495,6 +567,15 @@
    "source": "goodkyung.com",
    "published": "2026-11-06T21:30:00+00:00",
    "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "d8b067b4a7a3",
+   "title": "AI 시대에 자막·더빙 회사?... 세계 1위 찍은 반전 성공기",
+   "url": "https://www.chosun.com/economy/industry-company/2026/11/07/NJ6H4F5KOFABBGORKLPTC3CXNQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+   "source": "chosun.com",
+   "published": "2026-11-06T21:01:00+00:00",
+   "tag": "소식",
    "lang": "ko"
   },
   {
@@ -1269,87 +1350,6 @@
    "source": "ichannela.com",
    "published": "2026-11-06T01:26:00+00:00",
    "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "0db52bf7f107",
-   "title": "오픈AI, 보안 특화 'GPT-6 사이버' 공개 ··· 취약점 탐지·검증 역량 ...",
-   "url": "https://www.datanet.co.kr/news/articleView.html?idxno=215671",
-   "source": "datanet.co.kr",
-   "published": "2026-11-06T01:26:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "83492140af4e",
-   "title": "美 중간선거 민주당 압승에도 \"AI 데이터센터 규제 가능성 제한적\"",
-   "url": "https://news.bizwatch.co.kr/article/market/2026/11/06/0004",
-   "source": "news.bizwatch.co.kr",
-   "published": "2026-11-06T01:25:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "0fe822a62c3e",
-   "title": "오픈AI, 해킹 막는 'GPT-6 사이버' 공개…위험등급 최고",
-   "url": "https://www.mstoday.co.kr/news/articleView.html?idxno=200389",
-   "source": "mstoday.co.kr",
-   "published": "2026-11-06T01:18:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "6d4bab4e2fe6",
-   "title": "내 통장 들여다보는 클로드…앤트로픽, 개인 재무 관리 기능 선봬",
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=713280",
-   "source": "digitaltoday.co.kr",
-   "published": "2026-11-06T01:18:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "6a3d2164c1a8",
-   "title": "삼성 AI 스마트 글래스 다음 주 예약 판매 돌입?",
-   "url": "https://kbench.com/?q=node/283108",
-   "source": "kbench.com",
-   "published": "2026-11-06T01:14:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "1de64a238ec4",
-   "title": "오픈AI 사이버보안 특화 AI 'GPT-6 사이버' 공개, 취약점 검증 성능 향상",
-   "url": "https://www.businesspost.co.kr/BP?command=article_view&num=451334",
-   "source": "businesspost.co.kr",
-   "published": "2026-11-06T01:12:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "2e284cbc3efd",
-   "title": "[AI써봄] 법령명 몰라도 질문하면 찾아준다? AI 법령 검색 ‘리걸큐’ 써...",
-   "url": "https://it.donga.com/109844/",
-   "source": "it.donga.com",
-   "published": "2026-11-06T01:10:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "8758f8cb32e6",
-   "title": "\"이달 내 소비 습관은?\"…앤트로픽, 클로드에 '재무 서비스' 추가",
-   "url": "https://zdnet.co.kr/view/?no=20261106093335",
-   "source": "zdnet.co.kr",
-   "published": "2026-11-06T01:10:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "29554673fa5d",
-   "title": "과학자들의 AI 활용 20만7000건 분석했더니…데이터 분석·논문 작성에 ...",
-   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42618",
-   "source": "aitimes.kr",
-   "published": "2026-11-06T01:08:00+00:00",
-   "tag": "소식",
    "lang": "ko"
   }
  ]
