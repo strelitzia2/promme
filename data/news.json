@@ -1,7 +1,106 @@
 {
- "updated_at": "2026-11-07T17:46:38+00:00",
+ "updated_at": "2026-11-07T21:57:59+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "2c93e9013ac1",
+   "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+   "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+   "source": "TechCrunch",
+   "published": "2026-11-07T21:17:08+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "f54cf0a8ea0a",
+   "title": "AI 해킹에 기존 방어망 뚫리나…금융권 보안 '경고등'",
+   "url": "https://www.yna.co.kr/view/AKR20261107032100017?input=1195m",
+   "source": "yna.co.kr",
+   "published": "2026-11-07T21:05:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "77090b392c90",
+   "title": "[사이버 컨트롤타워] ① AI 해킹 시대에도 보안 감독은 칸막이…재편 시...",
+   "url": "https://www.yna.co.kr/view/AKR20261106127300017?input=1195m",
+   "source": "yna.co.kr",
+   "published": "2026-11-07T21:05:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "7fe3d93ebc66",
+   "title": "[인터뷰] 루크 앤더슨 AWS 아태·일본 총괄 “작업에 맞는 AI 모델 골라 ...",
+   "url": "https://biz.chosun.com/it-science/ict/2026/11/08/F47KZDRMM5FTZML4EM7DCTKEUM/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+   "source": "biz.chosun.com",
+   "published": "2026-11-07T21:01:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "5f65e4f570be",
+   "title": "AI 수익화 과제…광군제서 토큰 판매로 유료고객 찾는 중국",
+   "url": "https://www.mt.co.kr/world/2026/11/08/2026110610080147680",
+   "source": "mt.co.kr",
+   "published": "2026-11-07T21:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "40ab88c9213a",
+   "title": "\"중견국 AI 생존 전략… 활용 역량 강화·핵심 공급망 영향력 확보\"",
+   "url": "https://www.mt.co.kr/world/2026/11/08/2026110613353944032",
+   "source": "mt.co.kr",
+   "published": "2026-11-07T21:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "1af36aa56da9",
+   "title": "젠틀몬스터, 삼성·구글 AI 안경 11월 12일 예약 판매…12월 출시",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=01095526645643752&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "source": "edaily.co.kr",
+   "published": "2026-11-07T20:42:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "4b6a6cccf4cb",
+   "title": "\"AI 사이버 공격 일상화\"...대응 시스템 재설계 절실",
+   "url": "https://www.ytn.co.kr/_ln/0102_202611080510112576",
+   "source": "ytn.co.kr",
+   "published": "2026-11-07T20:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "9fb68ccb9b27",
+   "title": "“AI가 숙제 다 해주면 어떡하냐”…구글, 결국 美학교서 제미나이 차단...",
+   "url": "https://www.sedaily.com/article/20111399?ref=naver",
+   "source": "sedaily.com",
+   "published": "2026-11-07T20:01:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "fcfc6868bbe1",
+   "title": "창펑 자오 “은행이 더 취약”…AI 방어 촉구",
+   "url": "https://www.tokenpost.kr/news/blockchain/434580",
+   "source": "tokenpost.kr",
+   "published": "2026-11-07T19:26:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "66a02f9c22e3",
+   "title": "AI 에이전트 9개 환경서 협업 난항…공통 규칙은 일부 개선",
+   "url": "https://www.tokenpost.kr/news/ai/434579",
+   "source": "tokenpost.kr",
+   "published": "2026-11-07T19:04:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "926aea25f099",
    "title": "오픈AI 300억 달러 목표 못 채우고 앤트로픽 IPO 몸값도 1조 1,000억 달러...",
@@ -1251,105 +1350,6 @@
    "source": "AI타임스",
    "published": "2026-11-06T03:40:15+00:00",
    "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ae4f2a206402",
-   "title": "머스크의 스페이스X·테슬라 폭락...중간선거 후 시총 515조 증발 위기",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217092",
-   "source": "AI타임스",
-   "published": "2026-11-06T03:37:30+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "c03039f36d68",
-   "title": "중간선거 여파·AI 투자 불안에 미 기술주 폭락...시총 4340조 증발",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217082",
-   "source": "AI타임스",
-   "published": "2026-11-06T03:31:58+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ffe0f5b7bb32",
-   "title": "식약처, 식품안전 정보 포털에 AI 기반 민원검색 서비스 도입",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217085",
-   "source": "AI타임스",
-   "published": "2026-11-06T03:23:01+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "9dca300d8da7",
-   "title": "인텔리빅스, 비전 AI로 수소충전소 실시간 충전대기 정보 서비스 구현",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217081",
-   "source": "AI타임스",
-   "published": "2026-11-06T03:21:27+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "c73948e02bc3",
-   "title": "몰로코, 구글·메타 밖 '고객 찾기‘ 승부…“CTV·커머스로 광고 확장”",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217073",
-   "source": "AI타임스",
-   "published": "2026-11-06T03:20:13+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "9eaa74c576a8",
-   "title": "비드래프트 '다윈', 수학·과학 추론 세계 2위 수준…구글·딥시크 앞서",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217089",
-   "source": "AI타임스",
-   "published": "2026-11-06T02:47:30+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "03580f17fbe8",
-   "title": "프랑스 태양광 신규 연결 4.18GW…주택용 33% 감소, 지붕형 14% 증가",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217077",
-   "source": "AI타임스",
-   "published": "2026-11-06T02:05:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "5077fd937021",
-   "title": "일본, 사업용 태양광 패널 50톤 이상 폐기 시 계획 신고 의무화 추진",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=216925",
-   "source": "AI타임스",
-   "published": "2026-11-06T02:05:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "67891a293259",
-   "title": "오픈AI 사장 \"2027년 IPO 준비 가능\"…기업 매출 비중 '껑충'",
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=713285",
-   "source": "digitaltoday.co.kr",
-   "published": "2026-11-06T01:28:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "8f17f46f79d3",
-   "title": "인공지능(AI), 취약점 찾고 공격 코드 작성까지...슈워츠 \"은퇴 타이밍 ...",
-   "url": "http://coinreaders.com/267991",
-   "source": "coinreaders.com",
-   "published": "2026-11-06T01:26:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "e01602d9a63a",
-   "title": "판도라 상자 열리나…스스로 해킹 코드 짜는 AI 출시",
-   "url": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000558687",
-   "source": "ichannela.com",
-   "published": "2026-11-06T01:26:00+00:00",
-   "tag": "보안",
    "lang": "ko"
   }
  ]
