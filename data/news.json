@@ -1,7 +1,70 @@
 {
- "updated_at": "2026-11-08T13:39:56+00:00",
+ "updated_at": "2026-11-08T19:45:10+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "134a90ceadf8",
+   "title": "챗봇부터 영상-음악까지… AI 90종 대여서비스 추가",
+   "url": "https://www.donga.com/news/Society/article/all/20261108/134987445/2",
+   "source": "donga.com",
+   "published": "2026-11-08T19:32:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "9158acb22b66",
+   "title": "중국, 'AI 저질 숏폼 드라마' 철퇴···연말까지 특별단속",
+   "url": "https://www.globale.co.kr/news/articleView.html?idxno=41512",
+   "source": "globale.co.kr",
+   "published": "2026-11-08T19:02:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "33b9c01a7191",
+   "title": "애플 시리, 이르면 내년 스스로 목표 쫓는 AI 에이전트로 변신…CEO가 ‘...",
+   "url": "https://www.wikitree.co.kr/articles/1172916",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-08T18:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "9e4d536e095f",
+   "title": "고선희 대표 \"AI 활용, 복잡한 명령보다 대화가 중요\"",
+   "url": "http://www.gjdream.com/news/articleView.html?idxno=674139",
+   "source": "gjdream.com",
+   "published": "2026-11-08T15:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "3ab8e92fe702",
+   "title": "한양여대 인테리어디자인과, 국제 AI 건축 어워드 종합 2위(은상), 3위(동...",
+   "url": "https://www.etnews.com/20261108000103",
+   "source": "etnews.com",
+   "published": "2026-11-08T14:15:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "75c7cef07f09",
+   "title": "챗GPT 국내 앱 사용자 1,800만 넘었다…클로드 15배 약진에도 점유율 91%...",
+   "url": "https://www.wikitree.co.kr/articles/1172899",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-08T13:50:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d387b2f7d886",
+   "title": "[특파원리포트] 개인정보 유출이 AI 탓이라고?",
+   "url": "https://www.segye.com/newsView/20261108509132?OutUrl=naver",
+   "source": "segye.com",
+   "published": "2026-11-08T13:49:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
   {
    "id": "aec373a87aa6",
    "title": "리플(XRP) 2035년 7달러 전망…챗GPT, 에스크로 소진 시점과 겹쳐",
@@ -1286,69 +1349,6 @@
    "url": "https://www.aitimes.com/news/articleView.html?idxno=217091",
    "source": "AI타임스",
    "published": "2026-11-06T22:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "69d07b0e789b",
-   "title": "클로드 기억 정리 예제 공개…드리밍은 연구 프리뷰",
-   "url": "https://www.tokenpost.kr/news/ai/434301",
-   "source": "tokenpost.kr",
-   "published": "2026-11-06T21:42:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "1429df72fb55",
-   "title": "[굿모닝! AI 리포트] 오픈AI, 사이버보안 특화 AI 모델 선봬…딥시크, '...",
-   "url": "https://www.goodkyung.com/news/articleView.html?idxno=293213",
-   "source": "goodkyung.com",
-   "published": "2026-11-06T21:30:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "d8b067b4a7a3",
-   "title": "AI 시대에 자막·더빙 회사?... 세계 1위 찍은 반전 성공기",
-   "url": "https://www.chosun.com/economy/industry-company/2026/11/07/NJ6H4F5KOFABBGORKLPTC3CXNQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-   "source": "chosun.com",
-   "published": "2026-11-06T21:01:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d8427a79da1a",
-   "title": "[기획 | 게임사 AI 전환의 현주소 ①]… 카카오게임즈, 업무·보안까지 ...",
-   "url": "http://www.economytalk.kr/news/articleView.html?idxno=425131",
-   "source": "economytalk.kr",
-   "published": "2026-11-06T21:00:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "093f45be735f",
-   "title": "앤트로픽 AI, 가상 실험서 종료 막으려 임원 협박 시도",
-   "url": "https://www.tokenpost.kr/news/ai/434274",
-   "source": "tokenpost.kr",
-   "published": "2026-11-06T20:14:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "14a737e30e00",
-   "title": "[AI+]폰·노트북 바꾸려다 '깜짝'...가격 폭등 이유는? AI 안 써도 'AI값...",
-   "url": "https://www.mt.co.kr/tech/2026/11/07/2026110620083266668",
-   "source": "mt.co.kr",
-   "published": "2026-11-06T20:10:00+00:00",
-   "tag": "할인",
-   "lang": "ko"
-  },
-  {
-   "id": "bcff264d47df",
-   "title": "[AI와 사는 법] 로펌 AI '전용 서버'에 길 있다",
-   "url": "https://www.lawtimes.co.kr/news/articleView.html?idxno=228910",
-   "source": "lawtimes.co.kr",
-   "published": "2026-11-06T20:02:00+00:00",
    "tag": "소식",
    "lang": "ko"
   }
