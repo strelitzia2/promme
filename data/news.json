@@ -1,7 +1,97 @@
 {
- "updated_at": "2026-11-14T10:38:05+00:00",
+ "updated_at": "2026-11-14T18:15:05+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "d92f525f24c7",
+   "title": "FBI, AI 해킹도구 ARTEX 악용 경보…저장소 내려도 포크·상용판이 계속...",
+   "url": "https://www.wikitree.co.kr/articles/1174657",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-14T18:10:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "b08cefd9996d",
+   "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+   "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+   "source": "TechCrunch",
+   "published": "2026-11-14T17:30:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "2a2bfff1121f",
+   "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
+   "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+   "source": "TechCrunch",
+   "published": "2026-11-14T16:34:15+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "566f41be75cf",
+   "title": "Infor, 클로드 안에서 주문 승인·재고 재배치까지…현재는 일부 고객에...",
+   "url": "https://www.wikitree.co.kr/articles/1174648",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-14T15:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "c7b1d86a47d9",
+   "title": "오픈AI, 카드 3사와 AI 에이전트 결제 지갑 출시",
+   "url": "https://www.tokenpost.kr/news/breaking/438355",
+   "source": "tokenpost.kr",
+   "published": "2026-11-14T14:52:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
+  {
+   "id": "28ba60cec24c",
+   "title": "커서, 클로드 코드 악성 확장의 출발점으로 파이어웍스 지목…노출된 키...",
+   "url": "https://www.wikitree.co.kr/articles/1174642",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-14T13:48:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
+  {
+   "id": "5dbd7bb9ebea",
+   "title": "Databricks details three ways to connect OpenAI tools to company data",
+   "url": "https://econotimes.com/Databricks-details-three-ways-to-connect-OpenAI-tools-to-company-data-1776779",
+   "source": "econotimes.com",
+   "published": "2026-11-14T13:18:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "59337f1622a5",
+   "title": "구글 AI 안경은 화면 없는 오디오형…12MP 카메라에 최대 9시간 배터리,...",
+   "url": "https://www.wikitree.co.kr/articles/1174636",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-14T13:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "adde9ea54f3b",
+   "title": "검색 상위에 떠도 방문자는 줄어든다…AI 시대 기업 마케팅에 무슨 일이...",
+   "url": "http://www.ikoreanspirit.com/news/articleView.html?idxno=88253",
+   "source": "ikoreanspirit.com",
+   "published": "2026-11-14T13:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "10be0ac130c5",
+   "title": "\"비트코인 하락, 앤트로픽 IPO 전 투자자금 이동 때문\"",
+   "url": "https://www.edaily.co.kr/News/Read?newsId=02797846645645720&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+   "source": "edaily.co.kr",
+   "published": "2026-11-14T11:53:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
   {
    "id": "2b4d4642f587",
    "title": "[VS 기획] AI 안경은 일상을 바꾸는데, 시험장에선 부정행위 도구?…기술...",
@@ -1261,96 +1351,6 @@
    "published": "2026-11-13T08:00:00+00:00",
    "tag": "소식",
    "lang": "en"
-  },
-  {
-   "id": "903f9e7855b8",
-   "title": "KT밀리의서재, 'AI 페르소나 챗봇' 접는다…서비스 전략 '재정비'",
-   "url": "https://www.newsway.co.kr/news/view?ud=2026111316121759956",
-   "source": "newsway.co.kr",
-   "published": "2026-11-13T07:54:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "5d0f74f9a6c2",
-   "title": "2857억 차세대 지방행정, AI 코딩 공식 도입…공공SW 개발체계 전환 주목",
-   "url": "https://zdnet.co.kr/view/?no=20261113134630",
-   "source": "zdnet.co.kr",
-   "published": "2026-11-13T07:53:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "f4498b694460",
-   "title": "AI 모델 바꾼 기업 70% \"몇 주 이상 걸려\"…앱 수정·검증이 걸림돌",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217379",
-   "source": "AI타임스",
-   "published": "2026-11-13T07:51:53+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "57a5643ff5c2",
-   "title": "2040년 섬유산업 주도권 누가 쥘까…'제조기업·국가·AI'가 격돌",
-   "url": "http://www.ktnews.com/news/articleView.html?idxno=150174",
-   "source": "ktnews.com",
-   "published": "2026-11-13T07:46:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "129ff77b02c8",
-   "title": "시끌시끌한 AI 산업···투자 성공하려면 기준부터",
-   "url": "https://www.womaneconomy.co.kr/news/articleView.html?idxno=261103",
-   "source": "womaneconomy.co.kr",
-   "published": "2026-11-13T07:44:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d0ab47429e39",
-   "title": "노타, 3분기 역대 최대 매출 달성…플랫폼·솔루션 동반 도약",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217391",
-   "source": "AI타임스",
-   "published": "2026-11-13T07:40:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "88f9d957a901",
-   "title": "SBS아카데미컴퓨터AIX학원, AI 실무활용 교육과정 운영",
-   "url": "https://www.lecturernews.com/news/articleView.html?idxno=213745",
-   "source": "lecturernews.com",
-   "published": "2026-11-13T07:36:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "fa24f9f2565e",
-   "title": "AMD, 양자컴퓨터 오류 수정에 GPU·SW 투입…엔비디아와 경쟁",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217381",
-   "source": "AI타임스",
-   "published": "2026-11-13T07:34:23+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "fc0fc00bf72c",
-   "title": "‘1분 드라마’가 OTT 판도 뒤흔든다…중국 공세 속 韓 숏폼 위기↑",
-   "url": "https://www.ceoscoredaily.com/page/view/2026111315084804265",
-   "source": "ceoscoredaily.com",
-   "published": "2026-11-13T07:34:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "67cdd3db3dcb",
-   "title": "실시간 AI 통역 시대...\"그래도 직접 영어를 말해야 하는 이유\"",
-   "url": "https://zdnet.co.kr/view/?no=20261113161937",
-   "source": "zdnet.co.kr",
-   "published": "2026-11-13T07:20:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
   }
  ]
 }
