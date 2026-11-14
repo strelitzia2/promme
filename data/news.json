@@ -1,7 +1,97 @@
 {
- "updated_at": "2026-11-14T18:15:05+00:00",
+ "updated_at": "2026-11-14T22:35:23+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "a331ee236cf6",
+   "title": "시험장선 부정행위, 일상선 AI 비서…스마트 안경의 명암",
+   "url": "https://www.yna.co.kr/view/AKR20261113127500017?input=1195m",
+   "source": "yna.co.kr",
+   "published": "2026-11-14T22:33:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "1e84151c5d64",
+   "title": "엔비디아 실적이 국내 반도체주 좌우한다…HBM·AI 관련주 주목을",
+   "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=504106",
+   "source": "pinpointnews.co.kr",
+   "published": "2026-11-14T22:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "6f7c627f0cc1",
+   "title": "[글로벌 경제지표] 엔비디아 실적·앤트로픽 상장 주목…트럼프, APEC 참...",
+   "url": "https://biz.sbs.co.kr/article_hub/20000346230?division=NAVER",
+   "source": "biz.sbs.co.kr",
+   "published": "2026-11-14T22:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "9a736294c460",
+   "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
+   "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+   "source": "TechCrunch",
+   "published": "2026-11-14T21:41:22+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "c062c1237569",
+   "title": "\"레거시 BI 도구에 AI 올렸다\"…한국형사법무정책연구원, 범죄통계 AI 내...",
+   "url": "https://www.ddaily.co.kr/page/view/2026111420574725454",
+   "source": "ddaily.co.kr",
+   "published": "2026-11-14T21:38:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "2e1fa6c4045e",
+   "title": "[써보니] \"KTX 좌석 있나요?\"…코레일에 직접 전화한 AI 비서",
+   "url": "https://www.yna.co.kr/view/AKR20261114026700017?input=1195m",
+   "source": "yna.co.kr",
+   "published": "2026-11-14T21:13:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "c46098ea9fd0",
+   "title": "세기의 미·중·러 정상회담...앤트로픽 IPO ‘AI 빅 위크’ [한동훈의 ...",
+   "url": "https://www.sedaily.com/article/20114361?ref=naver",
+   "source": "sedaily.com",
+   "published": "2026-11-14T21:01:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "5f4c483b14e1",
+   "title": "\"비싼 AI가 꼭 좋진 않더라\"…기업에 딱 맞는 AI 찾아주는 이곳",
+   "url": "https://www.mt.co.kr/future/2026/11/15/2026102213225931695",
+   "source": "mt.co.kr",
+   "published": "2026-11-14T20:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "4c8e03ef8b8e",
+   "title": "'돈 먹는 하마' AI의 진검승부...앤트로픽 상장의 명암",
+   "url": "https://www.ytn.co.kr/_ln/0104_202611150408185083",
+   "source": "ytn.co.kr",
+   "published": "2026-11-14T19:08:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "1ac278425ee3",
+   "title": "토스, 금융보안 AI 해킹방어 대회 대상…6년 연속 우승",
+   "url": "http://www.bizwnews.com/news/articleView.html?idxno=151858",
+   "source": "bizwnews.com",
+   "published": "2026-11-14T18:34:00+00:00",
+   "tag": "보안",
+   "lang": "ko"
+  },
   {
    "id": "d92f525f24c7",
    "title": "FBI, AI 해킹도구 ARTEX 악용 경보…저장소 내려도 포크·상용판이 계속...",
@@ -1261,96 +1351,6 @@
    "published": "2026-11-13T08:32:00+00:00",
    "tag": "소식",
    "lang": "ko"
-  },
-  {
-   "id": "571d18da849f",
-   "title": "[AI의 난] AI 방어, '총론'보다 '각론' 필요할 때...'보안 부채' 함께 살...",
-   "url": "https://www.techm.kr/news/articleView.html?idxno=157333",
-   "source": "techm.kr",
-   "published": "2026-11-13T08:30:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "98ff60e53cc4",
-   "title": "내가 만든 AI 에이전트가 베트남 주식 모의투자… 성적은 사람과 같은 ...",
-   "url": "https://platum.kr/archives/298596",
-   "source": "platum.kr",
-   "published": "2026-11-13T08:30:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "a8c7ef9259b5",
-   "title": "[비즈&] 삼성전자, 구글·젠틀몬스터와 AI 안경 공개 外",
-   "url": "http://www.yonhapnewstv.co.kr/news/MYH2026111317272821k",
-   "source": "yonhapnewstv.co.kr",
-   "published": "2026-11-13T08:28:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "0a3ab5db351d",
-   "title": "[유프로의 AI 픽] \"블프 뷰티 대전부터 얼죽코 코트·패딩 부츠까지\"",
-   "url": "https://www.mediapen.com/news/view/1137415",
-   "source": "mediapen.com",
-   "published": "2026-11-13T08:22:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "e2ccbaa91442",
-   "title": "업스테이지 이어 KT도 '오픈라우터' 입성…국산 AI 모델 글로벌 진출 확...",
-   "url": "http://www.inews24.com/view/2026094",
-   "source": "inews24.com",
-   "published": "2026-11-13T08:06:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "174728121047",
-   "title": "블룸버그 “앤트로픽 IPO에 공모 물량 6배 주문”…역대 최대 상장 가시...",
-   "url": "https://www.donga.com/news/Economy/article/all/20261113/135020341/2",
-   "source": "donga.com",
-   "published": "2026-11-13T08:03:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "a785fe1ae3e4",
-   "title": "불륜에 무너진 AI 황제...젠슨 황 \"난 쓰레기\" 자책 [이슈ON]",
-   "url": "https://www.ytn.co.kr/_ln/0104_202611131702278753",
-   "source": "ytn.co.kr",
-   "published": "2026-11-13T08:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ec410c47c850",
-   "title": "‘고독한 미식가’가 찾은 남도 음식…12월 일본 방송으로 만난다",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217380",
-   "source": "AI타임스",
-   "published": "2026-11-13T08:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "bab6a73aba21",
-   "title": "오픈AI, 아스트라 '노-CoT' 능력 향상 확인…AI 추론 감시 한계 드러나",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217369",
-   "source": "AI타임스",
-   "published": "2026-11-13T08:00:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "d1318183fe17",
-   "title": "Shield helps technicians hand off legacy portal work with OpenAI",
-   "url": "https://openai.com/business/customer-stories/shield",
-   "source": "OpenAI",
-   "published": "2026-11-13T08:00:00+00:00",
-   "tag": "소식",
-   "lang": "en"
   }
  ]
 }
