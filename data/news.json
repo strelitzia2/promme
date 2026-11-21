@@ -1,7 +1,115 @@
 {
- "updated_at": "2026-11-21T11:21:06+00:00",
+ "updated_at": "2026-11-21T19:26:09+00:00",
  "count": 150,
  "items": [
+  {
+   "id": "fc05dd3ce1ca",
+   "title": "[167년 수학 난제] ‘리만가설’, 앤트로픽 수학자 \"AI 클로드가 풀었다...",
+   "url": "https://news-s.kr/view.html?id=L261122030955acb2",
+   "source": "news-s.kr",
+   "published": "2026-11-21T18:56:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "07677c88b0bf",
+   "title": "1291점 GPT-6.2 아스트라, 에이전트 지수 6위",
+   "url": "https://www.tokenpost.kr/news/ai/442300",
+   "source": "tokenpost.kr",
+   "published": "2026-11-21T17:44:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "6ccebafcdf30",
+   "title": "Here are the top AI agents that can live in your text messages",
+   "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
+   "source": "TechCrunch",
+   "published": "2026-11-21T17:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "dffab27fe8d5",
+   "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+   "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+   "source": "TechCrunch",
+   "published": "2026-11-21T16:00:00+00:00",
+   "tag": "소식",
+   "lang": "en"
+  },
+  {
+   "id": "d01286eabbfe",
+   "title": "167년 수학 난제 놓고 ‘인간과 AI’ 대결 벌어졌다",
+   "url": "https://www.g-enews.com/view.php?ud=2026112122552342899a1f309431_1",
+   "source": "g-enews.com",
+   "published": "2026-11-21T16:00:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "d428e583b546",
+   "title": "[주간AI노트] 귀찮은 건 제게 맡기세요…AI 비서 ‘피클’은 어떤 변화...",
+   "url": "https://www.inthenews.co.kr/news/article.html?no=94788",
+   "source": "inthenews.co.kr",
+   "published": "2026-11-21T15:40:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "7155fa72bdce",
+   "title": "[암호체계 흔들 최대 난제] \"클로드가 167년 묵은 리만 가설 풀었다\"… ...",
+   "url": "https://www.cbci.co.kr/news/articleView.html?idxno=629338",
+   "source": "cbci.co.kr",
+   "published": "2026-11-21T15:10:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "1072226a5d98",
+   "title": "캘리포니아대 10개 캠퍼스 챗GPT 기본 모델 무제한 무료…고급 모델은 ...",
+   "url": "https://www.wikitree.co.kr/articles/1176601",
+   "source": "wikitree.co.kr",
+   "published": "2026-11-21T13:50:00+00:00",
+   "tag": "할인",
+   "lang": "ko"
+  },
+  {
+   "id": "6aaa94b17240",
+   "title": "황정아 의원, AI 부정행위 방지 대책 마련 촉구",
+   "url": "https://www.newstnt.com/news/articleView.html?idxno=729729",
+   "source": "newstnt.com",
+   "published": "2026-11-21T13:30:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "ee3229b385f9",
+   "title": "‘AI 부정행위’ 원천 봉쇄할 수 있는 해법은?… 업계 “정부·모델사 협...",
+   "url": "https://www.ddaily.co.kr/page/view/2026112115432866856",
+   "source": "ddaily.co.kr",
+   "published": "2026-11-21T13:23:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "308aa33d0e82",
+   "title": "[어바웃 C] LGU+ 홍범식 유임…AI 성과 속 신뢰 회복은 과제",
+   "url": "https://www.bloter.net/news/articleView.html?idxno=679307",
+   "source": "bloter.net",
+   "published": "2026-11-21T12:55:00+00:00",
+   "tag": "소식",
+   "lang": "ko"
+  },
+  {
+   "id": "499b80709844",
+   "title": "주요 AI사 공개 연산 계약 중 엔비디아 28%…앤트로픽은 4종 칩 운용",
+   "url": "https://www.tokenpost.kr/news/ai/442204",
+   "source": "tokenpost.kr",
+   "published": "2026-11-21T11:48:00+00:00",
+   "tag": "출시",
+   "lang": "ko"
+  },
   {
    "id": "6e439045bead",
    "title": "\"AI로 167년 난제 풀었다\" 앤트로픽 수학자의 '리만 가설' 증명, MIT 검증...",
@@ -10,6 +118,15 @@
    "published": "2026-11-21T11:17:00+00:00",
    "tag": "소식",
    "lang": "ko"
+  },
+  {
+   "id": "16765aea3bd9",
+   "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+   "url": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
+   "source": "The Hacker News",
+   "published": "2026-11-21T11:03:17+00:00",
+   "tag": "소식",
+   "lang": "en"
   },
   {
    "id": "eb6bbed1b9a4",
@@ -1232,123 +1349,6 @@
    "url": "https://www.venturesquare.net/1130456/",
    "source": "venturesquare.net",
    "published": "2026-11-20T08:29:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "979e29df0162",
-   "title": "급여·휴가 시스템 열흘 넘게 차질... EU 집행위원회, AI 해킹 도구 '아...",
-   "url": "https://www.boannews.com/news/articleView.html?idxno=147398",
-   "source": "boannews.com",
-   "published": "2026-11-20T08:22:00+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "6642973107ea",
-   "title": "미래에셋증권, 금융상품 AI 검색 내년 고객 확대…'답변 정확성'이 경쟁...",
-   "url": "https://sateconomy.co.kr/news/view/1065593388282952",
-   "source": "sateconomy.co.kr",
-   "published": "2026-11-20T08:20:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "1cc975e89a82",
-   "title": "GPT-Live-1.1 API 공개…대기 요금 분당 0.02달러",
-   "url": "https://www.tokenpost.kr/news/ai/441472",
-   "source": "tokenpost.kr",
-   "published": "2026-11-20T08:20:00+00:00",
-   "tag": "할인",
-   "lang": "ko"
-  },
-  {
-   "id": "e25e6cad9a7c",
-   "title": "유락, 오만서 AI 포렌식 설루션 공개...중동 시장 공략 확대",
-   "url": "https://www.techm.kr/news/articleView.html?idxno=157661",
-   "source": "techm.kr",
-   "published": "2026-11-20T08:18:00+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "041f8e63544d",
-   "title": "오픈AI, 'GPT-6.2' 응답 늦게 받으면 API 요금 최대 40% 할인",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217632",
-   "source": "AI타임스",
-   "published": "2026-11-20T08:17:56+00:00",
-   "tag": "할인",
-   "lang": "ko"
-  },
-  {
-   "id": "f23563525d2a",
-   "title": "메타, AI가 기억하는 방법도 스스로 개선...AI 자기개선 연구 잇따라",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217629",
-   "source": "AI타임스",
-   "published": "2026-11-20T08:15:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "236489035563",
-   "title": "캘리포니아주, 엔비디아에 소환장...중국 기밀 유출·투자자 기만 조사",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217637",
-   "source": "AI타임스",
-   "published": "2026-11-20T08:07:06+00:00",
-   "tag": "보안",
-   "lang": "ko"
-  },
-  {
-   "id": "7b3d8cb91cbf",
-   "title": "김범수 사법리스크 덜어낸 카카오…AI 시대 ‘혁신 DNA’ 되살릴까",
-   "url": "https://ilyo.co.kr/?ac=article_view&entry_id=513736",
-   "source": "ilyo.co.kr",
-   "published": "2026-11-20T08:02:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "8d2ee65ca5e4",
-   "title": "애플 “AI 시대에도 아이디어는 사람의 몫…중요한 건 문제 해결 능력”",
-   "url": "https://www.etnews.com/20261120000304",
-   "source": "etnews.com",
-   "published": "2026-11-20T08:01:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "1d6a0d3b771c",
-   "title": "미 상무부, 중국군 연계 기업에 AI 칩 수출 허가...하원 자료 공개로 파장",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217634",
-   "source": "AI타임스",
-   "published": "2026-11-20T07:57:21+00:00",
-   "tag": "출시",
-   "lang": "ko"
-  },
-  {
-   "id": "f02aec061269",
-   "title": "바비톡, 직원이 직접 AI 에이전트 만드는 ‘BaaS’ 도입…두 달 만에 123...",
-   "url": "https://www.venturesquare.net/1130413/",
-   "source": "venturesquare.net",
-   "published": "2026-11-20T07:57:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "5174433ff071",
-   "title": "미래에셋증권, 생성형 AI로 금융정보 검색 혁신",
-   "url": "http://www.newsmaker.or.kr/news/articleView.html?idxno=186229",
-   "source": "newsmaker.or.kr",
-   "published": "2026-11-20T07:52:00+00:00",
-   "tag": "소식",
-   "lang": "ko"
-  },
-  {
-   "id": "ea3927e678c7",
-   "title": "오픈AI, 코덱스로 챗GPT 성능 문제 자동 진단·수정안 작성",
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=217626",
-   "source": "AI타임스",
-   "published": "2026-11-20T07:47:37+00:00",
    "tag": "소식",
    "lang": "ko"
   }
